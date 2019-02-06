@@ -1,0 +1,110 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+ENTITY Lab_2 is
+
+  port (
+    ----- CLOCK -----
+    CLOCK_50 : in std_logic;
+    CLOCK2_50 : in std_logic;
+    CLOCK3_50 : in std_logic;
+    CLOCK4_50 : in std_logic;
+
+    ----- SDRAM -----
+    DRAM_ADDR : out std_logic_vector(12 downto 0);
+    DRAM_BA : out std_logic_vector(1 downto 0);
+    DRAM_CAS_N : out std_logic;
+    DRAM_CKE : out std_logic;
+    DRAM_CLK : out std_logic;
+    DRAM_CS_N : out std_logic;
+    DRAM_DQ : inout std_logic_vector(15 downto 0);
+    DRAM_LDQM : out std_logic;
+    DRAM_RAS_N : out std_logic;
+    DRAM_UDQM : out std_logic;
+    DRAM_WE_N : out std_logic;
+
+    ----- SEG7 -----
+    HEX0 : out std_logic_vector(6 downto 0);
+    HEX1 : out std_logic_vector(6 downto 0);
+    HEX2 : out std_logic_vector(6 downto 0);
+    HEX3 : out std_logic_vector(6 downto 0);
+    HEX4 : out std_logic_vector(6 downto 0);
+    HEX5 : out std_logic_vector(6 downto 0);
+
+    ----- KEY -----
+    KEY : in std_logic_vector(3 downto 0);
+
+    ----- LED -----
+    LEDR : out  std_logic_vector(9 downto 0);
+
+    ----- SW -----
+    SW : in  std_logic_vector(9 downto 0) );
+
+end entity Lab_2;
+
+architecture Lab_2_arch of Lab_2 is
+
+  -- signal declarations
+  signal led0 : std_logic;
+  signal cntr : std_logic_vector(25 downto 0);
+  signal ledNios : std_logic_vector(7 downto 0);
+  signal reset_n : std_logic;
+  signal pushbuttons_export : std_logic_vector(3 downto 0);
+    signal buttons0 : std_logic_vector(3 downto 0);
+	  signal buttons1 : std_logic_vector(3 downto 0);
+	    signal buttons2 : std_logic_vector(3 downto 0);
+  signal pushbuttons_export0 : std_logic;
+  signal key0_d1 : std_logic;
+  signal key0_d2 : std_logic;
+  signal key0_d3 : std_logic;
+  signal sw_d1 : std_logic_vector(9 downto 0);
+  signal sw_d2 : std_logic_vector(9 downto 0);
+  
+
+--	component nios_system is
+--		port (
+--			clk_clk            : in  std_logic                    := 'X';             -- clk
+--			pushbuttons_export : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+--			reset_reset_n      : in  std_logic                    := 'X';             -- reset_n
+--			switches_export    : in  std_logic_vector(7 downto 0) := (others => 'X'); -- export
+--			hex0_export        : out std_logic_vector(6 downto 0)                     -- export
+--		);
+--	end component nios_system;
+	
+	BEGIN
+	
+  ----- Synchronize the push buttons
+  synchReset_proc0 : process (CLOCK2_50) begin
+    if (rising_edge(CLOCK2_50)) then
+      buttons0 <= KEY;
+      buttons1 <= buttons0;
+      buttons2 <= buttons1;
+    end if;
+  end process synchReset_proc0;
+  pushbuttons_export <= buttons2;
+  
+    ----- Synchronize the reset
+  synchReset_proc1 : process (CLOCK2_50) begin
+    if (rising_edge(CLOCK2_50)) then
+      key0_d1 <= KEY(0);
+      key0_d2 <= key0_d1;
+      key0_d3 <= key0_d2;
+    end if;
+  end process synchReset_proc1;
+  pushbuttons_export0 <= key0_d3;
+  
+  
+----------Nios System Port Map------------  
+--  	u0 : component nios_system
+--		port map (
+--			clk_clk            => CLOCK2_50,
+--			pushbuttons_export => pushbuttons_export,
+--			reset_reset_n      => pushbuttons_export0,
+--			switches_export    => sw_d2(7 downto 0), -- switches.export
+--			hex0_export        => HEX0
+--		);
+		
+END architecture Lab_2_arch;
+	
