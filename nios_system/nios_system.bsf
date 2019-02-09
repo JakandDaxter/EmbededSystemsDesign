@@ -79,7 +79,7 @@ agreement for further details.
 		(text "reset_n" (rect 149 227 340 464)(font "Arial" (color 0 0 0)))
 		(text "switches" (rect 94 243 236 499)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 149 267 334 544)(font "Arial" (color 0 0 0)))
-		(text " system " (rect 317 288 682 586)(font "Arial" ))
+		(text " nios_system " (rect 294 288 666 586)(font "Arial" ))
 		(line (pt 144 32)(pt 208 32)(line_width 1))
 		(line (pt 208 32)(pt 208 288)(line_width 1))
 		(line (pt 144 288)(pt 208 288)(line_width 1))

@@ -10,13 +10,6 @@ use ieee.std_logic_arith.all;
 
 ENTITY Lab_3 is
   port (
-    ----- Audio -----
-    AUD_ADCDAT : in std_logic; 
-    AUD_ADCLRCK : inout std_logic;
-    AUD_BCLK : inout std_logic;
-    AUD_DACDAT : out std_logic;
-    AUD_DACLRCK : inout std_logic;
-    AUD_XCK : out std_logic;
 
     ----- CLOCK -----
     CLOCK_50 : in std_logic;
@@ -24,18 +17,6 @@ ENTITY Lab_3 is
     CLOCK3_50 : in std_logic;
     CLOCK4_50 : in std_logic;
 
-    ----- SDRAM -----
-    DRAM_ADDR : out std_logic_vector(12 downto 0);
-    DRAM_BA : out std_logic_vector(1 downto 0);
-    DRAM_CAS_N : out std_logic;
-    DRAM_CKE : out std_logic;
-    DRAM_CLK : out std_logic;
-    DRAM_CS_N : out std_logic;
-    DRAM_DQ : inout std_logic_vector(15 downto 0);
-    DRAM_LDQM : out std_logic;
-    DRAM_RAS_N : out std_logic;
-    DRAM_UDQM : out std_logic;
-    DRAM_WE_N : out std_logic;
 
     ----- I2C for Audio and Video-In -----
     FPGA_I2C_SCLK : out std_logic;
@@ -43,11 +24,6 @@ ENTITY Lab_3 is
 
     ----- SEG7 -----
     HEX0 : out std_logic_vector(6 downto 0);
-    HEX1 : out std_logic_vector(6 downto 0);
-    HEX2 : out std_logic_vector(6 downto 0);
-    HEX3 : out std_logic_vector(6 downto 0);
-    HEX4 : out std_logic_vector(6 downto 0);
-    HEX5 : out std_logic_vector(6 downto 0);
 
     ----- KEY -----
     KEY : in std_logic_vector(3 downto 0);
@@ -79,10 +55,23 @@ architecture Lab_3_arch of Lab_3 is
   signal sw_d2 : std_logic_vector(9 downto 0);
   
   
+----- Component Declarations--
+component nios_system is
+	port (
+		clk_clk            : in  std_logic                    := 'X';             -- clk
+		hex0_export        : out std_logic_vector(6 downto 0);                    -- export
+		leds_export        : out std_logic_vector(7 downto 0);                    -- export
+		pushbuttons_export : in  std_logic_vector(3 downto 0) := (others => 'X'); -- export
+		reset_reset_n      : in  std_logic                    := 'X';             -- reset_n
+		switches_export    : in  std_logic_vector(7 downto 0) := (others => 'X')  -- export
+	);
+end component nios_system;
+
+  
 begin
 
-  LEDR(9 downto 0) <= "1" & ledNios & led0;
-  led0 <= cntr(24);
+  -- LEDR(9 downto 0) <= "1" & ledNios & led0;
+  -- led0 <= cntr(24);
   
   ----- Syncronize the reset
   synchReset_proc : process (CLOCK2_50) begin
@@ -110,6 +99,16 @@ begin
   end process synchUserIn_proc;
 
   ----- Instantiate the nios processor
+  
+u0 : component nios_system
+	port map (
+		clk_clk            => CLOCK_50,      --         clk.clk
+		hex0_export        => HEX0,          --        hex0.export
+		leds_export        => LEDR(7 downto 0),        	 --        leds.export
+		pushbuttons_export => KEY,			 -- pushbuttons.export
+		reset_reset_n      => reset_n,       --       reset.reset_n
+		switches_export    => sw_d2(7 downto 0)    		 --    switches.export
+	);
 
 
 end architecture Lab_3_arch;

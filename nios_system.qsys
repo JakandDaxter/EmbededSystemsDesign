@@ -29,7 +29,7 @@
    {
       datum baseAddress
       {
-         value = "69648";
+         value = "69680";
          type = "String";
       }
    }
@@ -45,7 +45,7 @@
    {
       datum baseAddress
       {
-         value = "69704";
+         value = "69736";
          type = "String";
       }
    }
@@ -61,7 +61,7 @@
    {
       datum baseAddress
       {
-         value = "69632";
+         value = "69664";
          type = "String";
       }
    }
@@ -109,7 +109,7 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69696";
          type = "String";
       }
    }
@@ -125,7 +125,7 @@
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69712";
          type = "String";
       }
    }
@@ -141,7 +141,7 @@
    {
       datum baseAddress
       {
-         value = "69696";
+         value = "69728";
          type = "String";
       }
    }
@@ -151,6 +151,14 @@
       {
          value = "7";
          type = "int";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "69632";
+         type = "String";
       }
    }
 }
@@ -273,7 +281,7 @@
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='timer_0.s1' start='0x0' end='0x20' type='altera_avalon_timer.s1' /><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='leds.s1' start='0x11000' end='0x11010' type='altera_avalon_pio.s1' /><slave name='hex0.s1' start='0x11010' end='0x11020' type='altera_avalon_pio.s1' /><slave name='pushbuttons.s1' start='0x11020' end='0x11030' type='altera_avalon_pio.s1' /><slave name='switches.s1' start='0x11030' end='0x11040' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x11040' end='0x11048' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11048' end='0x11050' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer_0.s1' start='0x11000' end='0x11020' type='altera_avalon_timer.s1' /><slave name='leds.s1' start='0x11020' end='0x11030' type='altera_avalon_pio.s1' /><slave name='hex0.s1' start='0x11030' end='0x11040' type='altera_avalon_pio.s1' /><slave name='pushbuttons.s1' start='0x11040' end='0x11050' type='altera_avalon_pio.s1' /><slave name='switches.s1' start='0x11050' end='0x11060' type='altera_avalon_pio.s1' /><slave name='sysid_qsys_0.control_slave' start='0x11060' end='0x11068' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11068' end='0x11070' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -310,7 +318,7 @@
   <parameter name="icache_ramBlockType" value="Automatic" />
   <parameter name="icache_size" value="4096" />
   <parameter name="icache_tagramBlockType" value="Automatic" />
-  <parameter name="impl" value="Fast" />
+  <parameter name="impl" value="Tiny" />
   <parameter name="instAddrWidth" value="17" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
@@ -319,7 +327,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="3" />
+  <parameter name="internalIrqMaskSystemInfo" value="7" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -470,12 +478,12 @@
    enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
+  <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
   <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="EDGE" />
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
@@ -503,13 +511,13 @@
   <parameter name="id" value="1" />
  </module>
  <module name="timer_0" kind="altera_avalon_timer" version="17.0" enabled="1">
-  <parameter name="alwaysRun" value="false" />
+  <parameter name="alwaysRun" value="true" />
   <parameter name="counterSize" value="32" />
-  <parameter name="fixedPeriod" value="false" />
+  <parameter name="fixedPeriod" value="true" />
   <parameter name="period" value="100" />
   <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
-  <parameter name="snapshot" value="true" />
+  <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="50000000" />
   <parameter name="timeoutPulseOutput" value="false" />
   <parameter name="watchdogPulse" value="2" />
@@ -520,7 +528,7 @@
    start="nios2_gen2_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011048" />
+  <parameter name="baseAddress" value="0x00011068" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -529,7 +537,7 @@
    start="nios2_gen2_0.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="baseAddress" value="0x00011060" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -556,7 +564,7 @@
    start="nios2_gen2_0.data_master"
    end="switches.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011050" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -565,7 +573,7 @@
    start="nios2_gen2_0.data_master"
    end="pushbuttons.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011040" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -574,7 +582,7 @@
    start="nios2_gen2_0.data_master"
    end="hex0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011010" />
+  <parameter name="baseAddress" value="0x00011030" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -583,7 +591,7 @@
    start="nios2_gen2_0.data_master"
    end="leds.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011000" />
+  <parameter name="baseAddress" value="0x00011020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -592,7 +600,7 @@
    start="nios2_gen2_0.data_master"
    end="timer_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -639,6 +647,13 @@
    start="nios2_gen2_0.irq"
    end="timer_0.irq">
   <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="17.0"
+   start="nios2_gen2_0.irq"
+   end="pushbuttons.irq">
+  <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="reset"
