@@ -5,9 +5,10 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
+   <baseaddress preferredWidth="349" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library expandedCategories="Library,Project" />
  <window width="2746" height="1516" x="-13" y="33" />
  <generation synthesis="VHDL" />
 </preferences>

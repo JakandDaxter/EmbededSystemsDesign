@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate S:\CPET-561\Lab_3\nios_system.qsys --block-symbol-file --output-directory=S:\CPET-561\Lab_3\nios_system --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Lab_3/nios_system.qsys
+Info: qsys-generate Z:\Documents\ESD1\EmbededSystemsDesign\nios_system.qsys --block-symbol-file --output-directory=Z:\Documents\ESD1\EmbededSystemsDesign\nios_system --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading EmbededSystemsDesign/nios_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 17.0]
 Progress: Parameterizing module clk_0
@@ -20,6 +20,8 @@ Progress: Adding switches [altera_avalon_pio 17.0]
 Progress: Parameterizing module switches
 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.0]
 Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 17.0]
+Progress: Parameterizing module timer_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -33,8 +35,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate S:\CPET-561\Lab_3\nios_system.qsys --synthesis=VHDL --output-directory=S:\CPET-561\Lab_3\nios_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Lab_3/nios_system.qsys
+Info: qsys-generate Z:\Documents\ESD1\EmbededSystemsDesign\nios_system.qsys --synthesis=VHDL --output-directory=Z:\Documents\ESD1\EmbededSystemsDesign\nios_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading EmbededSystemsDesign/nios_system.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 17.0]
 Progress: Parameterizing module clk_0
@@ -54,6 +56,8 @@ Progress: Adding switches [altera_avalon_pio 17.0]
 Progress: Parameterizing module switches
 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.0]
 Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 17.0]
+Progress: Parameterizing module timer_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -65,31 +69,35 @@ Info: nios_system.sysid_qsys_0: System ID is not assigned automatically. Edit th
 Info: nios_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
 Info: nios_system: Generating nios_system "nios_system" for QUARTUS_SYNTH
 Info: hex0: Starting RTL generation for module 'nios_system_hex0'
-Info: hex0:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_hex0 --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0001_hex0_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0001_hex0_gen//nios_system_hex0_component_configuration.pl  --do_build_sim=0  ]
+Info: hex0:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_hex0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0001_hex0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0001_hex0_gen//nios_system_hex0_component_configuration.pl  --do_build_sim=0  ]
 Info: hex0: Done RTL generation for module 'nios_system_hex0'
 Info: hex0: "nios_system" instantiated altera_avalon_pio "hex0"
 Info: jtag_uart_0: Starting RTL generation for module 'nios_system_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_system_jtag_uart_0 --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0002_jtag_uart_0_gen//nios_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_system_jtag_uart_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0002_jtag_uart_0_gen//nios_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'nios_system_jtag_uart_0'
 Info: jtag_uart_0: "nios_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: leds: Starting RTL generation for module 'nios_system_leds'
-Info: leds:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_leds --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0003_leds_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0003_leds_gen//nios_system_leds_component_configuration.pl  --do_build_sim=0  ]
+Info: leds:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_leds --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0003_leds_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0003_leds_gen//nios_system_leds_component_configuration.pl  --do_build_sim=0  ]
 Info: leds: Done RTL generation for module 'nios_system_leds'
 Info: leds: "nios_system" instantiated altera_avalon_pio "leds"
 Info: nios2_gen2_0: "nios_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'nios_system_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_system_onchip_memory2_0 --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0004_onchip_memory2_0_gen//nios_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_system_onchip_memory2_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0004_onchip_memory2_0_gen//nios_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'nios_system_onchip_memory2_0'
 Info: onchip_memory2_0: "nios_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pushbuttons: Starting RTL generation for module 'nios_system_pushbuttons'
-Info: pushbuttons:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_pushbuttons --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0005_pushbuttons_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0005_pushbuttons_gen//nios_system_pushbuttons_component_configuration.pl  --do_build_sim=0  ]
+Info: pushbuttons:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_pushbuttons --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0005_pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0005_pushbuttons_gen//nios_system_pushbuttons_component_configuration.pl  --do_build_sim=0  ]
 Info: pushbuttons: Done RTL generation for module 'nios_system_pushbuttons'
 Info: pushbuttons: "nios_system" instantiated altera_avalon_pio "pushbuttons"
 Info: switches: Starting RTL generation for module 'nios_system_switches'
-Info: switches:   Generation command is [exec C:/intelfpga/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/17.0/quartus/bin64/perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_switches --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0006_switches_gen/ --quartus_dir=C:/intelfpga/17.0/quartus --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0006_switches_gen//nios_system_switches_component_configuration.pl  --do_build_sim=0  ]
+Info: switches:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_switches --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0006_switches_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0006_switches_gen//nios_system_switches_component_configuration.pl  --do_build_sim=0  ]
 Info: switches: Done RTL generation for module 'nios_system_switches'
 Info: switches: "nios_system" instantiated altera_avalon_pio "switches"
 Info: sysid_qsys_0: "nios_system" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: timer_0: Starting RTL generation for module 'nios_system_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/17.0/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nios_system_timer_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0008_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0008_timer_0_gen//nios_system_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'nios_system_timer_0'
+Info: timer_0: "nios_system" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -98,33 +106,24 @@ Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "nios_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "nios_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "nios_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'nios_system_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA/17.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA/17.0/quartus/bin64//perl/lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/17.0/quartus/sopc_builder/bin -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_system_nios2_gen2_0_cpu --dir=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA/17.0/quartus/bin64/ --verilog --config=C:/Users/axt3290/AppData/Local/Temp/alt7933_1401427433096505459.dir/0010_cpu_gen//nios_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2019.02.06 16:26:36 (*) Starting Nios II generation
-Info: cpu: # 2019.02.06 16:26:36 (*)   Checking for plaintext license.
-Info: cpu: # 2019.02.06 16:26:36 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA/17.0/quartus/bin64/
-Info: cpu: # 2019.02.06 16:26:36 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.02.06 16:26:36 (*)   Plaintext license not found.
-Info: cpu: # 2019.02.06 16:26:36 (*)   Checking for encrypted license (non-evaluation).
-Info: cpu: # 2019.02.06 16:26:37 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA/17.0/quartus/bin64/
-Info: cpu: # 2019.02.06 16:26:37 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.02.06 16:26:37 (*)   Encrypted license found.  SOF will not be time-limited.
-Info: cpu: # 2019.02.06 16:26:37 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2019.02.06 16:26:37 (*)   Creating all objects for CPU
-Info: cpu: # 2019.02.06 16:26:37 (*)     Testbench
-Info: cpu: # 2019.02.06 16:26:37 (*)     Instruction decoding
-Info: cpu: # 2019.02.06 16:26:37 (*)       Instruction fields
-Info: cpu: # 2019.02.06 16:26:37 (*)       Instruction decodes
-Info: cpu: # 2019.02.06 16:26:37 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2019.02.06 16:26:37 (*)       Instruction controls
-Info: cpu: # 2019.02.06 16:26:37 (*)     Pipeline frontend
-Info: cpu: # 2019.02.06 16:26:38 (*)     Pipeline backend
-Info: cpu: # 2019.02.06 16:26:39 (*)   Generating RTL from CPU objects
-Info: cpu: # 2019.02.06 16:26:41 (*)   Creating encrypted RTL
-Info: cpu: # 2019.02.06 16:26:41 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_system_nios2_gen2_0_cpu --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0011_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.0/quartus/bin64/ --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt7937_4515071823413930831.dir/0011_cpu_gen//nios_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.02.09 22:24:47 (*) Starting Nios II generation
+Info: cpu: # 2019.02.09 22:24:47 (*)   Checking for plaintext license.
+Info: cpu: # 2019.02.09 22:24:48 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.0/quartus/bin64/
+Info: cpu: # 2019.02.09 22:24:48 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.02.09 22:24:48 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.02.09 22:24:48 (*)   Plaintext license not found.
+Info: cpu: # 2019.02.09 22:24:48 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.02.09 22:24:48 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.02.09 22:24:48 (*)   Creating all objects for CPU
+Info: cpu: # 2019.02.09 22:24:49 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.02.09 22:24:49 (*)   Creating plain-text RTL
+Info: cpu: # 2019.02.09 22:24:50 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'nios_system_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -136,21 +135,18 @@ Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
-Info: nios2_gen2_0_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_gen2_0_data_master_limiter"
-Info: Reusing file S:/CPET-561/Lab_3/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file S:/CPET-561/Lab_3/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file Z:/Documents/ESD1/EmbededSystemsDesign/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
-Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file S:/CPET-561/Lab_3/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file Z:/Documents/ESD1/EmbededSystemsDesign/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file S:/CPET-561/Lab_3/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file Z:/Documents/ESD1/EmbededSystemsDesign/nios_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: nios_system: Done "nios_system" with 33 modules, 53 files
+Info: nios_system: Done "nios_system" with 32 modules, 45 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

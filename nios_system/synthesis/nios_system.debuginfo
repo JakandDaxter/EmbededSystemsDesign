@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nios_system" kind="system" version="17.0" fabric="QSYS">
  <!-- Format version 17.0 595 (Future versions may contain additional information.) -->
- <!-- 2019.02.09.05:36:38 -->
+ <!-- 2019.02.10.01:32:57 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1549701375</value>
+  <value>1549773149</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -8516,11 +8516,11 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <assignment>
    <name>embeddedsw.CMacro.ID</name>
-   <value>1</value>
+   <value>3</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1549701375</value>
+   <value>1549773149</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8536,11 +8536,11 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.id</name>
-   <value>1</value>
+   <value>3</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1549701375</value>
+   <value>1549773149</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8548,7 +8548,7 @@ the requested settings for a module instance. -->
   </assignment>
   <parameter name="id">
    <type>int</type>
-   <value>1</value>
+   <value>3</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8556,7 +8556,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1549701375</value>
+   <value>1549773149</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -13558,7 +13558,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="IRQ_MAP">
    <type>java.lang.String</type>
-   <value>0:0,1:1,2:2</value>
+   <value>0:1,1:0,2:2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -16496,5 +16496,5 @@ parameters are a RESULT of the module parameters. -->
   <version>17.0</version>
  </plugin>
  <reportVersion>17.0 595</reportVersion>
- <uniqueIdentifier>001C4246236F00000168D1667995</uniqueIdentifier>
+ <uniqueIdentifier>001C4246236F00000168D5ADA66F</uniqueIdentifier>
 </EnsembleReport>

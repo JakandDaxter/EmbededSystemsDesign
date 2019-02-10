@@ -57,6 +57,14 @@
          type = "int";
       }
    }
+   element leds.clk
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
    element leds.s1
    {
       datum baseAddress
@@ -103,6 +111,14 @@
       {
          value = "5";
          type = "int";
+      }
+   }
+   element pushbuttons.external_connection
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
       }
    }
    element pushbuttons.s1
@@ -508,7 +524,7 @@
    kind="altera_avalon_sysid_qsys"
    version="17.0"
    enabled="1">
-  <parameter name="id" value="1" />
+  <parameter name="id" value="3" />
  </module>
  <module name="timer_0" kind="altera_avalon_timer" version="17.0" enabled="1">
   <parameter name="alwaysRun" value="true" />
@@ -639,14 +655,14 @@
    version="17.0"
    start="nios2_gen2_0.irq"
    end="jtag_uart_0.irq">
-  <parameter name="irqNumber" value="0" />
+  <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="interrupt"
    version="17.0"
    start="nios2_gen2_0.irq"
    end="timer_0.irq">
-  <parameter name="irqNumber" value="1" />
+  <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="interrupt"
