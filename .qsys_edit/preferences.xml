@@ -6,9 +6,15 @@
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
    <baseaddress preferredWidth="349" />
+   <name preferredWidth="405" />
+   <description preferredWidth="347" />
+   <export preferredWidth="301" />
+   <inputclock preferredWidth="183" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="2746" height="1516" x="-13" y="33" />
- <generation synthesis="VHDL" />
+ <library expandedCategories="Project,Library" />
+ <window width="3335" height="2055" x="0" y="46" />
+ <generation
+   synthesis="VHDL"
+   path="//Mac/Home/Documents/ESD1/EmbededSystemsDesign" />
 </preferences>
