@@ -1,9 +1,0 @@
-04:35:13 **** Clean-only build of configuration Nios II for project nios_software_bsp ****
-make clean 
-[BSP clean complete]
-04:35:21 **** Clean-only build of configuration Nios II for project nios_software ****
-make clean 
-Cannot run program "make": Launching failed
-
-Error: Program "make" not found in PATH
-PATH=[C:/intelfpga_lite/17.0/quartus/bin64;C:/intelfpga_lite/17.0/nios2eds/bin/cygpath;C:/intelfpga_lite/17.0/quartus/sopc_builder/model/lib;C:/intelfpga_lite/17.0/quartus/bin32;c:\intelfpga_lite\17.0\quartus\bin64\;C:\Program Files (x86)\Parallels\Parallels Tools\Applications;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility;C:\Users\jakanddaxter\AppData\Local\Microsoft\WindowsApps;;C:\intelFPGA_lite\17.0\modelsim_ase\win32aloem]

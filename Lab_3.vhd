@@ -24,7 +24,8 @@ ENTITY Lab_3 is
     LEDR : out  std_logic_vector(9 downto 0);
 
     ----- SW -----
-    SW : in  std_logic_vector(7 downto 0)   );
+    SW : in  std_logic_vector(7 downto 0)   
+	 );
 
  
 end entity Lab_3;

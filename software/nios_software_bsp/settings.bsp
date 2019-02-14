@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 13, 2019 4:35:09 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1550043309136</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>\\Mac\Home\Documents\ESD1\EmbededSystemsDesign\software\nios_software_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspGeneratedTimeStamp>Feb 13, 2019 7:52:34 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1550105554163</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>S:\CPET-561\Lab_3\software\nios_software_bsp</BspGeneratedLocation>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
