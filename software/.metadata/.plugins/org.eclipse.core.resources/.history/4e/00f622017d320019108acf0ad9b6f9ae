@@ -143,13 +143,13 @@ int main(void)
 		
 		*Hex0Ptr = array_hexDisplay[0];
 		
-		alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
-		                        PUSHBUTTONS_IRQ,
-		                        Pushbutton_isr,
-		                        0,
-		                        0);
-			while(thing = 1); //keep looking for that key button press
+			while(1); //keep looking for that key button press
 				{
+					alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
+					                        PUSHBUTTONS_IRQ,
+					                        Pushbutton_isr,
+					                        0,
+					                        0);
 							if(thing == 1)
 								{		switch_val = *SwitchPtr; //reading the current value of the
 
