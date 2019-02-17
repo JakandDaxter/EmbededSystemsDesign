@@ -1,17 +1,3 @@
-// 1. Write a NIOS II C program that does the following:
-// 	a. Displays 0 on hex0
-// 	b. Checks to see if key1 is pushed (active low)
-// 			i. If SW0 is high, increments the value on hex0 ii. If SW0 is low, decrements the value on hex0
-// 	c. Do not increment or decrement the value on hex0 until key1 is released
-//
-// 2. Open NIOS II Software Build Tools for Eclipse. Create a new App and BSP, generate the bsp,
-// copy system.h to the app folder, move your C program to the app folder, build the project and choose Debug as NIOS II hardware.
-// Click the run icon and verify your program works as expected.
-// /* alt_types.h and sys/alt_irq.h need to be included for the interrupt
-//   functions
-//   system.h is necessary for the system constants
-//   io.h has read and write functions
-
 #include "io.h"
 #include <stdio.h>
 #include "system.h"
@@ -19,6 +5,7 @@
 #include "sys/alt_irq.h"
 #include "altera_avalon_timer_regs.h"
 #include "altera_avalon_timer.h"
+#include "altera_avalon_pio_regs.h"
 
 // create standard embedded type definitions
 typedef   signed char   sint8;              // signed 8 bit values
@@ -34,6 +21,10 @@ volatile uint32 *LedPtr           	= (uint32 *) 0x11020;
 volatile uint32 *Hex0Ptr      	    = (uint32 *) 0x11030;
 volatile uint32 *KeyPtr       	    = (uint32 *) 0x11040;
 volatile uint32 *SwitchPtr        	= (uint32 *) 0x11050;
+
+volatile uint32 j					= 0; //used to increment through the array
+volatile int *edge_capture;   			 //global variable to hold the edge capture value 
+volatile uint32 SwitchValue			= 0; //this is the switch value i will write to  when im in the ISR
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 //************************************************************************************************************************//
@@ -110,52 +101,84 @@ volatile uint32 *SwitchPtr        	= (uint32 *) 0x11050;
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 
+//	   what is stored in the bucket
+char array_hexDisplay[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x2, 0x78, 0x0, 0x18}; //array to hold the hex constants
+
+void Pushbutton_isr(void* context, alt_u32 id)
+// ****************************************************************************/
+// /* Interrupt Service Routine                                                 */
+// /*   Determines what caused the interrupt and calls the appropriate          */
+// /*  subroutine.                                                              */
+// /*                                                                           */
+// /****************************************************************************
+{
+   int switch_val;
+   *edge_capture = (volatile int*) context;
+   
+   *edge_capture = IORD_ALTERA_AVALON_PIO_EDGE_CAP(0x11040); //stores the edge capture
+   IOWR_ALTERA_AVALON_PIO_EDGE_CAP(0x11040,0);
+   IOWR_ALTERA_AVALON_PIO_IRQ_MASK(0x11040, 0x2);
+   
+
+   
+		switch_val = *SwitchPtr; //reading the current value of the
+		//if(edge_capture == 1){
+			if(switch_val == 1)
+				{
+
+					if(j == 10)
+					{
+						j = 0; //restart the position of the array
+					}
+						else
+							{
+								j++;
+							} //increment the bucket of the array normally
+		 	 	 }
+		 	else
+			{
+				if(j == 0)
+					{
+						j = 10; //if at the end restart the position of the array and decrement from there
+						j--;
+					}
+				 		j--; //decrement normal operation
+			}
+			//}
+
+			*Hex0Ptr = array_hexDisplay[j];
+
+		//*(KeyPtr+1) = 1; //clear button interrupt for key 1
+
+	// *(LedPtr) = *(SwitchPtr);
+	// *(KeyPtr+3) = 0;
+
+		
+    return;
+}
 
 int main(void)
 // ****************************************************************************/
 // /* Main Program   Part 2                                                    */
-// /*   polling to increment and decrement                                    */
+// /*   pushbutton interrupt on key1                                         */
 // ***************************************************************************
 {
-
-	int j = 0;
-//	Set up the board and variables
-	int current_Keyval,switch_val; //will store the value of what ever is being read
-//	   what is stored in the bucket
-	char array_hexDisplay[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x2, 0x78, 0x0, 0x18}; //array to hold the hex constants
-
-	*Hex0Ptr = array_hexDisplay[0] ;
-	//current_Keyval = *KeyPtr; //reading the current value of the key
-
-
-		//while(startloop == 1){
-	while(1){
-	 for(int i = 0; i<10;i++)
-	 {
-		 *Hex0Ptr = array_hexDisplay[j] ;
-		 	 current_Keyval = *KeyPtr; //reading the current value of the key
-			
-		 	 if(current_Keyval == 13)
-		 	 {
-		 		 current_Keyval = *KeyPtr; //reading the current value of the key
-
-		 		 if(current_Keyval == 15){
-
-		 			 switch_val = *SwitchPtr; //reading the current value of the key
-
-		 			 if(switch_val == 1){
-		 				 if(j == 10){j = 0;}
-						 else{j++;} //increment the bucket of the array
-		 	 	 	 }
-		 			 else{
-		 				 if(j == 0){j = 10; j--;}
-				 		j--;
-				 }
-
-			 }
-		 }
-	 }
- 		}
+	 // this enables the NIOS II to accept a pushbutton interrupt
+     // * and indicates the name of the interrupt handler
+	//alt_irq_register(PUSHBUTTONS_IRQ,(void *) &edge_capture,Pushbutton_isr);
+	
+	alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
+	                        PUSHBUTTONS_IRQ,
+	                        Pushbutton_isr,
+	                        0,
+	                        0);
+	
+		
+		*Hex0Ptr = array_hexDisplay[0];
+		
+			while(1); //keep looking for that key button press
+				{
+				}
 
     return (0);
 }
@@ -164,7 +187,7 @@ int main(void)
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 //************************************************************************************************************************//
-// #********This is the array that will hold the hex display values******************************************************#
+//******************This is the array that will hold the hex display values***********************************************//
 //
 // array_hexDisplay:
 //
@@ -181,4 +204,5 @@ int main(void)
 // 		#0000000 - 8  = 0x0
 // 		#0011000 - 9  = 0x18
 //
-// #*********************************************************************************************************************#
+// #*********************************************************************************************************************#   // unsigned 8 bit values
+

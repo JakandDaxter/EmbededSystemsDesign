@@ -1,6 +1,6 @@
 Assembler report for Lab_3
-Wed Feb 13 18:23:25 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Sat Feb 16 20:16:17 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -11,7 +11,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: S:/CPET-561/Lab_3/output_files/Lab_3.sof
+  6. Assembler Device Options: Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Feb 13 18:23:25 2019 ;
+; Assembler Status      ; Successful - Sat Feb 16 20:16:17 2019 ;
 ; Revision Name         ; Lab_3                                 ;
 ; Top-level Entity Name ; Lab_3                                 ;
 ; Family                ; Cyclone V                             ;
@@ -64,23 +64,23 @@ agreement for further details.
 +--------+------------------------+--------------+
 
 
-+------------------------------------------+
-; Assembler Generated Files                ;
-+------------------------------------------+
-; File Name                                ;
-+------------------------------------------+
-; S:/CPET-561/Lab_3/output_files/Lab_3.sof ;
-+------------------------------------------+
++---------------------------------------------------------------+
+; Assembler Generated Files                                     ;
++---------------------------------------------------------------+
+; File Name                                                     ;
++---------------------------------------------------------------+
+; Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.sof ;
++---------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Assembler Device Options: S:/CPET-561/Lab_3/output_files/Lab_3.sof ;
-+----------------+---------------------------------------------------+
-; Option         ; Setting                                           ;
-+----------------+---------------------------------------------------+
-; JTAG usercode  ; 0x0186E7F8                                        ;
-; Checksum       ; 0x0186E7F8                                        ;
-+----------------+---------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Assembler Device Options: Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.sof ;
++----------------+------------------------------------------------------------------------+
+; Option         ; Setting                                                                ;
++----------------+------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0186E7F8                                                             ;
+; Checksum       ; 0x0186E7F8                                                             ;
++----------------+------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -88,15 +88,15 @@ agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Wed Feb 13 18:23:16 2019
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Feb 16 20:16:05 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab_3 -c Lab_3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 801 megabytes
-    Info: Processing ended: Wed Feb 13 18:23:26 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Sat Feb 16 20:16:17 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:09
 
 

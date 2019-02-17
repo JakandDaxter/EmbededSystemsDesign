@@ -8,7 +8,8 @@ obj/default/Lab_3.o: Lab_3.c ../nios_software_bsp//HAL/inc/io.h \
  ../nios_software_bsp//HAL/inc/sys/alt_dev.h \
  ../nios_software_bsp//HAL/inc/sys/alt_llist.h \
  ../nios_software_bsp//HAL/inc/priv/alt_dev_llist.h \
- ../nios_software_bsp//HAL/inc/sys/alt_warning.h
+ ../nios_software_bsp//HAL/inc/sys/alt_warning.h \
+ ../nios_software_bsp//drivers/inc/altera_avalon_pio_regs.h
 
 ../nios_software_bsp//HAL/inc/io.h:
 
@@ -37,3 +38,5 @@ system.h:
 ../nios_software_bsp//HAL/inc/priv/alt_dev_llist.h:
 
 ../nios_software_bsp//HAL/inc/sys/alt_warning.h:
+
+../nios_software_bsp//drivers/inc/altera_avalon_pio_regs.h:

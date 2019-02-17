@@ -1,6 +1,6 @@
 Fitter report for Lab_3
-Wed Feb 13 18:23:11 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Sat Feb 16 20:16:02 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -63,30 +63,30 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Fitter Summary                                                                    ;
-+---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Feb 13 18:23:11 2019           ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
-; Revision Name                   ; Lab_3                                           ;
-; Top-level Entity Name           ; Lab_3                                           ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSEMA5F31C6                                    ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 773 / 32,070 ( 2 % )                            ;
-; Total registers                 ; 1079                                            ;
-; Total pins                      ; 30 / 457 ( 7 % )                                ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                     ;
-; Total RAM Blocks                ; 37 / 397 ( 9 % )                                ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Fitter Summary                                                                ;
++---------------------------------+---------------------------------------------+
+; Fitter Status                   ; Successful - Sat Feb 16 20:16:02 2019       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Lab_3                                       ;
+; Top-level Entity Name           ; Lab_3                                       ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 773 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 1079                                        ;
+; Total pins                      ; 30 / 457 ( 7 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                 ;
+; Total RAM Blocks                ; 37 / 397 ( 9 % )                            ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -153,17 +153,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.8%      ;
-;     Processor 3            ;   3.7%      ;
-;     Processor 4            ;   3.6%      ;
+;     Processor 2            ;   3.6%      ;
 +----------------------------+-------------+
 
 
@@ -414,7 +412,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in S:/CPET-561/Lab_3/output_files/Lab_3.pin.
+The pin-out file can be found in Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.pin.
 
 
 +---------------------------------------------------------------------------------------------+
@@ -2281,11 +2279,12 @@ Note: This table only shows the top 100 path(s) that have the largest delay adde
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "Lab_3"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Info (184020): Starting Fitter periphery placement operations
@@ -2454,37 +2453,37 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "PS2_DAT2" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:16
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:18
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 16% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 1.56 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:09
+Info (11888): Total time spent on timing analysis during the Fitter is 1.89 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:09
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file S:/CPET-561/Lab_3/output_files/Lab_3.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 2690 megabytes
-    Info: Processing ended: Wed Feb 13 18:23:14 2019
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:01:52
+Info (144001): Generated suppressed messages file Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 6326 megabytes
+    Info: Processing ended: Sat Feb 16 20:16:03 2019
+    Info: Elapsed time: 00:01:47
+    Info: Total CPU time (on all processors): 00:02:24
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in S:/CPET-561/Lab_3/output_files/Lab_3.fit.smsg.
+The suppressed messages can be found in Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.fit.smsg.
 
 
