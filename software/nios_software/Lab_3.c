@@ -16,15 +16,16 @@ typedef   signed long   sint32;             // signed 32 bit values
 typedef unsigned long   uint32;             // unsigned 32 bit values
 typedef         float   real32;             // 32 bit real values
 
-volatile uint32 *TimerPtr           = (uint32 *) 0x11000;
+		 uint32 *TimerPtr           = (uint32 *) 0x11000;
 volatile uint32 *LedPtr           	= (uint32 *) 0x11020;
 volatile uint32 *Hex0Ptr      	    = (uint32 *) 0x11030;
 volatile uint32 *KeyPtr       	    = (uint32 *) 0x11040;
 volatile uint32 *SwitchPtr        	= (uint32 *) 0x11050;
-int thing = 0;
-volatile uint32 j					= 0; //used to increment through the array
 //************************************************************************************************************************//
 //************************************************************************************************************************//
+
+
+
 //************************************************************************************************************************//
 // 1. Write a NIOS II C program that does the following:
 // a. Displays 0 on hex0
@@ -40,7 +41,6 @@ volatile uint32 j					= 0; //used to increment through the array
 // // ***************************************************************************
 // {
 //
-// 	int j = 0;
 // 	int startloop = 0;
 // //	Set up the board and variables
 // 	int current_Keyval,switch_val; //will store the value of what ever is being read
@@ -49,16 +49,13 @@ volatile uint32 j					= 0; //used to increment through the array
 //
 // 	*Hex0Ptr = array_hexDisplay[0] ;
 // 	//current_Keyval = *KeyPtr; //reading the current value of the key
-//
-// /* 		if(current_Keyval == 15)
-// 			{startloop = 0;}
-// 		else{startloop=1;} */
+
 //
 // 		//while(startloop == 1){
 // 	while(1){
 // 	 for(int i = 0; i<10;i++)
 // 	 {
-// 		 *Hex0Ptr = array_hexDisplay[j] ;
+// 		 *Hex0Ptr = array_hexDisplay[i] ;
 // 		 	 current_Keyval = *KeyPtr; //reading the current value of the key
 //
 // 		 	 if(current_Keyval == 13)
@@ -70,12 +67,12 @@ volatile uint32 j					= 0; //used to increment through the array
 // 		 			 switch_val = *SwitchPtr; //reading the current value of the key
 //
 // 		 			 if(switch_val == 1){
-// 		 				 if(j == 10){j = 0;}
-// 						 else{j++;} //increment the bucket of the array
+// 		 				 if(i == 10){i = 0;}
+// 						 else{i++;} //increment the bucket of the array
 // 		 	 	 	 }
 // 		 			 else{
-// 		 				 if(j == 0){j = 10; j--;}
-// 				 		j--;
+// 		 				 if(i == 0){i = 11; i--;}
+// 				 		i--;
 // 				 }
 //
 // 			 }
@@ -87,10 +84,12 @@ volatile uint32 j					= 0; //used to increment through the array
 // }
 //************************************************************************************************************************//
 //************************************************************************************************************************//
-//************************************************************************************************************************//
-//************************************************************************************************************************//
+//*********************************************************************************************************************************************************************************************************************************************************************//
 
-// Write a NIOS II C program that does the following:
+
+
+//************************************************************************************************************************//
+// A NIOS II C program that does the following:
 // 			a. Registers and enables a pushbutton interrupt for key1 
 //						b. Displays 0 on led0
 // 							c. Contains a pushbutton ISR that checks the state of SWO
@@ -99,10 +98,93 @@ volatile uint32 j					= 0; //used to increment through the array
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 
-//	   what is stored in the bucket
-char array_hexDisplay[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x2, 0x78, 0x0, 0x18}; //array to hold the hex constants
+// void Pushbutton_isr(void* context)
+// ****************************************************************************/
+// /* Interrupt Service Routine                                                 */
+// /*   Determines what caused the interrupt and calls the appropriate          */
+// /*  subroutine.                                                              */
+// /*                                                                           */
+// /****************************************************************************
+// {
+// 	char array_hexDisplay[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x2, 0x78, 0x0, 0x18}; //array to hold the hex constants
+//
+//    		int switch_val,current_Keyval;
+//
+// 			*(KeyPtr + 3) = 0; //clear edge capture
+//
+//    for(int i = 0; i<10;)
+//    	 {
+//    		 *Hex0Ptr = array_hexDisplay[i] ;
+//
+//
+//    		 	 current_Keyval = *KeyPtr; //reading the current value of the key
+//
+//
+//    		 	 if(current_Keyval == 13)
+//    		 	 {
+//    		 		 current_Keyval = *KeyPtr; //reading the current value of the key
+//
+//    		 		 if(current_Keyval == 15){
+//
+//    		 			 switch_val = *SwitchPtr; //reading the current value of the key
+//
+//    		 			 if(switch_val == 1){
+//    		 				 if(i == 10){i = 0;}
+//    						 else{i++;} //increment the bucket of the array
+//    		 	 	 	 }
+//    		 			 else{
+//    		 				 if(i == 0){i = 11; i--;}
+//    				 		i--;
+//    				 }
+//
+//    			 }
+//    		 }
+//    	 }
+//
+//
+//     return Pushbutton_isr(context);
+// }
 
-int Pushbutton_isr(void* context)
+// int main(void)
+
+// ****************************************************************************/
+// /* Main Program   Part 2                                                    */
+// /*   pushbutton interrupt on key1                                         */
+// ***************************************************************************
+// {
+	 // this enables the NIOS II to accept a pushbutton interrupt
+     // * and indicates the name of the interrupt handler
+	//alt_irq_register(PUSHBUTTONS_IRQ,(void *) &edge_capture,Pushbutton_isr);
+
+	
+		
+// 		*Hex0Ptr = 0x40;
+//
+// 		alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
+// 		                        PUSHBUTTONS_IRQ,
+// 		                        Pushbutton_isr,
+// 		                        0,
+// 		                        0);
+//
+// 			*(KeyPtr + 2) = 0xF; //writing to the pushbuttons interrupt mask register
+//
+// 			while(1); //keep looking for that key button press
+//
+//     return (0);
+// }
+//*********************************************************************************************************************************************************************************************************************************************************************//
+
+
+
+//************************************************************************************************************************//
+// Write a NIOS II C program that does the following:
+// a. Maintains the functionality of the second program
+// b. Registers a timer interrupt
+// c. Contains a timer ISR that toggles the state of the 8 LEDs each time it is reached.
+//************************************************************************************************************************//
+//************************************************************************************************************************//
+
+void Pushbutton_isr(void* context)
 // ****************************************************************************/
 // /* Interrupt Service Routine                                                 */
 // /*   Determines what caused the interrupt and calls the appropriate          */
@@ -110,77 +192,103 @@ int Pushbutton_isr(void* context)
 // /*                                                                           */
 // /****************************************************************************
 {
-   int switch_val;
-   volatile int *edge_capture;   			 //global variable to hold the edge capture value 
-   *edge_capture = (volatile int*) context;
+	char array_hexDisplay[] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x2, 0x78, 0x0, 0x18}; //array to hold the hex constants
    
-   *edge_capture = IORD_ALTERA_AVALON_PIO_EDGE_CAP(0x11040); //stores the edge capture
-  
+   		int switch_val,current_Keyval;
+   
+			*(KeyPtr + 3) = 0; //clear edge capture
 
-		//*(KeyPtr+1) = 1; //clear button interrupt for key 1
+   for(int i = 0; i<10;)
+   	 {
+   		 *Hex0Ptr = array_hexDisplay[i] ;
+		 
+		 
+   		 	 current_Keyval = *KeyPtr; //reading the current value of the key
+			 
 
-	// *(LedPtr) = *(SwitchPtr);
-	// *(KeyPtr+3) = 0;
-		    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(0x11040,0);
-		    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(0x11040, 0xF);
-			thing = 1;
+   		 	 if(current_Keyval == 13)
+   		 	 {
+   		 		 current_Keyval = *KeyPtr; //reading the current value of the key
+
+   		 		 if(current_Keyval == 15){
+
+   		 			 switch_val = *SwitchPtr; //reading the current value of the key
+					 
+   		 			 if(switch_val == 1){
+   		 				 if(i == 10){i = 0;}
+   						 else{i++;} //increment the bucket of the array
+   		 	 	 	 }
+   		 			 else{
+   		 				 if(i == 0){i = 10;}
+   				 		i--;
+   				 }
+
+   			 }
+   		 }
+   	 }
+
 		
-    return(thing);
+    return Pushbutton_isr(context);
+}
+
+
+void Timer0_isr(void* context)
+// ****************************************************************************/
+// /* 						Interrupt Service Routine                         */
+// /*   Determines what caused the interrupt and calls the appropriate        */
+// /*  subroutine.                                                            */
+// /*                                                                         */
+// /****************************************************************************
+{
+	*TimerPtr = 0; //clear the time
+	
+	unsigned char LEDvalue;
+	
+	LEDvalue = *LedPtr; //read what is on the led's
+	
+	*LedPtr = LEDvalue ^ 0xFF;  // toggle the LED's
+	
+	
+	
+	return;
 }
 
 int main(void)
 // ****************************************************************************/
-// /* Main Program   Part 2                                                    */
-// /*   pushbutton interrupt on key1                                         */
-// ***************************************************************************
+// /* Main Program   Part 3                                                   /
+// /*   pushbutton interrupt on key1 and toggle LED's                        /
+// *************************************************************************/
 {
-	int switch_val;
 	 // this enables the NIOS II to accept a pushbutton interrupt
      // * and indicates the name of the interrupt handler
 	//alt_irq_register(PUSHBUTTONS_IRQ,(void *) &edge_capture,Pushbutton_isr);
 
 	
 		
-		*Hex0Ptr = array_hexDisplay[0];
+		*Hex0Ptr = 0x40;
 		
 		alt_ic_isr_register(PUSHBUTTONS_IRQ_INTERRUPT_CONTROLLER_ID,
 		                        PUSHBUTTONS_IRQ,
 		                        Pushbutton_isr,
 		                        0,
 		                        0);
-			while(thing = 1); //keep looking for that key button press
-				{
-							if(thing == 1)
-								{		switch_val = *SwitchPtr; //reading the current value of the
-
-			if(switch_val == 1)
-				{
-
-					if(j == 10)
-					{
-						j = 0; //restart the position of the array
-					}
-						else
-							{
-								j++;
-							} //increment the bucket of the array normally
-		 	 	 }
-		 	else
-			{
-				if(j == 0)
-					{
-						j = 10; //if at the end restart the position of the array and decrement from there
-						j--;
-					}
-				 		j--; //decrement normal operation
-			}
-
-			*Hex0Ptr = array_hexDisplay[j];}				
-				}
-
+								
+		
+		alt_ic_isr_register(TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID ,
+								TIMER_0_IRQ,
+								Timer0_isr,
+								0,
+								0);								
+								
+			*(KeyPtr + 2) = 0xF; //writing to the pushbuttons interrupt mask register
+			
+			    *LedPtr = 0;  // initial value to leds
+			
+			while(1); //sit idle
+				
     return (0);
 }
-//************************************************************************************************************************//
+
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 //************************************************************************************************************************//

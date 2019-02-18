@@ -1,29 +1,10 @@
-03:21:22 **** Incremental Build of configuration Nios II for project nios_software ****
+22:17:17 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
 Info: Compiling Lab_3.c to obj/default/Lab_3.o
 nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab_3.o Lab_3.c
-Lab_3.c: In function 'Pushbutton_isr':
-Lab_3.c:115:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    *edge_capture = (volatile int*) context;
-                  ^
-Lab_3.c:113:8: warning: unused variable 'switch_val' [-Wunused-variable]
-    int switch_val;
-        ^
-Lab_3.c: In function 'main':
-Lab_3.c:150:30: warning: passing argument 3 of 'alt_ic_isr_register' from incompatible pointer type [-Wincompatible-pointer-types]
-                              Pushbutton_isr,
-                              ^
-In file included from Lab_3.c:5:0:
-../nios_software_bsp//HAL/inc/sys/alt_irq.h:195:12: note: expected 'alt_isr_func {aka void (*)(void *)}' but argument is of type 'int (*)(void *)'
- extern int alt_ic_isr_register(alt_u32 ic_id,
-            ^
-Lab_3.c: In function 'Pushbutton_isr':
-Lab_3.c:115:18: warning: 'edge_capture' is used uninitialized in this function [-Wuninitialized]
-    *edge_capture = (volatile int*) context;
-                  ^
 Info: Linking nios_software.elf
 nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/   -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab_3.o -lm -msys-lib=m
 nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 3 --sidp 0x11060 --timestamp 1550091513 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign" --jdi ../..//output_files/Lab_3.jdi --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/software/nios_software_bsp/../../nios_system.sopcinfo
@@ -32,64 +13,9 @@ Info:                     10 KBytes free for stack + heap.
 Info: Creating nios_software.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
 [nios_software build complete]
-03:21:56 **** Incremental Build of configuration Nios II for project nios_software ****
+22:18:10 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
-[nios_software build complete]
-03:23:11 **** Incremental Build of configuration Nios II for project nios_software ****
-make all 
-Info: Building ../nios_software_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
-[BSP build complete]
-[nios_software build complete]
-03:25:07 **** Incremental Build of configuration Nios II for project nios_software ****
-make all 
-Info: Building ../nios_software_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
-[BSP build complete]
-[nios_software build complete]
-03:25:57 **** Incremental Build of configuration Nios II for project nios_software ****
-make all 
-Info: Building ../nios_software_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
-[BSP build complete]
-[nios_software build complete]
-03:26:51 **** Incremental Build of configuration Nios II for project nios_software ****
-make all 
-Info: Building ../nios_software_bsp/
-C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
-[BSP build complete]
-Info: Compiling Lab_3.c to obj/default/Lab_3.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab_3.o Lab_3.c
-Lab_3.c: In function 'Pushbutton_isr':
-Lab_3.c:115:18: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
-    *edge_capture = (volatile int*) context;
-                  ^
-Lab_3.c:113:8: warning: unused variable 'switch_val' [-Wunused-variable]
-    int switch_val;
-        ^
-Lab_3.c: In function 'main':
-Lab_3.c:148:27: warning: passing argument 3 of 'alt_ic_isr_register' from incompatible pointer type [-Wincompatible-pointer-types]
-                           Pushbutton_isr,
-                           ^
-In file included from Lab_3.c:5:0:
-../nios_software_bsp//HAL/inc/sys/alt_irq.h:195:12: note: expected 'alt_isr_func {aka void (*)(void *)}' but argument is of type 'int (*)(void *)'
- extern int alt_ic_isr_register(alt_u32 ic_id,
-            ^
-Lab_3.c:151:4: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-    while(thing = 1); //keep looking for that key button press
-    ^
-Lab_3.c: In function 'Pushbutton_isr':
-Lab_3.c:115:18: warning: 'edge_capture' is used uninitialized in this function [-Wuninitialized]
-    *edge_capture = (volatile int*) context;
-                  ^
-Info: Linking nios_software.elf
-nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/   -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab_3.o -lm -msys-lib=m
-nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 3 --sidp 0x11060 --timestamp 1550091513 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign" --jdi ../..//output_files/Lab_3.jdi --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/software/nios_software_bsp/../../nios_system.sopcinfo
-Info: (nios_software.elf) 15 KBytes program size (code + initialized data).
-Info:                     10 KBytes free for stack + heap.
-Info: Creating nios_software.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
 [nios_software build complete]

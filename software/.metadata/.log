@@ -3880,3 +3880,155 @@ Binding(CTRL+G,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 03:27:03.238
 !MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/x/CPET-561/Lab_3/software/nios_software/nios_software.elf]
+!SESSION 2019-02-17 17:57:18.362 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:11:40.368
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-02-17 18:11:42.684
+!MESSAGE ELF file not specified for download for Lab_3
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:19:08.627
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:19:10.089
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:19:12.471
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:23:48.345
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:23:50.573
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:27:19.624
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:27:21.897
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:28:44.036
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:28:46.265
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:40:32.903
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 18:40:35.158
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:08:41.568
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:08:43.808
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:11:38.453
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:11:39.352
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:11:41.583
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:36:54.977
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:36:57.282
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:48:39.887
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:48:42.084
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:56:48.385
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:56:50.679
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:58:54.869
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 19:58:57.080
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 20:03:50.456
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 20:03:52.702
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 20:57:01.619
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 20:57:03.887
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:02:03.866
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:02:06.110
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:02:37.024
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:02:38.159
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:02:40.597
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:27:30.282
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:27:32.571
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:30:51.503
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:30:53.637
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:33:53.984
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 21:33:56.261
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+!SESSION 2019-02-17 22:12:46.747 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 22:15:34.440
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --stop --sidp=0x11060 --id=0x3 --timestamp=1550091513]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 22:15:36.724
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --go --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 22:18:17.974
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 22:18:18.845
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11060 --id=0x3 --timestamp=1550091513 /cygdrive/z/Documents/ESD1/EmbededSystemsDesign/software/nios_software/nios_software.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-17 22:18:21.068
+!MESSAGE Executing: [C:/intelfpga_lite/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11060 --id=0x3 --timestamp=1550091513]
