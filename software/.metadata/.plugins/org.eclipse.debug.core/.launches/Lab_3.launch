@@ -3,7 +3,7 @@
 <stringAttribute key="byteStreamDeviceCableName" value="DE-SoC on localhost [USB-1]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="2"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="59992"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="60328"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="Z:\Documents\ESD1\EmbededSystemsDesign\software\nios_software\nios_software.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>

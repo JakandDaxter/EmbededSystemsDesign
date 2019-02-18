@@ -1,5 +1,5 @@
 Assembler report for Lab_3
-Sun Feb 17 20:42:14 2019
+Mon Feb 18 13:52:37 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Feb 17 20:42:14 2019 ;
+; Assembler Status      ; Successful - Mon Feb 18 13:52:37 2019 ;
 ; Revision Name         ; Lab_3                                 ;
 ; Top-level Entity Name ; Lab_3                                 ;
 ; Family                ; Cyclone V                             ;
@@ -89,14 +89,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Feb 17 20:42:01 2019
+    Info: Processing started: Mon Feb 18 13:51:14 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab_3 -c Lab_3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Sun Feb 17 20:42:14 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Processing ended: Mon Feb 18 13:52:37 2019
+    Info: Elapsed time: 00:01:23
+    Info: Total CPU time (on all processors): 00:00:10
 
 

@@ -1,5 +1,5 @@
 Fitter report for Lab_3
-Sun Feb 17 20:41:57 2019
+Mon Feb 18 13:51:09 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Feb 17 20:41:57 2019       ;
+; Fitter Status                   ; Successful - Mon Feb 18 13:51:09 2019       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab_3                                       ;
 ; Top-level Entity Name           ; Lab_3                                       ;
@@ -156,12 +156,12 @@ agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
+;     Processor 2            ;   5.3%      ;
 +----------------------------+-------------+
 
 
@@ -2444,7 +2444,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "PS2_DAT2" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:16
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:17
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:17
@@ -2456,20 +2456,20 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 14% of the available device resources in the region that extends from location X0_Y0 to location X10_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 1.73 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
+Info (11888): Total time spent on timing analysis during the Fitter is 1.80 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:09
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:13
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file Z:/Documents/ESD1/EmbededSystemsDesign/output_files/Lab_3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 119 warnings
-    Info: Peak virtual memory: 6301 megabytes
-    Info: Processing ended: Sun Feb 17 20:41:58 2019
-    Info: Elapsed time: 00:01:35
-    Info: Total CPU time (on all processors): 00:02:08
+    Info: Peak virtual memory: 6334 megabytes
+    Info: Processing ended: Mon Feb 18 13:51:11 2019
+    Info: Elapsed time: 00:01:43
+    Info: Total CPU time (on all processors): 00:02:11
 
 
 +----------------------------+
