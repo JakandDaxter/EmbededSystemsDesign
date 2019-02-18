@@ -16,7 +16,7 @@ typedef   signed long   sint32;             // signed 32 bit values
 typedef unsigned long   uint32;             // unsigned 32 bit values
 typedef         float   real32;             // 32 bit real values
 
-		 uint32 *TimerPtr           = (uint32 *) 0x11000;
+volatile uint32 *TimerPtr           = (uint32 *) 0x11000;
 volatile uint32 *LedPtr           	= (uint32 *) 0x11020;
 volatile uint32 *Hex0Ptr      	    = (uint32 *) 0x11030;
 volatile uint32 *KeyPtr       	    = (uint32 *) 0x11040;
@@ -209,12 +209,14 @@ void Pushbutton_isr(void* context)
    		 	 if(current_Keyval == 13)
    		 	 {
    		 		 current_Keyval = *KeyPtr; //reading the current value of the key
+				 
+				 
 
    		 		 if(current_Keyval == 15){
 
    		 			 switch_val = *SwitchPtr; //reading the current value of the key
 					 
-   		 			 if(switch_val == 1){
+   		 			 if((switch_val & 0x01) == 1){
    		 				 if(i == 10){i = 0;}
    						 else{i++;} //increment the bucket of the array
    		 	 	 	 }
@@ -228,9 +230,10 @@ void Pushbutton_isr(void* context)
    	 }
 
 		
-    return Pushbutton_isr(context);
+    //return Pushbutton_isr(context);
+	
+	return;
 }
-
 
 void Timer0_isr(void* context)
 // ****************************************************************************/
@@ -282,13 +285,12 @@ int main(void)
 								
 			*(KeyPtr + 2) = 0xF; //writing to the pushbuttons interrupt mask register
 			
-			    *LedPtr = 0;  // initial value to leds
+			    *LedPtr = 0xFF;  // initial value to leds
 			
 			while(1); //sit idle
 				
     return (0);
 }
-
 //************************************************************************************************************************//
 //************************************************************************************************************************//
 //************************************************************************************************************************//

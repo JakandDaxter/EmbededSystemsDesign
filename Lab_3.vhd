@@ -91,7 +91,7 @@ begin
 		port map (
 			clk_clk            => CLOCK_50 ,            --         clk.clk
 			pushbuttons_export => KEY, 						-- pushbuttons.export
-			leds_export        => ledNios,        --        leds.export
+			leds_export        => LEDR(7 downto 0),        --        leds.export
 			reset_reset_n      => reset_n,      			--       reset.reset_n
 			switches_export    => SW,    						--    switches.export
 			hex0_export        => HEX0        				 --        hex0.export

@@ -1,5 +1,5 @@
 Flow report for Lab_3
-Sat Feb 16 20:16:34 2019
+Sun Feb 17 20:42:26 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Feb 16 20:16:17 2019       ;
+; Flow Status                     ; Successful - Sun Feb 17 20:42:14 2019       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab_3                                       ;
 ; Top-level Entity Name           ; Lab_3                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 773 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 1079                                        ;
+; Logic utilization (in ALMs)     ; 767 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 1070                                        ;
 ; Total pins                      ; 30 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                 ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/16/2019 20:13:30 ;
+; Start date & time ; 02/17/2019 20:39:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab_3               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121370977135.155036601006372                                  ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 121370977135.155045397504592                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --          ; --         ;
@@ -103,11 +103,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:41     ; 1.0                     ; 4986 MB             ; 00:00:49                           ;
-; Fitter                    ; 00:01:46     ; 1.0                     ; 6326 MB             ; 00:02:22                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 4883 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:15     ; 1.2                     ; 5186 MB             ; 00:00:16                           ;
-; Total                     ; 00:02:54     ; --                      ; --                  ; 00:03:36                           ;
+; Analysis & Synthesis      ; 00:00:43     ; 1.0                     ; 4997 MB             ; 00:00:47                           ;
+; Fitter                    ; 00:01:34     ; 1.0                     ; 6301 MB             ; 00:02:07                           ;
+; Assembler                 ; 00:00:13     ; 1.0                     ; 4880 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 1.3                     ; 5181 MB             ; 00:00:12                           ;
+; Total                     ; 00:02:41     ; --                      ; --                  ; 00:03:15                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
