@@ -16,17 +16,15 @@ set_global_assignment -name TOP_LEVEL_ENTITY top_level
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../output_files
 
 # 2] include your relative path files here
-set_global_assignment -name VHDL_FILE ../../src/ALU.vhd
-set_global_assignment -name VHDL_FILE ../../src/rising_edge_synchronizer.vhd
-set_global_assignment -name VHDL_FILE ../../src/seven_seg.vhd
-set_global_assignment -name VHDL_FILE ../../src/memory.vhd
-set_global_assignment -name VHDL_FILE ../../src/Generic_synchronizer.vhd
-set_global_assignment -name VHDL_FILE ../../src/my_components.vhd
+# set_global_assignment -name VHDL_FILE ../../src/ALU.vhd
+# set_global_assignment -name VHDL_FILE ../../src/rising_edge_synchronizer.vhd
+# set_global_assignment -name VHDL_FILE ../../src/seven_seg.vhd
+# set_global_assignment -name VHDL_FILE ../../src/memory.vhd
+# set_global_assignment -name VHDL_FILE ../../src/Generic_synchronizer.vhd
+# set_global_assignment -name VHDL_FILE ../../src/my_components.vhd
 set_global_assignment -name VHDL_FILE ../../src/top_level.vhd
 
 # 3] set your pin constraints here
-set_location_assignment PIN_AD10 -to op[0]
-set_location_assignment PIN_AE12 -to op[1]
 
 set_location_assignment PIN_AF14 -to clk
 
@@ -48,10 +46,8 @@ set_location_assignment PIN_V17  -to LED[2]
 set_location_assignment PIN_V18  -to LED[3]
 
 # selection assignment for Execution
-set_location_assignment PIN_AA14 -to resetBtn
-set_location_assignment PIN_AA15 -to execute
-set_location_assignment PIN_W15  -to ms
-set_location_assignment PIN_Y16  -to mr
+set_location_assignment PIN_AA14 -to resetBtn 
+
 
 #set the hex0
 set_location_assignment PIN_AE26 -to Hex0[0]

@@ -11,49 +11,49 @@ USE work.MY_MAJESTIC_COMPONENTS.all;
 entity Top is
 
   port (
-        Intput                                  : in   std_logic_vector(7 downto 0);
-        Operation                               : in   std_logic_vector(1 downto 0);
-        reset_btn                               : in   std_logic; --button
-        clk                                     : in   std_logic; --interally wired
-        Execute                                 : in   std_logic; --button for next state
-        Memory_Save                             : in   std_logic; --button
-        Memory_Recall                           : in   std_logic; --button
-        Hex0,Hex1,Hex2,Hex5                     : out  std_logic_Vector(6 downto 0); 
-        LED_display                             : out  std_logic_vector(4 downto 0)--this is just to show the state on the LED display so we know what state we are in
+        Intput                              : in   std_logic_vector(7 downto 0);
+        Operation                           : in   std_logic_vector(1 downto 0);
+        reset_btn                           : in   std_logic; --button
+        clk                                 : in   std_logic; --internally wired
+        Execute                             : in   std_logic; --button for next state
+        Memory_Save                         : in   std_logic; --button
+        Memory_Recall                       : in   std_logic; --button
+        Hex0,Hex1,Hex2,Hex5                 : out  std_logic_Vector(6 downto 0); 
+        LED_display                         : out  std_logic_vector(4 downto 0)--this is just to show the state on the LED display so we know what state we are in
         
        );                   
 end Top;  
 
-architecture Calculator of Top  is 
+architecture ServoMotor of Top  is 
 --------------------------------------
 --Signals
 --------------------------------------
-Signal  A_sync          :std_logic_vector(7 downto 0); -- gets the syhcnonized input
-Signal  B_sync          :std_logic_vector(7 downto 0); -- gets the syhcnonized input
-Signal  input_sync      :std_logic_vector(7 downto 0); -- gets the syhcnonized input
+Signal  _sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
+Signal  B_sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
+Signal  input_sync      :std_logic_vector(7 downto 0); -- gets the synchronized input
 
 Signal  A_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
 Signal  B_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
      
-signal  LEDS            :std_logic_vector(3 downto 0); --lets us know what state we are in, we evalute what to display based on the LEDS value
+signal  LEDS            :std_logic_vector(3 downto 0); --lets us know what state we are in, we evaluate what to display based on the LEDS value
 
-Signal  Execute_enable  :std_logic; --this is an input sychronized primiarly used in FSM
+Signal  Execute_enable  :std_logic; --this is an input synchronized primarily used in FSM
 
-Signal  Save_enable     :std_logic; --this is an input sychronized
+Signal  Save_enable     :std_logic; --this is an input synchronized
 
-Signal  Recall_enable   :std_logic; --this is an input sychronized
+Signal  Recall_enable   :std_logic; --this is an input synchronized
 
-Signal  Reset_enable    :std_logic; --this is an input sychronized
+Signal  Reset_enable    :std_logic; --this is an input synchronized
 
 signal  Write_enable    :std_logic; --this was created to set the write bit in the memory file
 
-signal  Address_for_mem :std_logic_vector(1 downto 0); --i set this ot the repsected address i want to write to
-signal  operation_sync  :std_logic_vector(1 downto 0); --synchonrize the switch input
+signal  Address_for_mem :std_logic_vector(1 downto 0); --i set this to the respected address i want to write to
+signal  operation_sync  :std_logic_vector(1 downto 0); --synchronize the switch input
 --signal  OP              :std_logic_vector(1 downto 0); --same thing as listed above
  
 signal  DATA            :std_logic_vector(7 downto 0); --comes from the ALU
 signal  DATA_EVALUATED  :std_logic_vector(7 downto 0); --goes into memory
-signal  ALU_sig         :std_logic_vector(7 downto 0); --i dont think i need this
+signal  ALU_sig         :std_logic_vector(7 downto 0); --i don't think i need this
 signal  Double_Dab_Data :std_logic_vector(7 downto 0); --comes out of memory
 
 Signal actual_data		:std_logic_vector(11 downto 0); -- this is going into the double dabble
@@ -184,9 +184,9 @@ Just_Sending_Info_Through_Registers1:Process(clk,Reset_enable,input_sync,A_raw,D
 															end if;		
 									end if;
                            end process;
- --****************************************-- 
+--****************************************-- 
  
---Just_Sending_Info_Through_Registers2:Process(clk,Reset_enable,input_sync,B_raw,DATA)
+Just_Sending_Info_Through_Registers2:Process(clk,Reset_enable,input_sync,B_raw,DATA)
  
                                BEGIN
                                        if(Reset_enable = '1') THEN      
@@ -224,23 +224,7 @@ Memory_for_display: memory
 --****************************************-- 
 --****************************************--
 
-THE_MATHS: alu
-    
-    port MAP (
-    
-          clk       => clk,
-          reset     => Reset_enable,      
-          a         => A_sync,      
-          b         => B_sync,    
-          op        => operation_sync,    
-          result    => DATA     --use this data from the ALU
-    
-    ); 
-     
-      
---****************************************-- 
-
-Operation_Synchonizer: synchronizer2bit 
+Operation_Synchonizer: synchronizer4bit 
 --this is for the switches for the operation
 
     Port Map(   clk        => clk,          
@@ -250,6 +234,7 @@ Operation_Synchonizer: synchronizer2bit
         );
         
 --****************************************--
+
 Frist_Synchonizer: synchronizer8bit
 
     Port Map(   
@@ -302,6 +287,7 @@ Button_Synchonizer_EXECUTE: rising_edge_synchronizer
         );
     
 --****************************************--
+
 Button_Synchonizer_SAVE: rising_edge_synchronizer
 
     Port Map(
@@ -312,8 +298,10 @@ Button_Synchonizer_SAVE: rising_edge_synchronizer
                 edge    =>  Save_enable     --use this        
 
         
-        );  
+        ); 
+		
 --****************************************--
+
 Button_Synchonizer_RECALL: rising_edge_synchronizer
 
     Port Map(  
@@ -325,6 +313,7 @@ Button_Synchonizer_RECALL: rising_edge_synchronizer
 
         
         );  
+		
 --****************************************-- 
  
 Button_Synchonizer_RESET: rising_edge_synchronizer
@@ -339,10 +328,10 @@ Button_Synchonizer_RESET: rising_edge_synchronizer
     
         );
 
---****************************************--
---****************************************--  
---****************************************--  
---****************************************-- 
+--*******************************************************************************************************************************************************************************--
+--*******************************************************************************************************************************************************************************--  
+--*******************************************************************************************************************************************************************************--  
+--*******************************************************************************************************************************************************************************-- 
 
 
 --****************************************--
@@ -352,20 +341,20 @@ The_State_Machine: FSM
 
             clk                 =>  clk,             
             reset               =>  Reset_enable,    
-            Execute_btn_sync    =>  Execute_enable,    
-            LED_display         =>  LEDS,    --use this 
+            Execute_btn_sync    =>      
+            LED_display         =>  
             write_en            =>
             recall              =>
             save                =>
                                      
           );
           
---****************************************--
+--*******************************************************************************************************************************************************************************--
 
 LED_display <= LEDS;
  
---****************************************--  
---****************************************-- 
+--*******************************************************************************************************************************************************************************--  
+--*******************************************************************************************************************************************************************************-- 
  
 The_Seperation: double_dabble
 
@@ -391,6 +380,7 @@ The_Dab_Display0: BCD
       Hex    => Hex0
       );
 --****************************************--
+
 The_Dab_Display1: BCD
 
     Port Map(
@@ -400,7 +390,9 @@ The_Dab_Display1: BCD
         Bin   => Double_Dab_Tens,                          
         Hex   => Hex1
       );
+	  
 --****************************************--
+
 The_Dab_Display2: BCD
 
     Port Map( 
@@ -410,6 +402,7 @@ The_Dab_Display2: BCD
             Bin   => Double_Dab_Hundres,                          
             Hex   => Hex2
       );
+	  
 --****************************************--
 
 --this is for the display clarity, goes to BCD 
@@ -424,9 +417,9 @@ The_Dab_Display3: BCD_Display
             Hex   => Hex5
       );
  
---****************************************--  
---****************************************--  
---****************************************--  
+--*******************************************************************************************************************************************************************************--  
+--*******************************************************************************************************************************************************************************--  
+--*******************************************************************************************************************************************************************************--  
       
         
-end Calculator;
+end ServoMotor;
