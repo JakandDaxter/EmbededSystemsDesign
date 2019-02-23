@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- THE FINITE STATE MACCHHIIINNNNENEEEEEEEEEEEE
+-- Servo State Machine
 --(  )_ (  )
 --(= '.' =)('')
 --('')_('')
@@ -9,7 +9,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
      
 
-entity FSM is 
+entity FSM_Servo is 
 
     port (
           clk                                           : in   std_logic;
@@ -21,9 +21,10 @@ entity FSM is
           Address_for_mems                              : out  std_logic_vector(1 downto 0)
           
           );
-        end FSM;
 
-architecture beh of FSM is
+end FSM_Servo;
+
+architecture beh of FSM_Servo is
     
 -- signal declarations
 

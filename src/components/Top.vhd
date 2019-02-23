@@ -7,35 +7,48 @@
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;      
-USE work.MY_MAJESTIC_COMPONENTS.all;
+USE work.components_include.all;
+
 entity Top is
 
-  port (
-        Intput                              : in   std_logic_vector(7 downto 0);
-        Operation                           : in   std_logic_vector(1 downto 0);
-        reset_btn                           : in   std_logic; --button
-        clk                                 : in   std_logic; --internally wired
-        Execute                             : in   std_logic; --button for next state
-        Memory_Save                         : in   std_logic; --button
-        Memory_Recall                       : in   std_logic; --button
-        Hex0,Hex1,Hex2,Hex5                 : out  std_logic_Vector(6 downto 0); 
-        LED_display                         : out  std_logic_vector(4 downto 0)--this is just to show the state on the LED display so we know what state we are in
-        
-       );                   
+    port (
+
+
+      ----- CLOCK -----
+	 
+      CLOCK_50 : in std_logic;
+
+      ----- SEG7 -----
+      HEX5 : out std_logic_vector(6 downto 0);
+	  HEX4 : out std_logic_vector(6 downto 0);
+	  HEX3 : out std_logic_vector(6 downto 0);
+	  HEX2 : out std_logic_vector(6 downto 0); -- use this to show the degree symbol
+
+
+      ----- KEY -----
+      KEY : in std_logic_vector(3 downto 0);
+
+      ----- LED -----
+      LEDR : out  std_logic_vector(9 downto 0);
+
+      ----- SW -----
+      SW : in  std_logic_vector(7 downto 0) 
+	    
+  	 );                 
 end Top;  
 
 architecture ServoMotor of Top  is 
 --------------------------------------
 --Signals
 --------------------------------------
-Signal  _sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
+Signal  A_sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
 Signal  B_sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
 Signal  input_sync      :std_logic_vector(7 downto 0); -- gets the synchronized input
 
 Signal  A_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
 Signal  B_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
      
-signal  LEDS            :std_logic_vector(3 downto 0); --lets us know what state we are in, we evaluate what to display based on the LEDS value
+signal  LEDS            :std_logic_vector(7 downto 0); --lets us know what state we are in, we evaluate what to display based on the LEDS value
 
 Signal  Execute_enable  :std_logic; --this is an input synchronized primarily used in FSM
 
@@ -48,12 +61,10 @@ Signal  Reset_enable    :std_logic; --this is an input synchronized
 signal  Write_enable    :std_logic; --this was created to set the write bit in the memory file
 
 signal  Address_for_mem :std_logic_vector(1 downto 0); --i set this to the respected address i want to write to
+
 signal  operation_sync  :std_logic_vector(1 downto 0); --synchronize the switch input
---signal  OP              :std_logic_vector(1 downto 0); --same thing as listed above
+
  
-signal  DATA            :std_logic_vector(7 downto 0); --comes from the ALU
-signal  DATA_EVALUATED  :std_logic_vector(7 downto 0); --goes into memory
-signal  ALU_sig         :std_logic_vector(7 downto 0); --i don't think i need this
 signal  Double_Dab_Data :std_logic_vector(7 downto 0); --comes out of memory
 
 Signal actual_data		:std_logic_vector(11 downto 0); -- this is going into the double dabble
@@ -62,7 +73,6 @@ Signal actual_data		:std_logic_vector(11 downto 0); -- this is going into the do
 signal  Double_Dab_Ones       :std_logic_vector(3 downto 0);
 signal  Double_Dab_Tens       :std_logic_vector(3 downto 0);
 signal  Double_Dab_Hundres    :std_logic_vector(3 downto 0);
-signal  Double_Dab_Thousands  :std_logic_vector(3 downto 0);
 
 BEGIN --We begin the ARCHITECTUREE
 --****************************************--  
@@ -75,7 +85,7 @@ BEGIN --We begin the ARCHITECTUREE
 --****************************************--  
 --****************************************--  
 --****************************************--
---This_Is_Evaluating_Data: Process (Reset_enable , DATA_EVALUATED , LEDS , A_sync , Double_Dab_Data , B_sync , DATA)
+This_Is_Evaluating_Data: Process (Reset_enable , DATA_EVALUATED , LEDS , A_sync , Double_Dab_Data , B_sync , DATA)
 
 						BEGIN
 						
@@ -92,7 +102,7 @@ BEGIN --We begin the ARCHITECTUREE
 --****************************************--  
 --****************************************--  
 --****************************************--
---We_talking_about_Addresses_here: Process(Address_for_mem,Save_enable,Recall_enable)
+We_talking_about_Addresses_here: Process(Address_for_mem,Save_enable,Recall_enable)
 
                                  BEGIN
                                  
@@ -133,7 +143,7 @@ BEGIN --We begin the ARCHITECTUREE
 --****************************************--
 --Here we are sending the respected enable bit
 
---We_talking_about_Enabling_here: Process(Write_enable,Save_enable,Recall_enable)
+We_talking_about_Enabling_here: Process(Write_enable,Save_enable,Recall_enable)
 
                         BEGIN
                                         

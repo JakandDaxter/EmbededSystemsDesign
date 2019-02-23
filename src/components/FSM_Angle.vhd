@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- THE FINITE STATE MACCHHIIINNNNENEEEEEEEEEEEE
+-- Angle state machine
 --(  )_ (  )
 --(= '.' =)('')
 --('')_('')
@@ -9,32 +9,35 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
      
 
-entity FSM is 
+entity FSM_Angle is 
 
     port (
           clk                                           : in   std_logic;
           reset                                         : in   std_logic;
-          Address_for_mems                              : out  std_logic_vector(1 downto 0);
-          Execute_btn_sync,Saves,Writes,Recalls         : in   std_logic;--this is coming fromm the rising edge synchronizer
-          LED_display                                   : out  std_logic_vector(4 downto 0);--this is just to show the state on the LED display so we know what state we are in
-          write_en,recall,save                          : out  std_logic;
-          Address_for_mems                              : out  std_logic_vector(1 downto 0)
-          
+          Angle1		                                : out  std_logic_vector(7 downto 0);
+		  Angle2		                                : out  std_logic_vector(7 downto 0);
+          KEY								            : in   std_logic_vector(3 downto 0); --this is coming fromm the rising edge synchronizer
+          state											: out  std_logic_vector(5 downto 0)
           );
-        end FSM;
+        
+end FSM_Angle;
 
-architecture beh of FSM is
-    
+architecture beh of FSM_Angle is
+
+--CONStANTS
+constant MinAngle				: std_logic_vector(7 downto 0):= X"0000C350"; --45
+constant MaxAngle				: std_logic_vector(7 downto 0):= X"000186A0"; --135   
+
+constant Input_Min        		: std_logic_vector(5 downto 0):= "000001";
+constant Key3_Lock      		: std_logic_vector(5 downto 0):= "000010";
+constant Verify_min      		: std_logic_vector(5 downto 0):= "000100";
+constant Input_Max     			: std_logic_vector(5 downto 0):= "001000";
+constant Key2_Lock    	 		: std_logic_vector(5 downto 0):= "010000";
+constant Verify_max    	 		: std_logic_vector(5 downto 0):= "100000";
+
 -- signal declarations
-
-constant Read_w        		: std_logic_vector(4 downto 0):= "00001";--signal for State Read_working
-constant Write_w_no_op      : std_logic_vector(4 downto 0):= "00010";--signal for State Write_w_no_op
-constant Write_w      		: std_logic_vector(4 downto 0):= "00100";--signal for Sum state
-constant Write_s     		: std_logic_vector(4 downto 0):= "01000";--signal for Subtract State
-constant Read_s    	 		: std_logic_vector(4 downto 0):= "10000";--signal for Subtract State
-
-signal writer,recalling,saving      :std_logic;
-signal  Address_for_mem             :std_logic_vector(1 downto 0); --i set this ot the repsected address i want to write to
+signal VerfiedMin				: std_logic; --min value meets the criteria
+signal verfiedMax				: std_logic; --max value meets the criteria
 
 signal Present_State     		: std_logic_vector(3 downto 0);--current state
 signal Next_State       	    : std_logic_vector(3 downto 0);--next state
@@ -44,7 +47,7 @@ BEGIN
 
 -- state register
 
-The_Default_Process :process(clk,reset,Present_State,Next_State,Saves,Writes,Recalls)
+The_Default_Process :process(clk,reset,Present_State,Next_State,Input_Min,Key3_Lock,Verify_min,Input_Max,Key2_Lock,Verify_max)
 
       BEGIN
             if (reset = '1') then --active high reset switch
@@ -68,7 +71,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State,Saves,Writes,Rec
           --give it default values so it doesnt cry
           
          
-          LED_display <= Present_State;
+          state <= Present_State;
           
               Next_State <= Present_State; --this is just so we dont latch anything, dont want the board to catch on fire
               
