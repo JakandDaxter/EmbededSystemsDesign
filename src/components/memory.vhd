@@ -35,7 +35,6 @@ begin
     if (we = '1') then
       RAM(to_integer(unsigned(addr))) <= din; --when execute = '1' the data is written in
     end if;
-    dout <= RAM(to_integer(unsigned(addr))); --when at the rising edge of a clock display the data at the given address, not dependent on the write enable
   end if;
 end process;
 
