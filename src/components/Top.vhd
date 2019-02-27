@@ -30,7 +30,7 @@ entity Top is
 
 
       ----- KEY -----
-      KEY : in std_logic_vector(3 downto 0);
+      KEY : in std_logic_vector(3 downto 0); --remeber to use key(0) for reset
 
       ----- LED -----
       LEDR : out  std_logic_vector(9 downto 0);
@@ -52,17 +52,21 @@ constant MaxAngle				: std_logic_vector(7 downto 0):= X"000186A0"; --135
 Signal  Min_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
 Signal  Max_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
 
-signal  state					:std_logic; --will handle the state so that i know when to enable the write
+Signal  Min_sync           		:std_logic_vector(7 downto 0); -- sends in the raw data
+Signal  Max_sync           		:std_logic_vector(7 downto 0); -- sends in the raw data
 
-signal  Write_enable    		:std_logic; --will be set to a one depening on the state
+
+signal  STATE_A					:std_logic_vector(5 downto 0); --will handle the state so that i know when to enable the write
+signal  STATE_S					:std_logic_vector(3 downto 0); --will handle the state so that i know when to enable the servo interrupt
+
+signal  Write_enable    		:std_logic; --will be set to a one depening on the state from the angle statemachine
 
 signal  Address_for_mem 		:std_logic_vector(1 downto 0); --i set this to the respected address i want to write to
 
-
+signal  verfiedMin		        :std_logic; --minimum angle verified from C
+signal  verfiedMax		        :std_logic; --maximum angle verified from C
  
 signal  Double_Dab_Data 		:std_logic_vector(7 downto 0); --comes out of memory
-
-Signal  actual_data				:std_logic_vector(11 downto 0); -- this is going into the double dabble
 
 
 signal  Double_Dab_Ones       	:std_logic_vector(3 downto 0);
@@ -74,58 +78,20 @@ BEGIN --We begin the ARCHITECTUREE
 --****************************************--  
 --****************************************--  
 --****************************************--
---****************************************--  
---****************************************--  
---****************************************--
 
-This_Is_Evaluating_Data: Process (Reset_enable , DATA_EVALUATED , LEDS , A_sync , Double_Dab_Data , B_sync , DATA)
-
-						BEGIN
-						
-						CASE LEDS IS	
-							WHEN "0010" =>		
-								DATA_EVALUATED <=  A_sync;											
-									WHEN "0100" =>
-										DATA_EVALUATED <=  B_sync;
-											WHEN "1000" =>
-												DATA_EVALUATED <= DATA;
-													WHEN OTHERS => DATA_EVALUATED <= DATA_EVALUATED;
-								end case;
-						end process;
---****************************************--  
---****************************************--  
---****************************************--
-We_talking_about_Addresses_here: Process(Address_for_mem,Save_enable,Recall_enable)
+We_talking_about_Addresses_here: Process(Address_for_mem,STATE_A)
 
                                  BEGIN
                                  
-							Case LEDS IS
-							WHEN "0001" =>
-								Address_for_mem <="00";
-								WHEN "0010" =>
-										IF( Save_enable = '1') THEN
-											Address_for_mem <= "01";	
-											elsif(Recall_enable = '1') THEN
-												Address_for_mem <= "01";	
-												else
-													Address_for_mem <= "00";	
-										end if;	
-									WHEN "0100" =>
-											IF( Save_enable = '1') THEN	
-												Address_for_mem <= "01";		
-												elsif(Recall_enable = '1') THEN	
-													Address_for_mem <= "01";		
-													else		
-														Address_for_mem <= "00";		
+							Case STATE IS
+							WHEN "000100" => --when in the verfied min stage stage
+								IF (Write_enable = '1') THEN
+									Address_for_mem <="00";
+										end if;
+									WHEN "100000" => --when in the verfied max stage
+									IF (Write_enable = '1') THEN
+										Address_for_mem <="01";
 											end if;		
-												WHEN "1000" =>
-													IF( Save_enable = '1') THEN	
-														Address_for_mem <= "01";		
-														elsif(Recall_enable = '1') THEN		
-															Address_for_mem <= "01";			
-														else				
-															Address_for_mem <="00";				
-													end if;		
 											WHEN OTHERS => Address_for_mem <= "00";
 										end case;	
 									end process;
@@ -134,74 +100,34 @@ We_talking_about_Addresses_here: Process(Address_for_mem,Save_enable,Recall_enab
 --****************************************--  
 --****************************************--  
 --****************************************--
---Here we are sending the respected enable bit
-
-We_talking_about_Enabling_here: Process(Write_enable,Save_enable,Recall_enable)
-
-                        BEGIN
-                                        
-							Case LEDS IS
-							WHEN "0001" =>
-								Write_enable <='0';
-								WHEN "0010" =>
-										IF( Save_enable = '1') THEN
-											Write_enable <= '1';	
-											elsif(Recall_enable = '1') THEN
-												Write_enable <= '0';	
-												else
-													Write_enable <= '0';	
-										end if;	
-									WHEN "0100" =>
-											IF( Save_enable = '1') THEN
-												Write_enable <= '1';	
-												elsif(Recall_enable = '1') THEN
-													Write_enable <= '0';	
-													else
-														Write_enable <= '0';
-											end if;		
-										WHEN "1000" =>
-												IF(Save_enable = '1') THEN
-													Write_enable <= '1';	
-												elsif(Recall_enable = '1') THEN
-													Write_enable <= '0';	
-													else
-														Write_enable <= '0';
-											end if;	
-											WHEN OTHERS => Write_enable <= '0';
-										end case;	
-									end process;
-
-
---****************************************-- 
---
-Just_Sending_Info_Through_Registers1:Process(clk,Reset_enable,input_sync,A_raw,DATA)
+Just_Sending_Info_Through_Registers1:Process(clk,Reset_enable,input_sync,Min_raw)
                                     BEGIN
                   
                                     if(Reset_enable = '1') THEN
-                                        A_raw <= (others => '0');
+                                        Min_raw <= (others => '0');
                                         ELSIF(clk'event and clk = '1') THEN
-                                                    if(LEDS = "0010") THEN
-														A_raw <= input_sync ;					
+                                                    if(STATE_A = "000001") THEN --when in the inputting of the min angle state
+														Min_raw <= input_sync;	--have the synced inputed data from the switches go into the raw minimum				
 													ELSE					
-														A_raw <= A_raw ;
+														Min_raw <= Min_raw ;
 															end if;		
 									end if;
                            end process;
 --****************************************-- 
  
-Just_Sending_Info_Through_Registers2:Process(clk,Reset_enable,input_sync,B_raw,DATA)
+Just_Sending_Info_Through_Registers2:Process(clk,Reset_enable,input_sync,Max_raw)
  
-                               BEGIN
+                                BEGIN
                                        if(Reset_enable = '1') THEN      
-                                           B_raw <= (others => '0');
+                                           Max_raw <= (others => '0');
                                         ELSIF(clk'event and clk = '1') THEN
-                                            if(LEDS = "0100") THEN	
-												B_raw <= DATA;   
+                                            if(STATE_A = "001000") THEN	--when in the inputting of the max angle state
+												Max_raw <= input_sync;   --have the synced inputed data from the switches go into the raw maximum
                                             ELSE
-                                                B_raw <= B_raw;
+                                                Max_raw <= Max_raw;
 											end if;			   
 										end if; 
-                      end process;
+                      	     end process;
 
 --****************************************--  
 --****************************************-- 
@@ -289,56 +215,14 @@ Button_Synchonizer_EXECUTE: rising_edge_synchronizer
         
         );
     
---****************************************--
-
-Button_Synchonizer_SAVE: rising_edge_synchronizer
-
-    Port Map(
-    
-                clk     =>  clk,                
-                reset   =>  Reset_enable,        
-                inputy  =>  Memory_Save,        
-                edge    =>  Save_enable     --use this        
-
-        
-        ); 
-		
---****************************************--
-
-Button_Synchonizer_RECALL: rising_edge_synchronizer
-
-    Port Map(  
-    
-                clk     =>  clk,                
-                reset   =>  Reset_enable,        
-                inputy  =>  Memory_Recall,        
-                edge    =>  Recall_enable    --use this      
-
-        
-        );  
-		
---****************************************-- 
- 
-Button_Synchonizer_RESET: rising_edge_synchronizer
-
-    Port Map(  
-    
-                clk     =>  clk,                
-                reset   =>  Reset_enable,        
-                inputy  =>  reset_btn,        
-                edge    =>  Reset_enable     --use this     
-
-    
-        );
 
 --*******************************************************************************************************************************************************************************--
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************-- 
 
-
 --****************************************--
-The_State_Machine: FSM
+The_State_Machine: FSM_Servo
 
     Port Map(  
 
@@ -351,7 +235,21 @@ The_State_Machine: FSM
             save                =>
                                      
           );
-          
+--****************************************--		  
+The_State_Machine: FSM_Angle
+
+    Port Map(  
+
+            clk                 =>  clk,             
+            reset               =>  Reset_enable,    
+            Execute_btn_sync    =>      
+            LED_display         =>  
+            write_en            =>
+            recall              =>
+            save                =>
+                                 
+          );
+       
 --*******************************************************************************************************************************************************************************--
 
 LED_display <= LEDS;

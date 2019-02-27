@@ -18,7 +18,9 @@ entity FSM_Servo is
 		  Write_enMin									: in   std_logic; --write enable min
 		  Write_enMax									: in   std_logic; --write enable max
 		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
-		  AngleCount		                            : in   std_logic;  
+		  AngleCount		                            : in   std_logic;
+	  	  Max_Interrupt	: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
+	  	  Min_Interrupt	: out  std_logic --the interrupt that will become a one when the PW count made it to the min  
           state											: out  std_logic_vector(5 downto 0)
           );
         
@@ -49,7 +51,7 @@ BEGIN
 The_Default_Process :process(clk,reset,Present_State,Next_State)
 
       BEGIN
-            if (reset = '1') then --active high reset switch
+            if (reset = '0') then --active high reset switch
             
               Present_State <= Sweep_Right;-- A is the default state after reset
               

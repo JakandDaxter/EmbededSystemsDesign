@@ -16,8 +16,8 @@ entity FSM_Angle is
     port (
           clk                                           : in   std_logic;
           reset                                         : in   std_logic;
-          verfiedMin		                                : in   std_logic; --minimum angle verified from C
-		  verfiedMax		                                : in   std_logic; --maximum angle verified from C
+          verfiedMin		                            : in   std_logic; --minimum angle verified from C
+		  verfiedMax		                            : in   std_logic; --maximum angle verified from C
 		  Write_enMin									: out  std_logic; --write enable min
 		  Write_enMax									: out  std_logic; --write enable max
 		  Start_Servo								    : out  std_logic; --start the servo state machine enable 
@@ -62,7 +62,7 @@ Key2_Lock <= KEY(2); --to lock in the maximum values
 The_Default_Process :process(clk,reset,Present_State,Next_State)
 
       BEGIN
-            if (reset = '1') then --active high reset switch
+            if (reset = '0') then --active high reset switch
             
               Present_State <= Input_Min;-- A is the default state after reset
               
