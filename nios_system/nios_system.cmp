@@ -1,0 +1,10 @@
+	component nios_system is
+		port (
+			clk_clk            : in  std_logic                     := 'X';             -- clk
+			custom_ip_ext_addr : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- ext_addr
+			custom_ip_ext_data : out std_logic_vector(31 downto 0);                    -- ext_data
+			custom_ip_invalid  : in  std_logic                     := 'X';             -- invalid
+			reset_reset_n      : in  std_logic                     := 'X'              -- reset_n
+		);
+	end component nios_system;
+

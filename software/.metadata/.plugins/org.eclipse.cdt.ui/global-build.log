@@ -1,0 +1,27 @@
+11:19:47 **** Build of configuration Nios II for project custome_component ****
+make all 
+Info: Building ../custome_component_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../custome_component_bsp/
+[BSP build complete]
+Info: Compiling custom_component_demo.c to obj/default/custom_component_demo.o
+nios2-elf-gcc -xc -MP -MMD -c -I../custome_component_bsp//HAL/inc -I../custome_component_bsp/ -I../custome_component_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/custom_component_demo.o custom_component_demo.c
+Info: Linking custome_component.elf
+nios2-elf-g++  -T'../custome_component_bsp//linker.x' -msys-crt0='../custome_component_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../custome_component_bsp/   -Wl,-Map=custome_component.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o custome_component.elf obj/default/custom_component_demo.o -lm -msys-lib=m
+nios2-elf-insert custome_component.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 4 --sidp 0x11020 --timestamp 1550851247 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "S:/CPET-561/custom_component_demo" --jdi ../..//output_files/custom_component_demo.jdi --sopcinfo S:/CPET-561/custom_component_demo/software/custome_component_bsp/../../nios_system.sopcinfo
+Info: (custome_component.elf) 15 KBytes program size (code + initialized data).
+Info:                         11 KBytes free for stack + heap.
+Info: Creating custome_component.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source custome_component.elf >custome_component.objdump
+[custome_component build complete]
+11:21:44 **** Incremental Build of configuration Nios II for project custome_component ****
+make all 
+Info: Building ../custome_component_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../custome_component_bsp/
+[BSP build complete]
+[custome_component build complete]
+11:23:38 **** Incremental Build of configuration Nios II for project custome_component ****
+make all 
+Info: Building ../custome_component_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../custome_component_bsp/
+[BSP build complete]
+[custome_component build complete]

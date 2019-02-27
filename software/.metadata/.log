@@ -1,0 +1,34 @@
+!SESSION 2019-02-22 11:11:45.941 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga/17.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-02-22 11:14:18.818
+!MESSAGE Indexed 'custome_component_bsp' (80 sources, 60 headers) in 2.15 sec: 1,190 declarations; 2,481 references; 110 unresolved inclusions; 6 syntax errors; 191 unresolved names (4.95%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-02-22 11:14:21.321
+!MESSAGE Indexed 'custome_component' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:21:52.230
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11020 --id=0x4 --timestamp=1550851247 /cygdrive/s/CPET-561/custom_component_demo/software/custome_component/custome_component.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:21:56.673
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11020 --id=0x4 --timestamp=1550851247]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:22:07.398
+!MESSAGE Terminated Launch with connection: 20DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:22:10.684
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11020 --id=0x4 --timestamp=1550851247 /cygdrive/s/CPET-561/custom_component_demo/software/custome_component/custome_component.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:22:14.998
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11020 --id=0x4 --timestamp=1550851247]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:24:00.452
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --sidp=0x11020 --id=0x4 --timestamp=1550851247 /cygdrive/s/CPET-561/custom_component_demo/software/custome_component/custome_component.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-02-22 11:24:04.694
+!MESSAGE Executing: [C:/intelfpga/17.0/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=2 --instance=0 --tcpport=auto --sidp=0x11020 --id=0x4 --timestamp=1550851247]
