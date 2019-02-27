@@ -3,7 +3,9 @@
 -- generic counter demo
 -------------------------------------------------------------------------------
 library ieee;
-use ieee.std_logic_1164.all;      
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;      
 
 entity generic_counter_Angle is
   port (
@@ -51,21 +53,46 @@ process(clk,reset,Angle_Count)
       
 	  	  if (Time = '1') then -- sweep write first
 		
-			  if ((Angle_Count < Anglemax)) then
+			  if (Angle_Count < Anglemax) then
         
 				  Angle_Count <= Angle_Count + 1;
 				  
 				  PWM <= '1';
+				  
+				  Max_Interrupt <= '0';
       
 	  		else
         
 				Angle_Count <= '0';
+				
+				Max_Interrupt <= '1';
         
-				output <= '0';
+				PWM <= '0';
+				
+			elsif(Max_Interrupt = '1') then
+				
+  			  if (Angle_Count > Anglemin) then
+        
+  				  	Angle_Count <= Angle_Count - 1;
+				  
+  				  	PWM <= '1';
+				  
+  				  	Min_Interrupt <= '0';
       
+  	  				else
+        
+  						Angle_Count <= '0';
+				
+  						Min_Interrupt <= '1';
+        
+  						PWM <= '0';
+				end if;
+				
 	  	  end if; 
     
 		end if;
+		
+	end if;
   
   	end process;
 

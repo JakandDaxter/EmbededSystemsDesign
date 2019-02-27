@@ -4,8 +4,10 @@
 --(= '.' =)('')
 --('')_('')
 -------------------------------------------------------------------------------
-Library ieee;
-USE ieee.std_logic_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 
 ENTITY BCD IS

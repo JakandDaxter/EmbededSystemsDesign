@@ -6,13 +6,17 @@
 --('')_('')
 -------------------------------------------------------------------------------
 library ieee;
-use ieee.std_logic_1164.all;      
-USE work.components_include.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 entity Top is
 
     port (
 
+      ---- PWM Output ----
+ 
+    	PWM : out std_logic;
 
       ----- CLOCK -----
 	 
@@ -34,57 +38,46 @@ entity Top is
       ----- SW -----
       SW : in  std_logic_vector(7 downto 0) 
 	    
-  	 );                 
+  	 );
+	                  
 end Top;  
 
 architecture ServoMotor of Top  is 
 --------------------------------------
 --Signals
 --------------------------------------
-Signal  A_sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
-Signal  B_sync          :std_logic_vector(7 downto 0); -- gets the synchronized input
-Signal  input_sync      :std_logic_vector(7 downto 0); -- gets the synchronized input
+constant MinAngle				: std_logic_vector(7 downto 0):= X"0000C350"; --45
+constant MaxAngle				: std_logic_vector(7 downto 0):= X"000186A0"; --135 
 
-Signal  A_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
-Signal  B_raw           :std_logic_vector(7 downto 0); -- sends in the raw data
-     
-signal  LEDS            :std_logic_vector(7 downto 0); --lets us know what state we are in, we evaluate what to display based on the LEDS value
+Signal  Min_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
+Signal  Max_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
 
-Signal  Execute_enable  :std_logic; --this is an input synchronized primarily used in FSM
+signal  state					:std_logic; --will handle the state so that i know when to enable the write
 
-Signal  Save_enable     :std_logic; --this is an input synchronized
+signal  Write_enable    		:std_logic; --will be set to a one depening on the state
 
-Signal  Recall_enable   :std_logic; --this is an input synchronized
+signal  Address_for_mem 		:std_logic_vector(1 downto 0); --i set this to the respected address i want to write to
 
-Signal  Reset_enable    :std_logic; --this is an input synchronized
-
-signal  Write_enable    :std_logic; --this was created to set the write bit in the memory file
-
-signal  Address_for_mem :std_logic_vector(1 downto 0); --i set this to the respected address i want to write to
-
-signal  operation_sync  :std_logic_vector(1 downto 0); --synchronize the switch input
 
  
-signal  Double_Dab_Data :std_logic_vector(7 downto 0); --comes out of memory
+signal  Double_Dab_Data 		:std_logic_vector(7 downto 0); --comes out of memory
 
-Signal actual_data		:std_logic_vector(11 downto 0); -- this is going into the double dabble
+Signal  actual_data				:std_logic_vector(11 downto 0); -- this is going into the double dabble
 
 
-signal  Double_Dab_Ones       :std_logic_vector(3 downto 0);
-signal  Double_Dab_Tens       :std_logic_vector(3 downto 0);
-signal  Double_Dab_Hundres    :std_logic_vector(3 downto 0);
+signal  Double_Dab_Ones       	:std_logic_vector(3 downto 0);
+signal  Double_Dab_Tens       	:std_logic_vector(3 downto 0);
+signal  Double_Dab_Hundres    	:std_logic_vector(3 downto 0);
 
 BEGIN --We begin the ARCHITECTUREE
+
 --****************************************--  
 --****************************************--  
 --****************************************--
---actual_data <= "0000"&Double_Dab_Data; --this came from the memory
---we read from address 00
---Here we are sending the respected address over to the memory component
--- Depending on the state DATA_EVALUATED gets the information
 --****************************************--  
 --****************************************--  
 --****************************************--
+
 This_Is_Evaluating_Data: Process (Reset_enable , DATA_EVALUATED , LEDS , A_sync , Double_Dab_Data , B_sync , DATA)
 
 						BEGIN
