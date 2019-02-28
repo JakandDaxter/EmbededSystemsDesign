@@ -13,7 +13,7 @@ entity generic_counter_Angle is
     reset           : in   std_logic;
 	Angle1			: in   std_logic_vector(7 downto 0); --min angle			
 	Angle2			: in   std_logic_vector(7 downto 0): --max angle
-	Time            : in   std_logic; --whether or not im in the sweep state, then start the count
+	Time            : in   std_logic; --period
 	Max_Interrupt	: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
 	Min_Interrupt	: out  std_logic --the interrupt that will become a one when the PW count made it to the min
 	PWM           	: out  std_logic; -- will be a one when ever the count has not reached the bounds

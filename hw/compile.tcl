@@ -2,7 +2,7 @@
 # Quartus II compile script for DE1-SoC  board
 
 # 1] name your project here
-set project_name "top_level"
+set project_name "Lab_4"
 
 file delete -force project
 file delete -force output_files
@@ -12,17 +12,21 @@ load_package flow
 project_new $project_name
 set_global_assignment -name FAMILY Cyclone
 set_global_assignment -name DEVICE 5CSEMA5F31C6 
-set_global_assignment -name TOP_LEVEL_ENTITY top_level
+set_global_assignment -name TOP_LEVEL_ENTITY Top
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../output_files
 
 # 2] include your relative path files here
-# set_global_assignment -name VHDL_FILE ../../src/ALU.vhd
-# set_global_assignment -name VHDL_FILE ../../src/rising_edge_synchronizer.vhd
-# set_global_assignment -name VHDL_FILE ../../src/seven_seg.vhd
-# set_global_assignment -name VHDL_FILE ../../src/memory.vhd
-# set_global_assignment -name VHDL_FILE ../../src/Generic_synchronizer.vhd
-# set_global_assignment -name VHDL_FILE ../../src/my_components.vhd
-set_global_assignment -name VHDL_FILE ../../src/top_level.vhd
+set_global_assignment -name VHDL_FILE ../../src/synchronizer4bit.vhd
+set_global_assignment -name VHDL_FILE ../../src/rising_edge_synchronizer.vhd
+set_global_assignment -name VHDL_FILE ../../src/synchronizer8bit.vhd
+set_global_assignment -name VHDL_FILE ../../src/generic_counter_Time.vhd
+set_global_assignment -name VHDL_FILE ../../src/generic_counter_Angle.vhd
+set_global_assignment -name VHDL_FILE ../../src/memory.vhd
+set_global_assignment -name VHDL_FILE ../../src/FSM_Angle.vhd
+set_global_assignment -name VHDL_FILE ../../src/BCD.vhd
+set_global_assignment -name VHDL_FILE ../../src/FSM_Servo.vhd
+set_global_assignment -name VHDL_FILE ../../src/components_include.vhd
+set_global_assignment -name VHDL_FILE ../../src/Top.vhd
 
 # 3] set your pin constraints here
 
@@ -37,7 +41,8 @@ set_location_assignment PIN_AD12  -to switch[5]
 set_location_assignment PIN_AE11  -to switch[6]
 set_location_assignment PIN_AC9   -to switch[7]
 
-
+# output gpio
+set_location_assignment PIN_AC18  -to GPIO_0[0]	
 
 # the LED is set here
 set_location_assignment PIN_V16  -to LED[0]
@@ -49,25 +54,7 @@ set_location_assignment PIN_V18  -to LED[3]
 set_location_assignment PIN_AA14 -to resetBtn 
 
 
-#set the hex0
-set_location_assignment PIN_AE26 -to Hex0[0]
-set_location_assignment PIN_AE27 -to Hex0[1]
-set_location_assignment PIN_AE28 -to Hex0[2]
-set_location_assignment PIN_AG27 -to Hex0[3]
-set_location_assignment PIN_AF28 -to Hex0[4]
-set_location_assignment PIN_AG28 -to Hex0[5]
-set_location_assignment PIN_AH28 -to Hex0[6]
-                                     
-# set the hex 1                      
-set_location_assignment PIN_AJ29 -to Hex1[0]
-set_location_assignment PIN_AH29 -to Hex1[1]
-set_location_assignment PIN_AH30 -to Hex1[2]
-set_location_assignment PIN_AG30 -to Hex1[3]
-set_location_assignment PIN_AF29 -to Hex1[4]
-set_location_assignment PIN_AF30 -to Hex1[5]
-set_location_assignment PIN_AD27 -to Hex1[6]
-                                     
-# set the hex 2                      
+#set the hex 2
 set_location_assignment PIN_AB23 -to Hex2[0]
 set_location_assignment PIN_AE29 -to Hex2[1]
 set_location_assignment PIN_AD29 -to Hex2[2]
@@ -75,6 +62,24 @@ set_location_assignment PIN_AC28 -to Hex2[3]
 set_location_assignment PIN_AD30 -to Hex2[4]
 set_location_assignment PIN_AC29 -to Hex2[5]
 set_location_assignment PIN_AC30 -to Hex2[6]
+                                     
+# set the hex 3                      
+set_location_assignment PIN_AD26 -to Hex3[0]
+set_location_assignment PIN_AC27 -to Hex3[1]
+set_location_assignment PIN_AD25 -to Hex3[2]
+set_location_assignment PIN_AC25 -to Hex3[3]
+set_location_assignment PIN_AB28 -to Hex3[4]
+set_location_assignment PIN_AB25 -to Hex3[5]
+set_location_assignment PIN_AB22 -to Hex3[6]
+                                     
+# set the hex 4                      
+set_location_assignment PIN_AA24 -to Hex4[0]
+set_location_assignment PIN_Y23 -to Hex4[1]
+set_location_assignment PIN_Y24 -to Hex4[2]
+set_location_assignment PIN_W22 -to Hex4[3]
+set_location_assignment PIN_W24 -to Hex4[4]
+set_location_assignment PIN_V23 -to Hex4[5]
+set_location_assignment PIN_W25 -to Hex4[6]
                                      
 # set the hex 3                      
 # set_location_assignment PIN_V25  -to Hex5[0]

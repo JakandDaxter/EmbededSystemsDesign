@@ -14,11 +14,10 @@ entity FSM_Servo is
     port (
           clk                                           : in   std_logic;
           reset                                         : in   std_logic;
-          enable		                                : in   std_logic; --start the servo process
-		  Write_enMin									: in   std_logic; --write enable min
-		  Write_enMax									: in   std_logic; --write enable max
+--        enable		                                : in   std_logic; --start the servo process
+		  Write_en									    : in   std_logic; --write enable 
 --		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
-		  AngleCount		                            : in   std_logic;
+--		  AngleCount		                            : in   std_logic;
 	  	  Max_Interrupt									: in   std_logic; --the interrupt that will become a one when the PW count made it to the max
 	      Min_Interrupt									: in   std_logic --the interrupt that will become a one when the PW count made it to the min  
           state											: out  std_logic_vector(5 downto 0)

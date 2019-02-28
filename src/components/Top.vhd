@@ -9,6 +9,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
+use work.components_include.all;
 
 entity Top is
 
@@ -76,10 +77,21 @@ signal  Double_Dab_Ones       	:std_logic_vector(3 downto 0);
 signal  Double_Dab_Tens       	:std_logic_vector(3 downto 0);
 signal  Double_Dab_Hundres    	:std_logic_vector(3 downto 0);
 
-signal reset_n : std_logic;
-signal key0_d1 : std_logic;
-signal key0_d2 : std_logic;
-signal key0_d3 : std_logic;
+signal reset_n 					:std_logic;
+signal key0_d1 					:std_logic;
+signal key0_d2 					:std_logic;
+signal key0_d3 					:std_logic;
+
+--Signals to interconnect port maps--
+signal servoenable 					    :std_logic;  ---the signal to start the servo
+signal Interruptmax 					:std_logic;
+signal interruptmin 					:std_logic;
+signal ActivePeriod 					:std_logic;
+signal minverified 						:std_logic;
+signal maxverified 						:std_logic;
+
+
+
 
 BEGIN --We begin the ARCHITECTUREE
 
@@ -177,15 +189,15 @@ B_Synchonizer: synchronizer8bit
 The_State_Machine: FSM_Servo
 
     Port Map(  
-			clk          		=>
-			reset               =>
-			enable	            =>
-			Write_enMin         =>
-			Write_enMax         =>
+			clk          		=>  CLOCK_50,
+			reset               =>  Rreset_n,
+		--	enable	            =>				--this is to start the servo
+			Write_en            =>  Write_enable,
 		--	Period	            =>
-			AngleCount          =>
-            Max_Interrupt       =>
-            Min_Interrupt       =>                  
+		--	AngleCount          =>              
+            Max_Interrupt       =>  Interruptmax,
+            Min_Interrupt       =>  Interruptmin,
+			state               =>  STATE_S               
           );
 --****************************************--		  
 The_State_Machine: FSM_Angle
@@ -193,34 +205,33 @@ The_State_Machine: FSM_Angle
     Port Map(  
 			clk        			 =>  CLOCK_50,
             reset                =>  Rreset_n,             
-            verfiedMin           =>     
-            verfiedMax    		 =>      
-            Write_enMin          =>  
-            Write_enMax          =>
-            Start_Servo          =>
-            KEY		             =>
-            state		         =>            
+            verfiedMin           =>  minverified   
+            verfiedMax    		 =>  maxverified    
+            Write_en             =>  Write_enable,
+            Start_Servo          =>  servoenable,
+            KEY		             =>  KEY,
+            state		         =>  STATE_A          
           );
  --****************************************--
  Timing_Counter: generic_counter_Time
  		Port Map(
 		
-		clk               =>
-		reset             =>
-		output            =>
+		clk               =>   CLOCK_50,
+		reset             =>   Rreset_n,
+		output            =>   ActivePeriod
 		
 		);
  --****************************************--		
 Angle_Counter: generic_counter_Angle
 		Port Map(
-		clk                =>
-		reset              =>
-		Angle1		       =>
-		Angle2		       =>
-		Time               =>
-		Max_Interrupt      =>
-		Min_Interrupt      =>
-		PWM                =>
+		clk                =>   CLOCK_50,
+		reset              =>   Rreset_n,
+		Angle1		       =>   A_sync,
+		Angle2		       =>   B_sync,
+		Time               =>   ActivePeriod,
+		Max_Interrupt      =>   Interruptmax,
+		Min_Interrupt      =>   interruptmin,
+		PWM                =>   PWM
 		);
 --*******************************************************************************************************************************************************************************--
 --*******************************************************************************************************************************************************************************--  
@@ -286,6 +297,32 @@ The_Dab_Display2: BCD
 --             Bin   => LEDS,
 --             Hex   => Hex5
 --       );
+
+State LEDS: Process(clk,servoenable,reset_n)
+begin
+	
+    if (reset_n = '0') then 
+			
+	servoenable <= '0';
+	
+	LEDR <= STATE_A;
+
+    elsif (CLOCK_50'event and CLOCK_50 = '1') then
+		
+      if (servoenable = '1') then
+		  
+		  LEDR <= STATE_S;
+
+      else
+		  
+		  	LEDR <= STATE_A;
+
+      end if;
+	   
+    end if;
+	
+  end process;
+
  
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  

@@ -10,7 +10,7 @@ use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 --****************************************************************************--
-PACKAGE MY_MAJESTIC_COMPONENTS IS --the name of the file shoud be MY_MAJESTIC_COMPONENTS
+PACKAGE components_include IS --the name of the file shoud be components_include
 
 
 
@@ -28,12 +28,12 @@ end component;
 
 --********-----****--------------*************-----------************-------**********---
 
-COMPONENT synchronizer2bit IS
+COMPONENT synchronizer4bit IS
         port (
                 clk               : in std_logic;
                 reset             : in std_logic;
-                async_in          : in  std_logic_vector(1 downto 0);
-                sync_out          : out  std_logic_vector(1 downto 0)
+                async_in          : in  std_logic_vector(3 downto 0);
+                sync_out          : out  std_logic_vector(3 downto 0)
              );
 END COMPONENT;
 
@@ -50,18 +50,33 @@ END COMPONENT;
 
 --********-----****--------------*************-----------************-------**********---
 
-COMPONENT FSM  IS
+COMPONENT FSM_Angle  IS
 
-  port (
+  port (  clk                                           : in   std_logic;
+          reset                                         : in   std_logic;
+          verfiedMin		                            : in   std_logic; --minimum angle verified from C
+          verfiedMax		                            : in   std_logic; --maximum angle verified from C
+          Write_en									    : out  std_logic; --write enable 
+          Start_Servo								    : out  std_logic; --alright, we can use this to debug, this will light up the LED's according to the state and let me know which state i am in
+          KEY								            : in   std_logic_vector(3 downto 0); --this is coming fromm the rising edge synchronizer
+          state											: out  std_logic_vector(5 downto 0)
+          clk                                           : in   std_logic;
+          );
+END COMPONENT;
+--********-----****--------------*************-----------************-------**********---
+
+COMPONENT FSM_Servo  IS
+
+  port ( 
           clk                                           : in   std_logic;
           reset                                         : in   std_logic;
-         Execute_btn_sync,Saves,Writes,Recalls          : in   std_logic;--this is coming fromm the rising edge synchronizer
-          LED_display                                   : out  std_logic_vector(3 downto 0);--this is just to show the state on the LED display so we know what state we are in
-          
-          write_en,recall,save                          : out  std_logic;
-          Address_for_mems                              : out  std_logic_vector(1 downto 0)
-                  
-          );
+--        enable		                                : in   std_logic; --start the servo process
+		  Write_en									    : in   std_logic; --write enable 
+--		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
+--		  AngleCount		                            : in   std_logic;
+	  	  Max_Interrupt									: in   std_logic; --the interrupt that will become a one when the PW count made it to the max
+	      Min_Interrupt									: in   std_logic --the interrupt that will become a one when the PW count made it to the min  
+          state											: out  std_logic_vector(5 downto 0)
 END COMPONENT;
 
 --********-----****--------------*************-----------************-------**********---
@@ -93,15 +108,29 @@ END COMPONENT;
 
 --********-----****--------------*************-----------************-------**********---
 
-COMPONENT ALU IS
+COMPONENT generic_counter_Angle IS
             port (
-                    clk           : in  std_logic;
-                    reset         : in  std_logic;
-                    a             : in  std_logic_vector(7 downto 0); 
-                    b             : in  std_logic_vector(7 downto 0);
-                    op            : in  std_logic_vector(1 downto 0); -- 00: add, 01: sub, 10: mult, 11: div
-                    result        : out std_logic_vector(7 downto 0)
-); 
+    clk             : in   std_logic; 
+    reset           : in   std_logic;
+	Angle1			: in   std_logic_vector(7 downto 0); --min angle			
+	Angle2			: in   std_logic_vector(7 downto 0): --max angle
+	Time            : in   std_logic; --period
+	Max_Interrupt	: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
+	Min_Interrupt	: out  std_logic --the interrupt that will become a one when the PW count made it to the min
+	PWM           	: out  std_logic; -- will be a one when ever the count has not reached the bounds
+	
+END COMPONENT;
+--********-----****--------------*************-----------************-------**********---
+
+COMPONENT generic_counter_Time IS
+  generic (
+    max_count       : integer := 1000000
+  );
+  port (
+    clk             : in  std_logic; 
+    reset           : in  std_logic;
+    output          : out std_logic
+  );  
 END COMPONENT;
 
 --********-----****--------------*************-----------************-------**********---
@@ -118,7 +147,7 @@ END COMPONENT;
 
 
 --********-----****--------------*************-----------************-------**********---
-COMPONENT BCD_Display IS
+COMPONENT BCD IS
 
     PORT(
           clk   : IN STD_LOGIC;
@@ -130,4 +159,4 @@ COMPONENT BCD_Display IS
 END COMPONENT;
 
 --********-----****--------------*************-----------************-------**********---
-END MY_MAJESTIC_COMPONENTS; --ending the file 
+END components_include; --ending the file 

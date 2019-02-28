@@ -12,17 +12,33 @@ end top_level_tb;
 
 architecture arch of top_level_tb is
 
-component top_level is
+component Top is
   Port(
-       clk                                      : in std_logic; 
-	   mr                                       : in std_logic;--pushbutton
-	   ms                                       : in std_logic;--pushbutton
-	   execute                                  : in std_logic;--pushbutton
-	   resetBtn									: in std_logic;--pushbutton
-       switch									: in std_logic_vector(7 downto 0);--A and B
-	   op										: in std_logic_vector(1 downto 0);--chooses the ALU operation 
-       Hex0,Hex1,Hex2                         	: out std_logic_Vector(6 downto 0);
-       LED                                   	: out std_logic_Vector(4 downto 0) --outputs the states
+
+  ---- PWM Output ----
+
+	PWM : out std_logic;
+
+  ----- CLOCK -----
+ 
+  CLOCK_50 : in std_logic;
+
+  ----- SEG7 -----
+  HEX5 : out std_logic_vector(6 downto 0);
+  HEX4 : out std_logic_vector(6 downto 0);
+  HEX3 : out std_logic_vector(6 downto 0);
+  HEX2 : out std_logic_vector(6 downto 0); -- use this to show the degree symbol
+
+
+  ----- KEY -----
+  KEY : in std_logic_vector(3 downto 0); --remeber to use key(0) for reset
+
+  ----- LED -----
+  LEDR : out  std_logic_vector(9 downto 0);
+
+  ----- SW -----
+  SW : in  std_logic_vector(7 downto 0) 
+   
 );
 end component; 
 
@@ -40,45 +56,45 @@ signal LEDS                           :std_logic_Vector(4 downto 0);--outputs th
 begin
 
 -- bcd iteration
-sequential_tb : process 
-    begin
-      report "****************** sequential testbench start ****************";
-      wait for 80 ns;   
-         switch_sig <= "00000101";
-		 opsig		<= "00";--add
-		 wait for 50 ns;
-		 executebt	<= '1';
-		 wait for 100 ns;
-		 executebt  <= '0';
-		 wait for 100 ns;
-		 executebt	<= '1';
-		 wait for 100 ns;
-		 executebt  <= '0';
-		 wait for 100 ns;
-		 msbutton <='1';
-		 wait for 100 ns;
-		 msbutton <='0';
-		 wait for 100 ns;
-		 mrbutton <='1';
-		 wait for 100 ns;
-		 mrbutton <='0';
-		 
-  end process; 
-
--- clock process
-clock: process
-  begin
-    clk <= not clk;
-    wait for period/2;
-end process; 
- 
--- reset process
-async_reset: process
-  begin
-    wait for 2 * period;
-    reset <= '1';--active low reset
-    wait;
-end process;
+-- sequential_tb : process
+--     begin
+--       report "****************** sequential testbench start ****************";
+--       wait for 80 ns;
+--          switch_sig <= "00000101";
+-- 		 opsig		<= "00";--add
+-- 		 wait for 50 ns;
+-- 		 executebt	<= '1';
+-- 		 wait for 100 ns;
+-- 		 executebt  <= '0';
+-- 		 wait for 100 ns;
+-- 		 executebt	<= '1';
+-- 		 wait for 100 ns;
+-- 		 executebt  <= '0';
+-- 		 wait for 100 ns;
+-- 		 msbutton <='1';
+-- 		 wait for 100 ns;
+-- 		 msbutton <='0';
+-- 		 wait for 100 ns;
+-- 		 mrbutton <='1';
+-- 		 wait for 100 ns;
+-- 		 mrbutton <='0';
+--
+--   end process;
+--
+-- -- clock process
+-- clock: process
+--   begin
+--     clk <= not clk;
+--     wait for period/2;
+-- end process;
+--
+-- -- reset process
+-- async_reset: process
+--   begin
+--     wait for 2 * period;
+--     reset <= '1';--active low reset
+--     wait;
+-- end process;
 
 -- --button process
 -- buttons: process
@@ -95,19 +111,19 @@ end process;
 -- end process; 
 
 
-uut: top_level 
-  port map(        
-  clk                        =>  clk,      
-  mr                         =>  mrbutton,      
-  ms                         =>  msbutton ,      
-  execute                    =>  executebt,      
-  resetBtn		             =>  reset,
-  switch		             => switch_sig, 
-  op			             =>  opsig,      
-  Hex0						 => Hex_0,
-  Hex1						 => Hex_1,
-  Hex2						 => Hex_2,                
-  LED                   	 =>  LEDS            
-                   
-  );
+-- uut: top_level
+--   port map(
+--   clk                        =>  clk,
+--   mr                         =>  mrbutton,
+--   ms                         =>  msbutton ,
+--   execute                    =>  executebt,
+--   resetBtn		             =>  reset,
+--   switch		             => switch_sig,
+--   op			             =>  opsig,
+--   Hex0						 => Hex_0,
+--   Hex1						 => Hex_1,
+--   Hex2						 => Hex_2,
+--   LED                   	 =>  LEDS
+--
+--   );
 end arch;

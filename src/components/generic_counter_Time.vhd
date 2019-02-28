@@ -9,7 +9,7 @@ use ieee.numeric_std.all;
 
 entity generic_counter_Time is
   generic (
-    max_count       : integer := 3
+    max_count       : integer := 1000000
   );
   port (
     clk             : in  std_logic; 

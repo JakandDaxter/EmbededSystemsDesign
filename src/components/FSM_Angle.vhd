@@ -18,9 +18,8 @@ entity FSM_Angle is
           reset                                         : in   std_logic;
           verfiedMin		                            : in   std_logic; --minimum angle verified from C
 		  verfiedMax		                            : in   std_logic; --maximum angle verified from C
-		  Write_enMin									: out  std_logic; --write enable min
-		  Write_enMax									: out  std_logic; --write enable max
-		  Start_Servo								    : out  std_logic; --start the servo state machine enable 
+		  Write_en									    : out  std_logic; --write enable 
+		  Start_Servo								    : out  std_logic; --alright, we can use this to debug, this will light up the LED's according to the state and let me know which state i am in 
           KEY								            : in   std_logic_vector(3 downto 0); --this is coming fromm the rising edge synchronizer
           state											: out  std_logic_vector(5 downto 0)
           );
@@ -98,7 +97,9 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
       
               if(Key3_Lock = '0') THEN
           
-                  Next_State <= Verify_min; 
+                  Next_State <= Verify_min;
+				  
+				  	 Write_en <= '0'; 
             
               end if; --end that if cause there isnt any other states we go to 
             
@@ -107,7 +108,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
         
                 if(verfiedMin = '1') THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
            
-					Write_enMin <= '1';  -- also let the write enable bit turn on so that you can store the min value into the register
+					Write_en <= '1';  -- also let the write enable bit turn on so that you can store the min value into the register
 				
                     Next_State <= Input_Max;
             
@@ -119,6 +120,8 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
                 if(Key2_Lock = '0') THEN 
             
                     Next_State <= Verify_max;
+					
+						Write_en <= '0';
             
                 end if;
 ------------------------------------------  
@@ -127,7 +130,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 					                 
                     if(verfiedMax = '1') THEN --this is the flag i will set to a 1 in the C program to let program know that the max value fits the criteria
 						
-						Write_enMax <= '1';  -- also let the write enable bit turn on so that you can store the min value into the register					
+						Write_en <= '1';  -- also let the write enable bit turn on so that you can store the min value into the register					
 						
 								--if it holds true then let the program now that we can start the servo process.
                     	Start_Servo <= '1';
@@ -140,6 +143,8 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
                                 when others =>
       
                                         Next_State <= Input_Min; --this is our default state, we always going back to it
+										
+											Write_en <= '0';
       
                     END CASE;
                                       
