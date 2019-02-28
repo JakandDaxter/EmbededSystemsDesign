@@ -52,6 +52,8 @@ constant MaxAngle				: std_logic_vector(7 downto 0):= X"000186A0"; --135
 Signal  Min_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
 Signal  Max_raw           		:std_logic_vector(7 downto 0); -- sends in the raw data
 
+Signal  Raw_input               :std_logic_vector(7 downto 0); -- raw data
+
 Signal  Min_sync           		:std_logic_vector(7 downto 0); -- sends in the raw data
 Signal  Max_sync           		:std_logic_vector(7 downto 0); -- sends in the raw data
 
@@ -66,12 +68,18 @@ signal  Address_for_mem 		:std_logic_vector(1 downto 0); --i set this to the res
 signal  verfiedMin		        :std_logic; --minimum angle verified from C
 signal  verfiedMax		        :std_logic; --maximum angle verified from C
  
-signal  Double_Dab_Data 		:std_logic_vector(7 downto 0); --comes out of memory
+signal  Read_Data 		        :std_logic_vector(7 downto 0); --comes out of memory
+signal  Stored_Data       		:std_logic_vector(7 downto 0); --goes into memory
 
 
 signal  Double_Dab_Ones       	:std_logic_vector(3 downto 0);
 signal  Double_Dab_Tens       	:std_logic_vector(3 downto 0);
 signal  Double_Dab_Hundres    	:std_logic_vector(3 downto 0);
+
+signal reset_n : std_logic;
+signal key0_d1 : std_logic;
+signal key0_d2 : std_logic;
+signal key0_d3 : std_logic;
 
 BEGIN --We begin the ARCHITECTUREE
 
@@ -87,47 +95,20 @@ We_talking_about_Addresses_here: Process(Address_for_mem,STATE_A)
 							WHEN "000100" => --when in the verfied min stage stage
 								IF (Write_enable = '1') THEN
 									Address_for_mem <="00";
+									     Stored_Data <= A_sync;
+									 else
+	 									Address_for_mem <="00"; --just read from here
 										end if;
 									WHEN "100000" => --when in the verfied max stage
 									IF (Write_enable = '1') THEN
 										Address_for_mem <="01";
+										Stored_Data <= B_sync;
+									else
+										Address_for_mem <="01"; --just read from here
 											end if;		
 											WHEN OTHERS => Address_for_mem <= "00";
 										end case;	
 									end process;
-
---****************************************--
---****************************************--  
---****************************************--  
---****************************************--
-Just_Sending_Info_Through_Registers1:Process(clk,Reset_enable,input_sync,Min_raw)
-                                    BEGIN
-                  
-                                    if(Reset_enable = '1') THEN
-                                        Min_raw <= (others => '0');
-                                        ELSIF(clk'event and clk = '1') THEN
-                                                    if(STATE_A = "000001") THEN --when in the inputting of the min angle state
-														Min_raw <= input_sync;	--have the synced inputed data from the switches go into the raw minimum				
-													ELSE					
-														Min_raw <= Min_raw ;
-															end if;		
-									end if;
-                           end process;
---****************************************-- 
- 
-Just_Sending_Info_Through_Registers2:Process(clk,Reset_enable,input_sync,Max_raw)
- 
-                                BEGIN
-                                       if(Reset_enable = '1') THEN      
-                                           Max_raw <= (others => '0');
-                                        ELSIF(clk'event and clk = '1') THEN
-                                            if(STATE_A = "001000") THEN	--when in the inputting of the max angle state
-												Max_raw <= input_sync;   --have the synced inputed data from the switches go into the raw maximum
-                                            ELSE
-                                                Max_raw <= Max_raw;
-											end if;			   
-										end if; 
-                      	     end process;
 
 --****************************************--  
 --****************************************-- 
@@ -141,11 +122,11 @@ Memory_for_display: memory
 --this is for the switches for the operation
 
     Port Map(       
-                clk      => clk,        
+                clk      => CLOCK_50,        
                 we       => write_enable,       --send a 1 if you wanna save data into address 10 else your reading from the working 00
                 addr     => Address_for_mem,    --the working memory is 00 so the write enable is a 0
-                din      => DATA_EVALUATED,                --its been through the process   
-                dout     => Double_Dab_Data     --this is the info we want to display          
+                din      => Stored_Data,                --its been through the process   
+                dout     => Read_Data     --this is the info we want to display          
         );
 
 
@@ -153,26 +134,23 @@ Memory_for_display: memory
 --****************************************-- 
 --****************************************--
 --****************************************--
+----- Syncronize the reset
+synchReset_proc : process (CLOCK_50) begin
+  if (rising_edge(CLOCK_50)) then
+    key0_d1 <= KEY(0);
+    key0_d2 <= key0_d1;
+    key0_d3 <= key0_d2;
+  end if;
+end process synchReset_proc;
+reset_n <= key0_d3;
 
-Frist_Synchonizer: synchronizer8bit
-
-    Port Map(   
-    
-                clk        => clk,            
-                reset      => Reset_enable,       
-                async_in   => Intput,       
-                sync_out   => input_sync   --use this      
-
-        
-            );
-    
 --****************************************--
 
 A_Synchonizer: synchronizer8bit
 
     Port Map(     
-                clk         => clk,      
-                reset       => Reset_enable,      
+                clk         => CLOCK_50,      
+                reset       => reset_n,      
                 async_in    => A_raw,      
                 sync_out    => A_sync   --use this      
   
@@ -184,28 +162,12 @@ B_Synchonizer: synchronizer8bit
 
     Port Map( 
     
-                clk         => clk,      
-                reset       => Reset_enable,      
+                clk         => CLOCK_50,      
+                reset       => reset_n,      
                 async_in    => B_raw,      
                 sync_out    => B_sync    --use this         
 
         );
-    
---****************************************--
-
-Button_Synchonizer_EXECUTE: rising_edge_synchronizer
-
-    Port Map( 
-    
-                clk      => clk,        
-                reset    => Reset_enable,        
-                inputy   => Execute,        
-                edge     => Execute_enable   --use this     
-
-        
-        );
-    
-
 --*******************************************************************************************************************************************************************************--
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  
@@ -215,35 +177,52 @@ Button_Synchonizer_EXECUTE: rising_edge_synchronizer
 The_State_Machine: FSM_Servo
 
     Port Map(  
-
-            clk                 =>  clk,             
-            reset               =>  Reset_enable,    
-            Execute_btn_sync    =>      
-            LED_display         =>  
-            write_en            =>
-            recall              =>
-            save                =>
-                                     
+			clk          		=>
+			reset               =>
+			enable	            =>
+			Write_enMin         =>
+			Write_enMax         =>
+		--	Period	            =>
+			AngleCount          =>
+            Max_Interrupt       =>
+            Min_Interrupt       =>                  
           );
 --****************************************--		  
 The_State_Machine: FSM_Angle
 
     Port Map(  
-
-            clk                 =>  clk,             
-            reset               =>  Reset_enable,    
-            Execute_btn_sync    =>      
-            LED_display         =>  
-            write_en            =>
-            recall              =>
-            save                =>
-                                 
+			clk        			 =>  CLOCK_50,
+            reset                =>  Rreset_n,             
+            verfiedMin           =>     
+            verfiedMax    		 =>      
+            Write_enMin          =>  
+            Write_enMax          =>
+            Start_Servo          =>
+            KEY		             =>
+            state		         =>            
           );
-       
+ --****************************************--
+ Timing_Counter: generic_counter_Time
+ 		Port Map(
+		
+		clk               =>
+		reset             =>
+		output            =>
+		
+		);
+ --****************************************--		
+Angle_Counter: generic_counter_Angle
+		Port Map(
+		clk                =>
+		reset              =>
+		Angle1		       =>
+		Angle2		       =>
+		Time               =>
+		Max_Interrupt      =>
+		Min_Interrupt      =>
+		PWM                =>
+		);
 --*******************************************************************************************************************************************************************************--
-
-LED_display <= LEDS;
- 
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************-- 
  
@@ -251,7 +230,7 @@ The_Seperation: double_dabble
 
     Port Map(
                
-           binIN     => actual_data, --this is getting the information from the working memory
+           binIN     => Read_Data, --this is getting the information from the working memory
            ones      => Double_Dab_Ones,
            tens      => Double_Dab_Tens,
            hundreds  => Double_Dab_Hundres
@@ -265,10 +244,10 @@ The_Dab_Display0: BCD
 
     Port Map( 
          
-      clk    => clk,
-      reset  => Reset_enable,
+      clk    => CLOCK_50,
+      reset  => reset_n,
       Bin    => Double_Dab_Ones,                            
-      Hex    => Hex0
+      Hex    => Hex5
       );
 --****************************************--
 
@@ -276,10 +255,10 @@ The_Dab_Display1: BCD
 
     Port Map(
           
-        clk   => clk,         
-        reset => Reset_enable,
+        clk   => CLOCK_50,         
+        reset => reset_n,
         Bin   => Double_Dab_Tens,                          
-        Hex   => Hex1
+        Hex   => Hex4
       );
 	  
 --****************************************--
@@ -288,25 +267,25 @@ The_Dab_Display2: BCD
 
     Port Map( 
          
-            clk   => clk,         
-            reset => Reset_enable,
+            clk   => CLOCK_50,         
+            reset => reset_n,
             Bin   => Double_Dab_Hundres,                          
-            Hex   => Hex2
+            Hex   => Hex3
       );
 	  
 --****************************************--
 
 --this is for the display clarity, goes to BCD 
      
-The_Dab_Display3: BCD_Display
-
-    Port Map( 
-         
-            clk   => clk,         
-            reset => Reset_enable,
-            Bin   => LEDS,                         
-            Hex   => Hex5
-      );
+-- The_Dab_Display3: BCD_Display
+--
+--     Port Map(
+--
+--             clk   => clk,
+--             reset => Reset_enable,
+--             Bin   => LEDS,
+--             Hex   => Hex5
+--       );
  
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  

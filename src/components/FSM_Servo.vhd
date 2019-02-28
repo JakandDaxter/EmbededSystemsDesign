@@ -17,7 +17,7 @@ entity FSM_Servo is
           enable		                                : in   std_logic; --start the servo process
 		  Write_enMin									: in   std_logic; --write enable min
 		  Write_enMax									: in   std_logic; --write enable max
-		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
+--		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
 		  AngleCount		                            : in   std_logic;
 	  	  Max_Interrupt									: in   std_logic; --the interrupt that will become a one when the PW count made it to the max
 	      Min_Interrupt									: in   std_logic --the interrupt that will become a one when the PW count made it to the min  
