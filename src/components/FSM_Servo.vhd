@@ -19,8 +19,8 @@ entity FSM_Servo is
 		  Write_enMax									: in   std_logic; --write enable max
 		  Period		                                : in   std_logic; --flag to let us know that the period is counting so we can=
 		  AngleCount		                            : in   std_logic;
-	  	  Max_Interrupt	: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
-	  	  Min_Interrupt	: out  std_logic --the interrupt that will become a one when the PW count made it to the min  
+	  	  Max_Interrupt									: in   std_logic; --the interrupt that will become a one when the PW count made it to the max
+	      Min_Interrupt									: in   std_logic --the interrupt that will become a one when the PW count made it to the min  
           state											: out  std_logic_vector(5 downto 0)
           );
         
@@ -85,7 +85,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 
             When Sweep_Right =>     
       
-              if("the PW count is less than the max") THEN
+              if(Max_Interrupt = '1') THEN
           
                   Next_State <= Interrupt_right; 
             
@@ -94,7 +94,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 ---------------------------------------          
               When Interrupt_right =>
         
-                if("the PW count is equal to the max") THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
+                if(Min_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
             
                     Next_State <= Sweep_Left;
             
@@ -103,7 +103,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
           
               When Sweep_Left =>
         
-                if("the PW count is greater than the min") THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
+                if(Min_Interrupt = '1') THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
             
                     Next_State <= Interrupt_left;
             
@@ -112,7 +112,7 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 
                     When Interrupt_left =>
 					                 
-                    if("the PW count is equal to the min") THEN --this is the flag i will set to a 1 in the C program to let program know that the max value fits the criteria
+                    if(Max_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the max value fits the criteria
 						
                         Next_State <= Sweep_Right;
                     

@@ -14,6 +14,8 @@ entity generic_counter_Angle is
 	Angle1			: in   std_logic_vector(7 downto 0); --min angle			
 	Angle2			: in   std_logic_vector(7 downto 0): --max angle
 	Time            : in   std_logic; --whether or not im in the sweep state, then start the count
+	Max_Interrupt	: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
+	Min_Interrupt	: out  std_logic --the interrupt that will become a one when the PW count made it to the min
 	PWM           	: out  std_logic; -- will be a one when ever the count has not reached the bounds
   );  
 end generic_counter_Angle;  
@@ -49,7 +51,7 @@ process(clk,reset,Angle_Count)
 	  
     	elsif (clk'event and clk = '1') then
       
-	  	  if (Time = '1') then -- sweep write first
+	  	  if (Time = '1') then -- sweep rite first
 		
 			  if (Angle_Count < Anglemax) then
         

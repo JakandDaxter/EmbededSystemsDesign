@@ -152,16 +152,6 @@ Memory_for_display: memory
 --****************************************--  
 --****************************************-- 
 --****************************************--
-
-Operation_Synchonizer: synchronizer4bit 
---this is for the switches for the operation
-
-    Port Map(   clk        => clk,          
-                reset      => Reset_enable,       
-                async_in   => Operation,       
-                sync_out   => operation_sync  --use this    
-        );
-        
 --****************************************--
 
 Frist_Synchonizer: synchronizer8bit
