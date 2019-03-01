@@ -1,0 +1,575 @@
+Analysis & Synthesis report for Top
+Fri Mar 01 01:28:42 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: memory:Memory_for_display
+ 14. Parameter Settings for User Entity Instance: generic_counter_Time:Timing_Counter
+ 15. Port Connectivity Checks: "double_dabble:The_Seperation"
+ 16. Port Connectivity Checks: "memory:Memory_for_display"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 01 01:28:42 2019       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Top                                         ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 59                                          ;
+; Total pins                      ; 48                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Top                ; Top                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; Components/Top.vhd                   ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd                   ;         ;
+; Components/synchronizer8bit.vhd      ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd      ;         ;
+; Components/memory.vhd                ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd                ;         ;
+; Components/generic_counter_Time.vhd  ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd  ;         ;
+; Components/generic_counter_Angle.vhd ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd ;         ;
+; Components/FSM_Servo.vhd             ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd             ;         ;
+; Components/FSM_Angle.vhd             ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd             ;         ;
+; Components/double_dabble.vhd         ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd         ;         ;
+; Components/components_include.vhd    ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd    ;         ;
+; Components/BCD.vhd                   ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd                   ;         ;
++--------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 33             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 41             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 3              ;
+;     -- 5 input functions                    ; 7              ;
+;     -- 4 input functions                    ; 1              ;
+;     -- <=3 input functions                  ; 30             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 59             ;
+;                                             ;                ;
+; I/O pins                                    ; 48             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 59             ;
+; Total fan-out                               ; 376            ;
+; Average fan-out                             ; 1.92           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name           ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
+; |Top                                     ; 41 (1)              ; 59 (7)                    ; 0                 ; 0          ; 48   ; 0            ; |Top                                     ; Top                   ; work         ;
+;    |BCD:The_Dab_Display0|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display0                ; BCD                   ; work         ;
+;    |BCD:The_Dab_Display1|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display1                ; BCD                   ; work         ;
+;    |BCD:The_Dab_Display2|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display2                ; BCD                   ; work         ;
+;    |FSM_Angle:The_State_MachineA|        ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|FSM_Angle:The_State_MachineA        ; FSM_Angle             ; work         ;
+;    |generic_counter_Angle:Angle_Counter| ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Angle:Angle_Counter ; generic_counter_Angle ; work         ;
+;    |generic_counter_Time:Timing_Counter| ; 25 (25)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Time:Timing_Counter ; generic_counter_Time  ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal                     ;
++---------------------------------------------------+----------------------------------------+
+; FSM_Angle:The_State_MachineA|Present_State[1,4]   ; Stuck at GND due to stuck port data_in ;
+; LEDR[4]~reg0                                      ; Stuck at GND due to stuck port data_in ;
+; FSM_Angle:The_State_MachineA|Start_Servo          ; Stuck at GND due to stuck port data_in ;
+; synchronizer8bit:A_Synchonizer|flop1[0..7]        ; Stuck at GND due to stuck port data_in ;
+; FSM_Angle:The_State_MachineA|Write_en             ; Stuck at GND due to stuck port data_in ;
+; synchronizer8bit:B_Synchonizer|flop1[0..7]        ; Stuck at GND due to stuck port data_in ;
+; LEDR[1]~reg0                                      ; Stuck at GND due to stuck port data_in ;
+; synchronizer8bit:A_Synchonizer|flop2[0..7]        ; Stuck at GND due to stuck port data_in ;
+; synchronizer8bit:B_Synchonizer|flop2[0..7]        ; Stuck at GND due to stuck port data_in ;
+; FSM_Servo:The_State_MachineF|Present_State[0..3]  ; Lost fanout                            ;
+; generic_counter_Angle:Angle_Counter|Min_Interrupt ; Lost fanout                            ;
+; generic_counter_Angle:Angle_Counter|Max_Interrupt ; Lost fanout                            ;
+; memory:Memory_for_display|RAM~13                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~21                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~14                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~22                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~15                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~23                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~17                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~25                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~16                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~24                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~12                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~20                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~11                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~19                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~10                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|RAM~18                  ; Stuck at GND due to stuck port data_in ;
+; memory:Memory_for_display|dout[0..7]              ; Stuck at GND due to stuck port data_in ;
+; BCD:The_Dab_Display0|Hex[6]                       ; Stuck at VCC due to stuck port data_in ;
+; BCD:The_Dab_Display1|Hex[6]                       ; Stuck at VCC due to stuck port data_in ;
+; BCD:The_Dab_Display2|Hex[6]                       ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 71            ;                                        ;
++---------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++-----------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register                                ;
++-----------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; FSM_Angle:The_State_MachineA|Present_State[1] ; Stuck at GND              ; LEDR[1]~reg0, FSM_Servo:The_State_MachineF|Present_State[1],          ;
+;                                               ; due to stuck port data_in ; memory:Memory_for_display|dout[3], memory:Memory_for_display|dout[4], ;
+;                                               ;                           ; memory:Memory_for_display|dout[5], memory:Memory_for_display|dout[6], ;
+;                                               ;                           ; memory:Memory_for_display|dout[2], memory:Memory_for_display|dout[1], ;
+;                                               ;                           ; memory:Memory_for_display|dout[0], BCD:The_Dab_Display0|Hex[6],       ;
+;                                               ;                           ; BCD:The_Dab_Display1|Hex[6], BCD:The_Dab_Display2|Hex[6]              ;
+; FSM_Angle:The_State_MachineA|Start_Servo      ; Stuck at GND              ; FSM_Servo:The_State_MachineF|Present_State[0],                        ;
+;                                               ; due to stuck port data_in ; FSM_Servo:The_State_MachineF|Present_State[2],                        ;
+;                                               ;                           ; FSM_Servo:The_State_MachineF|Present_State[3]                         ;
+; FSM_Angle:The_State_MachineA|Present_State[4] ; Stuck at GND              ; LEDR[4]~reg0                                                          ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[7]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[7]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[6]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[6]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[5]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[5]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[4]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[4]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[3]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[3]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[2]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[2]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[1]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[1]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:A_Synchonizer|flop1[0]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[0]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; FSM_Angle:The_State_MachineA|Write_en         ; Stuck at GND              ; memory:Memory_for_display|dout[7]                                     ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[7]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[7]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[6]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[6]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[5]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[5]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[4]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[4]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[3]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[3]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[2]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[2]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[1]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[1]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[0]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[0]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
++-----------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 59    ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 56    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; BCD:The_Dab_Display0|Hex[0]                   ; 1       ;
+; BCD:The_Dab_Display0|Hex[1]                   ; 1       ;
+; BCD:The_Dab_Display0|Hex[2]                   ; 1       ;
+; BCD:The_Dab_Display0|Hex[3]                   ; 1       ;
+; BCD:The_Dab_Display0|Hex[4]                   ; 1       ;
+; BCD:The_Dab_Display0|Hex[5]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[0]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[1]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[2]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[3]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[4]                   ; 1       ;
+; BCD:The_Dab_Display1|Hex[5]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[0]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[1]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[2]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[3]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[4]                   ; 1       ;
+; BCD:The_Dab_Display2|Hex[5]                   ; 1       ;
+; FSM_Angle:The_State_MachineA|Present_State[0] ; 5       ;
+; Total number of inverted registers = 19       ;         ;
++-----------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 68:1               ; 5 bits    ; 225 LEs       ; 40 LEs               ; 185 LEs                ; Yes        ; |Top|FSM_Angle:The_State_MachineA|Present_State[5] ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 21 LEs               ; 18 LEs                 ; Yes        ; |Top|FSM_Servo:The_State_MachineF|Present_State[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:Memory_for_display ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; addr_width     ; 2     ; Signed Integer                                ;
+; data_width     ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generic_counter_Time:Timing_Counter ;
++----------------+---------+-------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                  ;
++----------------+---------+-------------------------------------------------------+
+; max_count      ; 1000000 ; Signed Integer                                        ;
++----------------+---------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "double_dabble:The_Seperation" ;
++--------------+-------+----------+------------------------+
+; Port         ; Type  ; Severity ; Details                ;
++--------------+-------+----------+------------------------+
+; binin[11..8] ; Input ; Info     ; Stuck at GND           ;
++--------------+-------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "memory:Memory_for_display" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; addr[1] ; Input ; Info     ; Stuck at GND             ;
++---------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 59                          ;
+;     CLR               ; 28                          ;
+;     CLR SCLR          ; 20                          ;
+;     ENA CLR SCLR      ; 8                           ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 61                          ;
+;     arith             ; 28                          ;
+;         1 data inputs ; 28                          ;
+;     normal            ; 33                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 20                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 48                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.72                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Mar 01 01:28:27 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file components/top.vhd
+    Info (12022): Found design unit 1: Top-ServoMotor File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 46
+    Info (12023): Found entity 1: Top File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file components/synchronizer8bit.vhd
+    Info (12022): Found design unit 1: synchronizer8bit-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd Line: 19
+    Info (12023): Found entity 1: synchronizer8bit File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file components/synchronizer4bit.vhd
+    Info (12022): Found design unit 1: synchronizer4bit-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd Line: 19
+    Info (12023): Found entity 1: synchronizer4bit File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file components/rising_edge_synchronizer.vhd
+    Info (12022): Found design unit 1: rising_edge_synchronizer-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd Line: 19
+    Info (12023): Found entity 1: rising_edge_synchronizer File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file components/memory.vhd
+    Info (12022): Found design unit 1: memory-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd Line: 23
+    Info (12023): Found entity 1: memory File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file components/generic_counter_time.vhd
+    Info (12022): Found design unit 1: generic_counter_Time-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd Line: 21
+    Info (12023): Found entity 1: generic_counter_Time File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file components/generic_counter_angle.vhd
+    Info (12022): Found design unit 1: generic_counter_Angle-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd Line: 23
+    Info (12023): Found entity 1: generic_counter_Angle File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file components/fsm_servo.vhd
+    Info (12022): Found design unit 1: FSM_Servo-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 28
+    Info (12023): Found entity 1: FSM_Servo File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file components/fsm_angle.vhd
+    Info (12022): Found design unit 1: FSM_Angle-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 29
+    Info (12023): Found entity 1: FSM_Angle File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file components/double_dabble.vhd
+    Info (12022): Found design unit 1: double_dabble-Behavioral File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd Line: 23
+    Info (12023): Found entity 1: double_dabble File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd Line: 13
+Info (12021): Found 1 design units, including 0 entities, in source file components/components_include.vhd
+    Info (12022): Found design unit 1: components_include File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file components/bcd.vhd
+    Info (12022): Found design unit 1: BCD-arc File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd Line: 22
+    Info (12023): Found entity 1: BCD File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd Line: 13
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(30): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(53): used implicit default value for signal "Min_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 53
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(54): used implicit default value for signal "Max_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 54
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(90): used implicit default value for signal "minverified" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 90
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(91): used implicit default value for signal "maxverified" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 91
+Warning (10631): VHDL Process Statement warning at Top.vhd(104): inferring latch(es) for signal or variable "Stored_Data", which holds its previous value in one or more paths through the process File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[0]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[1]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[2]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[3]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[4]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[5]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[6]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (10041): Inferred latch for "Stored_Data[7]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
+Info (12128): Elaborating entity "memory" for hierarchy "memory:Memory_for_display" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 135
+Info (12128): Elaborating entity "synchronizer8bit" for hierarchy "synchronizer8bit:A_Synchonizer" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 163
+Info (12128): Elaborating entity "FSM_Servo" for hierarchy "FSM_Servo:The_State_MachineF" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 191
+Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(35): used explicit default value for signal "Interrupt_right" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(36): used explicit default value for signal "Interrupt_left" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(37): used explicit default value for signal "Sweep_Right" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(38): used explicit default value for signal "Sweep_Left" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 38
+Info (12128): Elaborating entity "FSM_Angle" for hierarchy "FSM_Angle:The_State_MachineA" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 205
+Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(34): used explicit default value for signal "Input_Min" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(35): used explicit default value for signal "Verify_min" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(36): used explicit default value for signal "Input_Max" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(37): used explicit default value for signal "Verify_max" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 37
+Info (12128): Elaborating entity "generic_counter_Time" for hierarchy "generic_counter_Time:Timing_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 218
+Info (12128): Elaborating entity "generic_counter_Angle" for hierarchy "generic_counter_Angle:Angle_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 227
+Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:The_Seperation" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 242
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:The_Dab_Display0" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 256
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "memory:Memory_for_display|RAM" is uninferred due to inappropriate RAM size File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd Line: 28
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 27
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 28
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 29
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 306
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 306
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 34
+    Warning (15610): No output dependent on input pin "SW[0]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[1]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[2]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[3]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[4]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[5]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[6]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+    Warning (15610): No output dependent on input pin "SW[7]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Fri Mar 01 01:28:42 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
+
+
