@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Fri Mar 01 01:28:42 2019
+Sun Mar 03 16:06:13 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -51,14 +51,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 01 01:28:42 2019       ;
+; Analysis & Synthesis Status     ; Successful - Sun Mar 03 16:06:13 2019       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Top                                         ;
 ; Top-level Entity Name           ; Top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 59                                          ;
-; Total pins                      ; 48                                          ;
+; Total pins                      ; 49                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -209,14 +209,14 @@ agreement for further details.
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 59             ;
 ;                                             ;                ;
-; I/O pins                                    ; 48             ;
+; I/O pins                                    ; 49             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 59             ;
-; Total fan-out                               ; 376            ;
-; Average fan-out                             ; 1.92           ;
+; Total fan-out                               ; 377            ;
+; Average fan-out                             ; 1.90           ;
 +---------------------------------------------+----------------+
 
 
@@ -225,7 +225,7 @@ agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name           ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
-; |Top                                     ; 41 (1)              ; 59 (7)                    ; 0                 ; 0          ; 48   ; 0            ; |Top                                     ; Top                   ; work         ;
+; |Top                                     ; 41 (1)              ; 59 (7)                    ; 0                 ; 0          ; 49   ; 0            ; |Top                                     ; Top                   ; work         ;
 ;    |BCD:The_Dab_Display0|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display0                ; BCD                   ; work         ;
 ;    |BCD:The_Dab_Display1|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display1                ; BCD                   ; work         ;
 ;    |BCD:The_Dab_Display2|                ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|BCD:The_Dab_Display2                ; BCD                   ; work         ;
@@ -284,10 +284,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------------------------+-----------------------------------------------------------------------+
 ; FSM_Angle:The_State_MachineA|Present_State[1] ; Stuck at GND              ; LEDR[1]~reg0, FSM_Servo:The_State_MachineF|Present_State[1],          ;
 ;                                               ; due to stuck port data_in ; memory:Memory_for_display|dout[3], memory:Memory_for_display|dout[4], ;
-;                                               ;                           ; memory:Memory_for_display|dout[5], memory:Memory_for_display|dout[6], ;
-;                                               ;                           ; memory:Memory_for_display|dout[2], memory:Memory_for_display|dout[1], ;
-;                                               ;                           ; memory:Memory_for_display|dout[0], BCD:The_Dab_Display0|Hex[6],       ;
-;                                               ;                           ; BCD:The_Dab_Display1|Hex[6], BCD:The_Dab_Display2|Hex[6]              ;
+;                                               ;                           ; memory:Memory_for_display|dout[5], memory:Memory_for_display|dout[7], ;
+;                                               ;                           ; memory:Memory_for_display|dout[6], memory:Memory_for_display|dout[2], ;
+;                                               ;                           ; memory:Memory_for_display|dout[1], memory:Memory_for_display|dout[0], ;
+;                                               ;                           ; BCD:The_Dab_Display0|Hex[6], BCD:The_Dab_Display1|Hex[6],             ;
+;                                               ;                           ; BCD:The_Dab_Display2|Hex[6]                                           ;
 ; FSM_Angle:The_State_MachineA|Start_Servo      ; Stuck at GND              ; FSM_Servo:The_State_MachineF|Present_State[0],                        ;
 ;                                               ; due to stuck port data_in ; FSM_Servo:The_State_MachineF|Present_State[2],                        ;
 ;                                               ;                           ; FSM_Servo:The_State_MachineF|Present_State[3]                         ;
@@ -309,23 +310,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                               ; due to stuck port data_in ;                                                                       ;
 ; synchronizer8bit:A_Synchonizer|flop1[0]       ; Stuck at GND              ; synchronizer8bit:A_Synchonizer|flop2[0]                               ;
 ;                                               ; due to stuck port data_in ;                                                                       ;
-; FSM_Angle:The_State_MachineA|Write_en         ; Stuck at GND              ; memory:Memory_for_display|dout[7]                                     ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[7]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[7]                               ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[6]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[6]                               ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[5]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[5]                               ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[4]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[4]                               ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[3]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[3]                               ;
-;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[2]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[2]                               ;
+; synchronizer8bit:B_Synchonizer|flop1[0]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[0]                               ;
 ;                                               ; due to stuck port data_in ;                                                                       ;
 ; synchronizer8bit:B_Synchonizer|flop1[1]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[1]                               ;
 ;                                               ; due to stuck port data_in ;                                                                       ;
-; synchronizer8bit:B_Synchonizer|flop1[0]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[0]                               ;
+; synchronizer8bit:B_Synchonizer|flop1[2]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[2]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[3]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[3]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[4]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[4]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[5]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[5]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[6]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[6]                               ;
+;                                               ; due to stuck port data_in ;                                                                       ;
+; synchronizer8bit:B_Synchonizer|flop1[7]       ; Stuck at GND              ; synchronizer8bit:B_Synchonizer|flop2[7]                               ;
 ;                                               ; due to stuck port data_in ;                                                                       ;
 +-----------------------------------------------+---------------------------+-----------------------------------------------------------------------+
 
@@ -441,7 +440,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 7                           ;
 ;         6 data inputs ; 3                           ;
-; boundary_port         ; 48                          ;
+; boundary_port         ; 49                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
 ; Average LUT depth     ; 1.72                        ;
@@ -453,7 +452,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -463,7 +462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Mar 01 01:28:27 2019
+    Info: Processing started: Sun Mar 03 16:05:28 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -508,31 +507,22 @@ Warning (10541): VHDL Signal Declaration warning at Top.vhd(53): used implicit d
 Warning (10541): VHDL Signal Declaration warning at Top.vhd(54): used implicit default value for signal "Max_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 54
 Warning (10541): VHDL Signal Declaration warning at Top.vhd(90): used implicit default value for signal "minverified" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 90
 Warning (10541): VHDL Signal Declaration warning at Top.vhd(91): used implicit default value for signal "maxverified" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 91
-Warning (10631): VHDL Process Statement warning at Top.vhd(104): inferring latch(es) for signal or variable "Stored_Data", which holds its previous value in one or more paths through the process File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[0]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[1]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[2]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[3]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[4]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[5]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[6]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (10041): Inferred latch for "Stored_Data[7]" at Top.vhd(104) File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 104
-Info (12128): Elaborating entity "memory" for hierarchy "memory:Memory_for_display" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 135
-Info (12128): Elaborating entity "synchronizer8bit" for hierarchy "synchronizer8bit:A_Synchonizer" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 163
-Info (12128): Elaborating entity "FSM_Servo" for hierarchy "FSM_Servo:The_State_MachineF" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 191
+Info (12128): Elaborating entity "memory" for hierarchy "memory:Memory_for_display" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 153
+Info (12128): Elaborating entity "synchronizer8bit" for hierarchy "synchronizer8bit:A_Synchonizer" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 181
+Info (12128): Elaborating entity "FSM_Servo" for hierarchy "FSM_Servo:The_State_MachineF" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 209
 Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(35): used explicit default value for signal "Interrupt_right" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 35
 Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(36): used explicit default value for signal "Interrupt_left" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 36
 Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(37): used explicit default value for signal "Sweep_Right" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 37
 Warning (10540): VHDL Signal Declaration warning at FSM_Servo.vhd(38): used explicit default value for signal "Sweep_Left" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd Line: 38
-Info (12128): Elaborating entity "FSM_Angle" for hierarchy "FSM_Angle:The_State_MachineA" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 205
+Info (12128): Elaborating entity "FSM_Angle" for hierarchy "FSM_Angle:The_State_MachineA" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 223
 Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(34): used explicit default value for signal "Input_Min" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 34
 Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(35): used explicit default value for signal "Verify_min" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 35
 Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(36): used explicit default value for signal "Input_Max" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 36
 Warning (10540): VHDL Signal Declaration warning at FSM_Angle.vhd(37): used explicit default value for signal "Verify_max" because signal was never assigned a value File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd Line: 37
-Info (12128): Elaborating entity "generic_counter_Time" for hierarchy "generic_counter_Time:Timing_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 218
-Info (12128): Elaborating entity "generic_counter_Angle" for hierarchy "generic_counter_Angle:Angle_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 227
-Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:The_Seperation" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 242
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:The_Dab_Display0" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 256
+Info (12128): Elaborating entity "generic_counter_Time" for hierarchy "generic_counter_Time:Timing_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 236
+Info (12128): Elaborating entity "generic_counter_Angle" for hierarchy "generic_counter_Angle:Angle_Counter" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 245
+Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:The_Seperation" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 260
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:The_Dab_Display0" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 274
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "memory:Memory_for_display|RAM" is uninferred due to inappropriate RAM size File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
@@ -546,13 +536,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX2[4]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
     Warning (13410): Pin "HEX2[5]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
     Warning (13410): Pin "HEX2[6]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 30
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 306
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 306
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 324
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 324
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 34
     Warning (15610): No output dependent on input pin "SW[0]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
     Warning (15610): No output dependent on input pin "SW[1]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
@@ -562,14 +552,15 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[5]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
     Warning (15610): No output dependent on input pin "SW[6]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
     Warning (15610): No output dependent on input pin "SW[7]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+    Warning (15610): No output dependent on input pin "SW[8]" File: Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd Line: 40
+Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 35 output pins
     Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Fri Mar 01 01:28:42 2019
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Sun Mar 03 16:06:13 2019
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:22
 
 

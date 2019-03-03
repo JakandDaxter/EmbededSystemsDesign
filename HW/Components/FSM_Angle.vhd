@@ -60,7 +60,7 @@ Key2_Lock <= KEY(2); --to lock in the maximum values
 The_Default_Process :process(clk,reset,Present_State,Next_State,Input_Min)
 
       BEGIN
-            if (reset = '0') then --active high reset switch
+            if (reset = '1') then --active high reset switch
             
               Present_State <= Input_Min;-- A is the default state after reset
               

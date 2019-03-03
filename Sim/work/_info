@@ -1,0 +1,512 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.0
+Ebcd
+Z0 w1551646801
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 dZ:/Documents/ESD1/EmbededSystemsDesign/Sim
+Z7 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd
+Z8 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd
+l0
+L13
+V7:HOR6WEVC^oY<go6`h]>3
+!s100 `KzFDm1A3]:bh]<GAJcOM0
+Z9 OV;C;10.5b;63
+32
+Z10 !s110 1551648277
+!i10b 1
+Z11 !s108 1551648277.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd|
+Z13 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/BCD.vhd|
+!i113 1
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1 CvgOpt 0
+Aarc
+R1
+R2
+R3
+R4
+R5
+DEx4 work 3 bcd 0 22 7:HOR6WEVC^oY<go6`h]>3
+l42
+L22
+VELW<Dg00g2i?Sm]1BR0Tk3
+!s100 <KPZAo1f_]Nc=ZA8d]jmP0
+R9
+32
+Z16 !s110 1551648278
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Pcomponents_include
+R1
+R2
+R3
+R4
+R5
+w1551412564
+R6
+8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd
+FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd
+l0
+L13
+V@T0WDR2ZZKb9443[ZbZ_z1
+!s100 _gNiKzP_<=ZX1g2HnVlkd3
+R9
+32
+R16
+!i10b 1
+Z17 !s108 1551648278.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd|
+!s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/components_include.vhd|
+!i113 1
+R14
+R15
+Edouble_dabble
+Z18 w1551331803
+R1
+R2
+R3
+R4
+R5
+R6
+Z19 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd
+Z20 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd
+l0
+L13
+VC2J1:5W<]KiLzT`9TbfdI1
+!s100 1@5SAE<n9cZ3nDQoLjM090
+R9
+32
+R16
+!i10b 1
+R17
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd|
+Z22 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/double_dabble.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R1
+R2
+R3
+R4
+R5
+DEx4 work 13 double_dabble 0 22 C2J1:5W<]KiLzT`9TbfdI1
+l25
+L23
+V5O^<VWOoT^TK^YC]C;URD2
+!s100 TkO524=CnT48;;lLVT`[e0
+R9
+32
+R16
+!i10b 1
+R17
+R21
+R22
+!i113 1
+R14
+R15
+Efsm_angle
+w1551647125
+R1
+R2
+R3
+R4
+R5
+R6
+8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd
+FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd
+l0
+L14
+Vg9WLFVIg:DEYUN07PBiDW3
+!s100 `Cn[HMccMia;I4hoLhzN]0
+R9
+32
+R16
+!i10b 1
+R17
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd|
+!s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Angle.vhd|
+!i113 1
+R14
+R15
+Efsm_servo
+w1551646808
+R1
+R2
+R3
+R4
+R5
+R6
+8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd
+FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd
+l0
+L12
+VfLheU_^@6aaibI1M>n^>Q0
+!s100 Gz9BMg3XlU>9kP0l_Djab2
+R9
+32
+R16
+!i10b 1
+R17
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd|
+!s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/FSM_Servo.vhd|
+!i113 1
+R14
+R15
+Egeneric_counter_angle
+Z23 w1551646818
+R1
+R2
+R3
+R4
+R5
+R6
+Z24 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd
+Z25 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd
+l0
+L10
+VTkM@;EZPSg@PLaT[eFjz]0
+!s100 z5K4YW32i6c]`_CBT?LHI3
+R9
+32
+R16
+!i10b 1
+R17
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd|
+Z27 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Angle.vhd|
+!i113 1
+R14
+R15
+Abeh
+R1
+R2
+R3
+R4
+R5
+DEx4 work 21 generic_counter_angle 0 22 TkM@;EZPSg@PLaT[eFjz]0
+l37
+L23
+Vc1Raj1OY6HzO:9T@@B4^K1
+!s100 S=?:IM_c@Gc;K5FU2cN^W0
+R9
+32
+R16
+!i10b 1
+R17
+R26
+R27
+!i113 1
+R14
+R15
+Egeneric_counter_time
+Z28 w1551646823
+R1
+R2
+R3
+R4
+R5
+R6
+Z29 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd
+Z30 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd
+l0
+L10
+VinJZhU8ZaM8`oTib=QlH31
+!s100 @I^QSedn:Lfh_?4_lYXjD0
+R9
+32
+Z31 !s110 1551648279
+!i10b 1
+R17
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd|
+Z33 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/generic_counter_Time.vhd|
+!i113 1
+R14
+R15
+Abeh
+R1
+R2
+R3
+R4
+R5
+DEx4 work 20 generic_counter_time 0 22 inJZhU8ZaM8`oTib=QlH31
+l25
+L21
+VGGKblei2lR8UkXIfniH_R3
+!s100 ^LYZL^fm2k@XolZi3j`950
+R9
+32
+R31
+!i10b 1
+R17
+R32
+R33
+!i113 1
+R14
+R15
+Ememory
+Z34 w1551332697
+R1
+R4
+R5
+R6
+Z35 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd
+Z36 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd
+l0
+L8
+VXGNG^QnAX9;Y`6;`P_]AG1
+!s100 N6o1@S:46I7U;LHL@1m@>1
+R9
+32
+R31
+!i10b 1
+Z37 !s108 1551648279.000000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd|
+Z39 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/memory.vhd|
+!i113 1
+R14
+R15
+Abeh
+R1
+R4
+R5
+DEx4 work 6 memory 0 22 XGNG^QnAX9;Y`6;`P_]AG1
+l30
+L23
+VWQ?ndNa42ilX`VPeN9JL]3
+!s100 lJm5@A1WSKY=Q51Xi9JS<0
+R9
+32
+R31
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R14
+R15
+Erising_edge_synchronizer
+R18
+R4
+R5
+R6
+Z40 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd
+Z41 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd
+l0
+L10
+Vo>Ic57DcN54f0K65ACYLP0
+!s100 ^=0l=2M8^Pl6eN^fIVNh_2
+R9
+32
+R31
+!i10b 1
+R37
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd|
+Z43 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/rising_edge_synchronizer.vhd|
+!i113 1
+R14
+R15
+Abeh
+R4
+R5
+DEx4 work 24 rising_edge_synchronizer 0 22 o>Ic57DcN54f0K65ACYLP0
+l25
+L19
+VOJjRabC@YBB<ekAR29feT0
+!s100 N7SGMkOL;[mY<JYkM3f2[1
+R9
+32
+R31
+!i10b 1
+R37
+R42
+R43
+!i113 1
+R14
+R15
+Esynchronizer4bit
+R18
+R4
+R5
+R6
+Z44 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd
+Z45 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd
+l0
+L10
+V<Bb:i]Q<DnfK241>E[ZBm3
+!s100 ?1MaeAFcFH]@c]0cC[0^j3
+R9
+32
+R31
+!i10b 1
+R37
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd|
+Z47 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer4bit.vhd|
+!i113 1
+R14
+R15
+Abeh
+R4
+R5
+DEx4 work 16 synchronizer4bit 0 22 <Bb:i]Q<DnfK241>E[ZBm3
+l24
+L19
+V?O^jEIa^7Cn@^5h:@EIe=2
+!s100 A3L2aQN9zZ<k;JWBg]NN>1
+R9
+32
+R31
+!i10b 1
+R37
+R46
+R47
+!i113 1
+R14
+R15
+Esynchronizer8bit
+R18
+R4
+R5
+R6
+Z48 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd
+Z49 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd
+l0
+L10
+V@I7AODR[O>>_Zj>Pb<@Zd0
+!s100 g@dX_jJl9^k7kj;XLi85z1
+R9
+32
+R31
+!i10b 1
+R37
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd|
+Z51 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/synchronizer8bit.vhd|
+!i113 1
+R14
+R15
+Abeh
+R4
+R5
+DEx4 work 16 synchronizer8bit 0 22 @I7AODR[O>>_Zj>Pb<@Zd0
+l24
+L19
+V@@7f1K_M8ECMUQn>[m_@<2
+!s100 z3G]bBCnWQkB8IoBK7S=m1
+R9
+32
+R31
+!i10b 1
+R37
+R50
+R51
+!i113 1
+R14
+R15
+Etop
+Z52 w1551648272
+Z53 DPx4 work 18 components_include 0 22 @T0WDR2ZZKb9443[ZbZ_z1
+R1
+R2
+R3
+R4
+R5
+R6
+Z54 8Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd
+Z55 FZ:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd
+l0
+L14
+VUMoRNOmgTUY5HLEedRMHZ1
+!s100 3daA<651l?nCHKD=6>29S3
+R9
+32
+R31
+!i10b 1
+R37
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd|
+Z57 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/HW/Components/Top.vhd|
+!i113 1
+R14
+R15
+Aservomotor
+R53
+R1
+R2
+R3
+R4
+R5
+Z58 DEx4 work 3 top 0 22 UMoRNOmgTUY5HLEedRMHZ1
+l97
+L46
+VBJ@6zme8Jj;7>aHhdNJ4b1
+!s100 LjILcIHZd0eYf?zoF[HdU3
+R9
+32
+R31
+!i10b 1
+R37
+R56
+R57
+!i113 1
+R14
+R15
+Etop_level_tb
+Z59 w1551648095
+R2
+Z60 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R1
+R4
+R5
+R6
+Z61 8Z:/Documents/ESD1/EmbededSystemsDesign/Sim/top_level_tb.vhd
+Z62 FZ:/Documents/ESD1/EmbededSystemsDesign/Sim/top_level_tb.vhd
+l0
+L6
+VOWFW]e@gKn?XXPiYCRB=N2
+!s100 P24^6B1;zC@noIJVF4EN]1
+R9
+32
+R10
+!i10b 1
+R11
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/EmbededSystemsDesign/Sim/top_level_tb.vhd|
+Z64 !s107 Z:/Documents/ESD1/EmbededSystemsDesign/Sim/top_level_tb.vhd|
+!i113 1
+R14
+R15
+Aarch
+R2
+R60
+R1
+R4
+R5
+DEx4 work 12 top_level_tb 0 22 OWFW]e@gKn?XXPiYCRB=N2
+l57
+L9
+VU?QdVKLd>aC3G4?f=_OJP0
+!s100 KP2YD;ZCF9]hioMc8QN`k3
+R9
+32
+R10
+!i10b 1
+R11
+R63
+R64
+!i113 1
+R14
+R15

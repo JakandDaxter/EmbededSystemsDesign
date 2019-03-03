@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Mar 01 01:29:30 2019
+Fitter Status : Successful - Sun Mar 03 16:07:24 2019
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Top
 Top-level Entity Name : Top
@@ -7,7 +7,7 @@ Device : 5CSEMA5F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 25 / 32,070 ( < 1 % )
 Total registers : 65
-Total pins : 48 / 457 ( 11 % )
+Total pins : 49 / 457 ( 11 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

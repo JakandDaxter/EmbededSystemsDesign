@@ -24,7 +24,7 @@ entity Top is
       CLOCK_50 : in std_logic;
 
       ----- SEG7 -----
-     HEX5 : out std_logic_vector(6 downto 0);
+      HEX5 : out std_logic_vector(6 downto 0);
 	  HEX4 : out std_logic_vector(6 downto 0);
 	  HEX3 : out std_logic_vector(6 downto 0);
 	  HEX2 : out std_logic_vector(6 downto 0); -- use this to show the degree symbol
@@ -34,10 +34,10 @@ entity Top is
       KEY : in std_logic_vector(3 downto 0); --remeber to use key(0) for reset
 
       ----- LED -----
-      LEDR : out  std_logic_vector(5 downto 0);
+      LEDR : out  std_logic_vector(9 downto 0);
 
       ----- SW -----
-      SW : in  std_logic_vector(7 downto 0) 
+      SW : in  std_logic_vector(8 downto 0) 
 	    
   	 );
 	                  
@@ -109,22 +109,40 @@ We_talking_about_Addresses_here: Process(Address_for_mem,STATE_A,Write_enable,Mi
 							WHEN "000100" => --when in the verfied min stage stage
 								IF (Write_enable = '1') THEN
 									Address_for_mem <="00";
-									     Stored_Data <= Min_sync;
 									 else
 	 									Address_for_mem <="00"; --just read from here
 										end if;
 									WHEN "100000" => --when in the verfied max stage
 									IF (Write_enable = '1') THEN
 										Address_for_mem <="01";
-										Stored_Data <= Max_sync;
 									else
 										Address_for_mem <="01"; --just read from here
 											end if;		
-											WHEN OTHERS => Address_for_mem <= "00";
+											WHEN OTHERS => Address_for_mem <="00";
 										end case;	
 									end process;
 
---****************************************--  
+--****************************************--
+We_talking_about_storage_here: Process(Address_for_mem,STATE_A,Write_enable,Min_sync,Max_sync)
+
+                                 BEGIN
+                                 
+							Case STATE_A IS
+							WHEN "000100" => --when in the verfied min stage stage
+								IF (Write_enable = '1') THEN
+									     Stored_Data <= Min_sync;
+									 else
+											Stored_Data <= Min_sync;
+										end if;
+									WHEN "100000" => --when in the verfied max stage
+									IF (Write_enable = '1') THEN
+										Stored_Data <= Max_sync;
+									else
+										Stored_Data <= Max_sync;
+											end if;		
+											WHEN OTHERS => Stored_Data <= Min_sync;
+										end case;	
+									end process; 
 --****************************************-- 
 --****************************************--  
 --****************************************--  
@@ -303,20 +321,20 @@ The_Dab_Display2: BCD
 State_LEDS: Process(CLOCK_50,servoenable,reset_n)
 begin
 	
-    if (reset_n = '0') then 
+    if (reset_n = '1') then 
 		
 	
-	LEDR <= "000000";
+	LEDR <= "0000000000";
 
     elsif (CLOCK_50'event and CLOCK_50 = '1') then
 		
       if (servoenable = '1') then
 		  
-		  LEDR <= "00" & STATE_S;
+		  LEDR <= "000000" & STATE_S;
 
       else
 		  
-		  	LEDR <= STATE_A;
+		  	LEDR <= "0000" & STATE_A;
 
       end if;
 	   

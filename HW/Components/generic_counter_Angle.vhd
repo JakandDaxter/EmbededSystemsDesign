@@ -43,7 +43,7 @@ Anglemax <= Angle2; --taking the maximum angle and storing it into a signal
 	
 process(clk,reset,Angle_Count)
   begin
-   if (reset = '0') then 
+   if (reset = '1') then 
 		
       Angle_Count <= "00000000";
 	  

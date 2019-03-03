@@ -26,7 +26,7 @@ begin
 	
 process(clk,reset)
   begin
-    if (reset = '0') then 
+    if (reset = '1') then 
       count_sig <= 0;
       output <= '0';
     elsif (clk'event and clk = '1') then

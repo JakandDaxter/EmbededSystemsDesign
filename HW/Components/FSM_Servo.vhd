@@ -50,7 +50,7 @@ BEGIN
 The_Default_Process :process(clk,reset,Present_State,Next_State,Sweep_Right)
 
       BEGIN
-            if (reset = '0') then --active high reset switch
+            if (reset = '1') then --active high reset switch
             
               Present_State <= Sweep_Right;-- A is the default state after reset
               

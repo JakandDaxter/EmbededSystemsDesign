@@ -43,7 +43,7 @@ BEGIN
 
 Process(clk,reset,Bin)
   BEGIN
-      if(reset = '0') THEN
+      if(reset = '1') THEN
           Hex <= Blank;
           
        elsif(clk'event and clk = '1') THEN
