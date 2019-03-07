@@ -14,6 +14,7 @@ entity generic_counter_Time is
   port (
     clk             : in  std_logic; 
     reset           : in  std_logic;
+    counter           : out integer range 0 to max_count;
     output          : out std_logic
   );  
 end generic_counter_Time;  
@@ -24,7 +25,8 @@ signal count_sig    : integer range 0 to max_count := 0;
 
 begin
 	
-process(clk,reset)
+
+ process(clk,reset)
   begin
     if (reset = '0') then 
       count_sig <= 0;
@@ -38,6 +40,16 @@ process(clk,reset)
           output <= '0';
       end if; 
     end if;
-  end process;
-  
+  end process; 
+
+
+process(clk,reset)
+  begin
+    if (reset = '0') then 
+		counter <= 0;
+    elsif (clk'event and clk = '1') then
+				counter <= count_sig;
+      end if; 
+   
+  end process;  
 end beh;

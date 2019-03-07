@@ -46,8 +46,7 @@ Signal  Raw_input               :std_logic_vector(7 downto 0); -- raw data
 Signal  Min_sync           		:std_logic_vector(31 downto 0); -- sends in the raw data
 Signal  Max_sync           		:std_logic_vector(31 downto 0); -- sends in the raw data
 
-
-
+Signal  TimingCount             : integer range 0 to 1000000 := 0;
 signal  STATE_S					:std_logic_vector(3 downto 0); --will handle the state so that i know when to enable the servo interrupt
 
 signal  Write_enable    		:std_logic; --will be set to a one depening on the state from the angle statemachine
@@ -239,6 +238,7 @@ The_State_MachineF: FSM_Servo
 		
 		clk               =>   CLOCK_50,
 		reset             =>   reset_n,
+		counter             =>   TimingCount,
 		output            =>   ActivePeriod
 		
 		);
@@ -247,7 +247,8 @@ Angle_Counter: generic_counter_Angle
 		Port Map(
 		clk                =>   CLOCK_50,
 		reset              =>   reset_n,
-		Timer              =>   ActivePeriod,
+		Timer              =>   ActivePeriod, --when the timer hits 1 mil
+		PeriodCount        =>   TimingCount,
 		Max_Interrupt      =>   Interruptmax,
 		state	           =>   STATE_S,
 		Min_Interrupt      =>   interruptmin,

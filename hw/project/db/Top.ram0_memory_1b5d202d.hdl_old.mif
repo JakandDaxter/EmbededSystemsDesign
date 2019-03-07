@@ -1,0 +1,16 @@
+-- begin_signature
+-- memory(addr_width
+-- 2
+-- data_width
+-- 32)
+-- end_signature
+WIDTH=32;
+DEPTH=2;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	1 :	00000000000000000000000000000000;
+	0 :	00000000000000000000000000000000;
+END;

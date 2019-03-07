@@ -13,6 +13,7 @@ entity generic_counter_Angle is
     reset             : in   std_logic;
 	Timer             : in   std_logic; --period
 	state			  : in   std_logic_vector;
+	PeriodCount       : in   integer range 0 to 1000000;
 	Max_Interrupt	  : out  std_logic; --the interrupt that will become a one when the PW count made it to the max
 	Min_Interrupt	  : out  std_logic; --the interrupt that will become a one when the PW count made it to the min
 	PWM           	  : out  std_logic -- will be a one when ever the count has not reached the bounds
@@ -40,13 +41,11 @@ begin
 --Anglemax <= Angle2; --taking the maximum angle and storing it into a signal  state = "0111"
 
 	
-process(clk,reset,Angle_Count)
+process(clk,reset,Angle_Count,Timer)
   begin
    if (reset = '0') then 
 		
       Angle_Count <= 0;
-	  
-      --PWM <= '0';
 	  
    elsif (clk'event and clk = '1') then
       
@@ -54,7 +53,7 @@ process(clk,reset,Angle_Count)
 			
 				  if (Angle_Count < max_angle_count) then
 			  
-					  Angle_Count <= Angle_Count + 500;
+					  Angle_Count <= Angle_Count + 5000;
 
 						end if;
 					  
@@ -62,9 +61,10 @@ process(clk,reset,Angle_Count)
 					
 						if (Angle_Count > min_angle_count) then
 			  
-							Angle_Count <= Angle_Count - 500;
+							Angle_Count <= Angle_Count - 5000;
 							
 							else
+
 							
 								Angle_Count <= Angle_Count;
 
@@ -77,7 +77,7 @@ process(clk,reset,Angle_Count)
   	end process;
 	
 --$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$--	
-	process(clk,reset,Angle_Count)
+	process(clk,reset,Angle_Count,PeriodCount,Timer)
 	  begin
 	   if (reset = '0') then 
 	  
@@ -85,9 +85,9 @@ process(clk,reset,Angle_Count)
 	  
 	   elsif (clk'event and clk = '1') then
       
-				  if (Timer = '1' AND state = "1011") then -- sweep rite first
+				  if (Timer = '0' AND state = "1011") then -- sweep rite first
 			
-					  if (Angle_Count < max_angle_count) then
+					  if (Angle_Count > PeriodCount  ) then
 			  
 						  PWM <= '1';
 			
@@ -97,9 +97,9 @@ process(clk,reset,Angle_Count)
 					
 						end if;
 						
-					elsif(Timer = '1' AND state = "0111") Then	
+					elsif(Timer = '0' AND state = "0111") Then	
 				
-						if (Angle_Count > min_angle_count) then
+						if (Angle_Count > PeriodCount) then
 										  
 							PWM <= '1';
 					  
@@ -115,7 +115,7 @@ process(clk,reset,Angle_Count)
 		  
 	  	end process;
 --$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$--		
-		process(clk,reset,Angle_Count)
+		process(clk,reset,Angle_Count,Timer)
 		  begin
 		   if (reset = '0') then 
 		

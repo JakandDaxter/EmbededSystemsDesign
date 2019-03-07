@@ -85,6 +85,7 @@ COMPONENT generic_counter_Angle IS
     reset           		: in   std_logic;
 	Timer            		: in   std_logic; --period
 	state		 			: in   std_logic_vector(3 downto 0);
+	PeriodCount       : in   integer range 0 to 1000000;
 	Max_Interrupt	  		: out  std_logic; --the interrupt that will become a one when the PW count made it to the max
 	Min_Interrupt	  		: out  std_logic; --the interrupt that will become a one when the PW count made it to the min
 	PWM           	  		: out  std_logic -- will be a one when ever the count has not reached the bounds
@@ -99,6 +100,7 @@ COMPONENT generic_counter_Time IS
   port (
     clk             		: in  std_logic; 
     reset           		: in  std_logic;
+    counter           : out integer range 0 to max_count;
     output          		: out std_logic
   );  
 END COMPONENT;

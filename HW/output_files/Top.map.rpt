@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Top
-Tue Mar 05 22:29:52 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Wed Mar 06 17:21:00 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
 ---------------------
@@ -13,15 +13,16 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: memory:Memory_for_display
- 12. Parameter Settings for User Entity Instance: generic_counter_Time:Timing_Counter
- 13. Port Connectivity Checks: "memory:Memory_for_display"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: memory:Memory_for_display
+ 13. Parameter Settings for User Entity Instance: generic_counter_Time:Timing_Counter
+ 14. Port Connectivity Checks: "memory:Memory_for_display"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -45,27 +46,27 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 05 22:29:51 2019       ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name                   ; Top                                         ;
-; Top-level Entity Name           ; Top                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 55                                          ;
-; Total pins                      ; 6                                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Mar 06 17:21:00 2019           ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
+; Revision Name                   ; Top                                             ;
+; Top-level Entity Name           ; Top                                             ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 71                                              ;
+; Total pins                      ; 6                                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -160,15 +161,15 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -177,13 +178,13 @@ agreement for further details.
 +-------------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
 ; File Name with User-Entered Path    ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
 +-------------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; ../../src/FSM_Servo.vhd             ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/FSM_Servo.vhd             ;         ;
-; ../../src/generic_counter_Angle.vhd ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd ;         ;
-; ../../src/generic_counter_Time.vhd  ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/generic_counter_Time.vhd  ;         ;
-; ../../src/components_include.vhd    ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/components_include.vhd    ;         ;
-; ../../src/memory.vhd                ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/memory.vhd                ;         ;
-; ../../src/synchronizer8bit.vhd      ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/synchronizer8bit.vhd      ;         ;
-; ../../src/Top.vhd                   ; yes             ; User VHDL File  ; X:/CPET-561/Lab_4/src/Top.vhd                   ;         ;
+; ../../src/FSM_Servo.vhd             ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/FSM_Servo.vhd             ;         ;
+; ../../src/generic_counter_Angle.vhd ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd ;         ;
+; ../../src/generic_counter_Time.vhd  ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/generic_counter_Time.vhd  ;         ;
+; ../../src/components_include.vhd    ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/components_include.vhd    ;         ;
+; ../../src/memory.vhd                ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/memory.vhd                ;         ;
+; ../../src/synchronizer8bit.vhd      ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/synchronizer8bit.vhd      ;         ;
+; ../../src/Top.vhd                   ; yes             ; User VHDL File  ; S:/CPET-561/Lab_4/src/Top.vhd                   ;         ;
 +-------------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
 
 
@@ -192,25 +193,25 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 40             ;
+; Estimate of Logic utilization (ALMs needed) ; 52             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 68             ;
+; Combinational ALUT usage for logic          ; 83             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 10             ;
-;     -- 5 input functions                    ; 8              ;
-;     -- 4 input functions                    ; 4              ;
-;     -- <=3 input functions                  ; 46             ;
+;     -- 6 input functions                    ; 18             ;
+;     -- 5 input functions                    ; 10             ;
+;     -- 4 input functions                    ; 8              ;
+;     -- <=3 input functions                  ; 47             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 55             ;
+; Dedicated logic registers                   ; 71             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 6              ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 55             ;
-; Total fan-out                               ; 443            ;
-; Average fan-out                             ; 3.28           ;
+; Maximum fan-out                             ; 71             ;
+; Total fan-out                               ; 588            ;
+; Average fan-out                             ; 3.54           ;
 +---------------------------------------------+----------------+
 
 
@@ -219,12 +220,22 @@ agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name           ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
-; |Top                                     ; 68 (0)              ; 55 (3)                    ; 0                 ; 0          ; 6    ; 0            ; |Top                                     ; Top                   ; work         ;
+; |Top                                     ; 83 (0)              ; 71 (3)                    ; 0                 ; 0          ; 6    ; 0            ; |Top                                     ; Top                   ; work         ;
 ;    |FSM_Servo:The_State_MachineF|        ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|FSM_Servo:The_State_MachineF        ; FSM_Servo             ; work         ;
-;    |generic_counter_Angle:Angle_Counter| ; 40 (40)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Angle:Angle_Counter ; generic_counter_Angle ; work         ;
-;    |generic_counter_Time:Timing_Counter| ; 24 (24)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Time:Timing_Counter ; generic_counter_Time  ; work         ;
+;    |generic_counter_Angle:Angle_Counter| ; 55 (55)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Angle:Angle_Counter ; generic_counter_Angle ; work         ;
+;    |generic_counter_Time:Timing_Counter| ; 24 (24)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|generic_counter_Time:Timing_Counter ; generic_counter_Time  ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                     ;
++---------------------------------------------------+--------------------+
+; Register name                                     ; Reason for Removal ;
++---------------------------------------------------+--------------------+
+; generic_counter_Time:Timing_Counter|counter[0..2] ; Lost fanout        ;
+; Total Number of Removed Registers = 3             ;                    ;
++---------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -232,12 +243,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 55    ;
+; Total registers                              ; 71    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Number of registers using Asynchronous Clear ; 67    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -247,20 +258,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
-; FSM_Servo:The_State_MachineF|Present_State[3] ; 6       ;
-; FSM_Servo:The_State_MachineF|Present_State[1] ; 6       ;
-; FSM_Servo:The_State_MachineF|Present_State[0] ; 6       ;
+; FSM_Servo:The_State_MachineF|Present_State[0] ; 7       ;
+; FSM_Servo:The_State_MachineF|Present_State[3] ; 7       ;
+; FSM_Servo:The_State_MachineF|Present_State[1] ; 7       ;
 ; Total number of inverted registers = 3        ;         ;
 +-----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |Top|generic_counter_Angle:Angle_Counter|Angle_count[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |Top|generic_counter_Angle:Angle_Counter|Angle_count[16] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -299,26 +310,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 55                          ;
-;     CLR               ; 7                           ;
+; arriav_ff             ; 71                          ;
+;     CLR               ; 24                          ;
 ;     CLR SCLR          ; 20                          ;
 ;     ENA               ; 1                           ;
-;     ENA CLR           ; 24                          ;
+;     ENA CLR           ; 23                          ;
 ;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 68                          ;
-;     arith             ; 44                          ;
+; arriav_lcell_comb     ; 83                          ;
+;     arith             ; 43                          ;
 ;         1 data inputs ; 21                          ;
-;         2 data inputs ; 23                          ;
-;     normal            ; 24                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 10                          ;
+;         3 data inputs ; 22                          ;
+;     normal            ; 40                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 6                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.77                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -327,7 +338,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -336,73 +347,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Mar 05 22:28:55 2019
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+    Info: Processing started: Wed Mar 06 17:20:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/bcd.vhd
-    Info (12022): Found design unit 1: BCD-arc File: X:/CPET-561/Lab_4/src/BCD.vhd Line: 22
-    Info (12023): Found entity 1: BCD File: X:/CPET-561/Lab_4/src/BCD.vhd Line: 13
+    Info (12022): Found design unit 1: BCD-arc File: S:/CPET-561/Lab_4/src/BCD.vhd Line: 22
+    Info (12023): Found entity 1: BCD File: S:/CPET-561/Lab_4/src/BCD.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/double_dabble.vhd
-    Info (12022): Found design unit 1: double_dabble-Behavioral File: X:/CPET-561/Lab_4/src/double_dabble.vhd Line: 23
-    Info (12023): Found entity 1: double_dabble File: X:/CPET-561/Lab_4/src/double_dabble.vhd Line: 13
+    Info (12022): Found design unit 1: double_dabble-Behavioral File: S:/CPET-561/Lab_4/src/double_dabble.vhd Line: 23
+    Info (12023): Found entity 1: double_dabble File: S:/CPET-561/Lab_4/src/double_dabble.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/fsm_angle.vhd
-    Info (12022): Found design unit 1: FSM_Angle-beh File: X:/CPET-561/Lab_4/src/FSM_Angle.vhd Line: 29
-    Info (12023): Found entity 1: FSM_Angle File: X:/CPET-561/Lab_4/src/FSM_Angle.vhd Line: 14
+    Info (12022): Found design unit 1: FSM_Angle-beh File: S:/CPET-561/Lab_4/src/FSM_Angle.vhd Line: 29
+    Info (12023): Found entity 1: FSM_Angle File: S:/CPET-561/Lab_4/src/FSM_Angle.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/fsm_servo.vhd
-    Info (12022): Found design unit 1: FSM_Servo-beh File: X:/CPET-561/Lab_4/src/FSM_Servo.vhd Line: 25
-    Info (12023): Found entity 1: FSM_Servo File: X:/CPET-561/Lab_4/src/FSM_Servo.vhd Line: 12
+    Info (12022): Found design unit 1: FSM_Servo-beh File: S:/CPET-561/Lab_4/src/FSM_Servo.vhd Line: 25
+    Info (12023): Found entity 1: FSM_Servo File: S:/CPET-561/Lab_4/src/FSM_Servo.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/generic_counter_angle.vhd
-    Info (12022): Found design unit 1: generic_counter_Angle-beh File: X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 22
-    Info (12023): Found entity 1: generic_counter_Angle File: X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 10
+    Info (12022): Found design unit 1: generic_counter_Angle-beh File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 23
+    Info (12023): Found entity 1: generic_counter_Angle File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/generic_counter_time.vhd
-    Info (12022): Found design unit 1: generic_counter_Time-beh File: X:/CPET-561/Lab_4/src/generic_counter_Time.vhd Line: 21
-    Info (12023): Found entity 1: generic_counter_Time File: X:/CPET-561/Lab_4/src/generic_counter_Time.vhd Line: 10
+    Info (12022): Found design unit 1: generic_counter_Time-beh File: S:/CPET-561/Lab_4/src/generic_counter_Time.vhd Line: 22
+    Info (12023): Found entity 1: generic_counter_Time File: S:/CPET-561/Lab_4/src/generic_counter_Time.vhd Line: 10
 Info (12021): Found 1 design units, including 0 entities, in source file /cpet-561/lab_4/src/components_include.vhd
-    Info (12022): Found design unit 1: components_include File: X:/CPET-561/Lab_4/src/components_include.vhd Line: 13
+    Info (12022): Found design unit 1: components_include File: S:/CPET-561/Lab_4/src/components_include.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/memory.vhd
-    Info (12022): Found design unit 1: memory-beh File: X:/CPET-561/Lab_4/src/memory.vhd Line: 24
-    Info (12023): Found entity 1: memory File: X:/CPET-561/Lab_4/src/memory.vhd Line: 9
+    Info (12022): Found design unit 1: memory-beh File: S:/CPET-561/Lab_4/src/memory.vhd Line: 24
+    Info (12023): Found entity 1: memory File: S:/CPET-561/Lab_4/src/memory.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/rising_edge_synchronizer.vhd
-    Info (12022): Found design unit 1: rising_edge_synchronizer-beh File: X:/CPET-561/Lab_4/src/rising_edge_synchronizer.vhd Line: 19
-    Info (12023): Found entity 1: rising_edge_synchronizer File: X:/CPET-561/Lab_4/src/rising_edge_synchronizer.vhd Line: 10
+    Info (12022): Found design unit 1: rising_edge_synchronizer-beh File: S:/CPET-561/Lab_4/src/rising_edge_synchronizer.vhd Line: 19
+    Info (12023): Found entity 1: rising_edge_synchronizer File: S:/CPET-561/Lab_4/src/rising_edge_synchronizer.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/synchronizer4bit.vhd
-    Info (12022): Found design unit 1: synchronizer4bit-beh File: X:/CPET-561/Lab_4/src/synchronizer4bit.vhd Line: 19
-    Info (12023): Found entity 1: synchronizer4bit File: X:/CPET-561/Lab_4/src/synchronizer4bit.vhd Line: 10
+    Info (12022): Found design unit 1: synchronizer4bit-beh File: S:/CPET-561/Lab_4/src/synchronizer4bit.vhd Line: 19
+    Info (12023): Found entity 1: synchronizer4bit File: S:/CPET-561/Lab_4/src/synchronizer4bit.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/synchronizer8bit.vhd
-    Info (12022): Found design unit 1: synchronizer8bit-beh File: X:/CPET-561/Lab_4/src/synchronizer8bit.vhd Line: 19
-    Info (12023): Found entity 1: synchronizer8bit File: X:/CPET-561/Lab_4/src/synchronizer8bit.vhd Line: 10
+    Info (12022): Found design unit 1: synchronizer8bit-beh File: S:/CPET-561/Lab_4/src/synchronizer8bit.vhd Line: 19
+    Info (12023): Found entity 1: synchronizer8bit File: S:/CPET-561/Lab_4/src/synchronizer8bit.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/lab_4/src/top.vhd
-    Info (12022): Found design unit 1: Top-ServoMotor File: X:/CPET-561/Lab_4/src/Top.vhd Line: 34
-    Info (12023): Found entity 1: Top File: X:/CPET-561/Lab_4/src/Top.vhd Line: 14
+    Info (12022): Found design unit 1: Top-ServoMotor File: S:/CPET-561/Lab_4/src/Top.vhd Line: 34
+    Info (12023): Found entity 1: Top File: S:/CPET-561/Lab_4/src/Top.vhd Line: 14
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Top.vhd(41): used implicit default value for signal "Min_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: X:/CPET-561/Lab_4/src/Top.vhd Line: 41
-Warning (10541): VHDL Signal Declaration warning at Top.vhd(42): used implicit default value for signal "Max_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: X:/CPET-561/Lab_4/src/Top.vhd Line: 42
-Warning (10036): Verilog HDL or VHDL warning at Top.vhd(57): object "Read_Data" assigned a value but never read File: X:/CPET-561/Lab_4/src/Top.vhd Line: 57
-Info (12128): Elaborating entity "memory" for hierarchy "memory:Memory_for_display" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 170
-Info (12128): Elaborating entity "synchronizer8bit" for hierarchy "synchronizer8bit:A_Synchonizer" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 198
-Info (12128): Elaborating entity "FSM_Servo" for hierarchy "FSM_Servo:The_State_MachineF" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 226
-Info (12128): Elaborating entity "generic_counter_Time" for hierarchy "generic_counter_Time:Timing_Counter" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 237
-Info (12128): Elaborating entity "generic_counter_Angle" for hierarchy "generic_counter_Angle:Angle_Counter" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 246
-Warning (10631): VHDL Process Statement warning at generic_counter_Angle.vhd(43): inferring latch(es) for signal or variable "Angle_count", which holds its previous value in one or more paths through the process File: X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 43
-Info (10041): Inferred latch for "Angle_count[0]" at generic_counter_Angle.vhd(43) File: X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 43
-Info (10041): Inferred latch for "Angle_count[1]" at generic_counter_Angle.vhd(43) File: X:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 43
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(41): used implicit default value for signal "Min_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: S:/CPET-561/Lab_4/src/Top.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at Top.vhd(42): used implicit default value for signal "Max_raw" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: S:/CPET-561/Lab_4/src/Top.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at Top.vhd(56): object "Read_Data" assigned a value but never read File: S:/CPET-561/Lab_4/src/Top.vhd Line: 56
+Info (12128): Elaborating entity "memory" for hierarchy "memory:Memory_for_display" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 169
+Info (12128): Elaborating entity "synchronizer8bit" for hierarchy "synchronizer8bit:A_Synchonizer" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 197
+Info (12128): Elaborating entity "FSM_Servo" for hierarchy "FSM_Servo:The_State_MachineF" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 225
+Info (12128): Elaborating entity "generic_counter_Time" for hierarchy "generic_counter_Time:Timing_Counter" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 236
+Info (12128): Elaborating entity "generic_counter_Angle" for hierarchy "generic_counter_Angle:Angle_Counter" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 246
+Warning (10631): VHDL Process Statement warning at generic_counter_Angle.vhd(44): inferring latch(es) for signal or variable "Angle_count", which holds its previous value in one or more paths through the process File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 44
+Info (10041): Inferred latch for "Angle_count[0]" at generic_counter_Angle.vhd(44) File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 44
+Info (10041): Inferred latch for "Angle_count[1]" at generic_counter_Angle.vhd(44) File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 44
+Info (10041): Inferred latch for "Angle_count[2]" at generic_counter_Angle.vhd(44) File: S:/CPET-561/Lab_4/src/generic_counter_Angle.vhd Line: 44
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 28
-    Warning (15610): No output dependent on input pin "KEY[2]" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 28
-    Warning (15610): No output dependent on input pin "KEY[3]" File: X:/CPET-561/Lab_4/src/Top.vhd Line: 28
-Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 28
+    Warning (15610): No output dependent on input pin "KEY[2]" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 28
+    Warning (15610): No output dependent on input pin "KEY[3]" File: S:/CPET-561/Lab_4/src/Top.vhd Line: 28
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 72 logic cells
+    Info (21061): Implemented 104 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Tue Mar 05 22:29:52 2019
-    Info: Elapsed time: 00:00:57
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 791 megabytes
+    Info: Processing ended: Wed Mar 06 17:21:01 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:21
 
 

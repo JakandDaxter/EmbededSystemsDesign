@@ -23,21 +23,9 @@ entity Top is
 	 
       CLOCK_50 : in std_logic;
 
-      ----- SEG7 -----
-	  --       HEX5 : out std_logic_vector(6 downto 0);
-	  -- HEX4 : out std_logic_vector(6 downto 0);
-	  -- HEX3 : out std_logic_vector(6 downto 0);
-	  -- HEX2 : out std_logic_vector(6 downto 0); -- use this to show the degree symbol
-
 
       ----- KEY -----
       KEY : in std_logic_vector(3 downto 0) --remeber to use key(0) for reset
-
-      ----- LED -----
-      --LEDR : out  std_logic_vector(9 downto 0);
-
-      ----- SW -----
-      --SW : in  std_logic_vector(9 downto 0) 
 	    
   	 );
 	                  
@@ -58,8 +46,7 @@ Signal  Raw_input               :std_logic_vector(7 downto 0); -- raw data
 Signal  Min_sync           		:std_logic_vector(31 downto 0); -- sends in the raw data
 Signal  Max_sync           		:std_logic_vector(31 downto 0); -- sends in the raw data
 
-
-signal  STATE_A					:std_logic_vector(5 downto 0); --will handle the state so that i know when to enable the write
+Signal  TimingCount             :: integer range 0 to 1000000 := 0;
 signal  STATE_S					:std_logic_vector(3 downto 0); --will handle the state so that i know when to enable the servo interrupt
 
 signal  Write_enable    		:std_logic; --will be set to a one depening on the state from the angle statemachine
@@ -68,6 +55,7 @@ signal  Address_for_mem 		:std_logic_vector(1 downto 0); --i set this to the res
  
 signal  Read_Data 		        :std_logic_vector(31 downto 0); --comes out of memory
 signal  Stored_Data       		:std_logic_vector(31 downto 0); --goes into memory
+signal  Disable					:std_logic;
 
 
 signal  Double_Dab_Ones       	:std_logic_vector(3 downto 0);
@@ -98,7 +86,8 @@ BEGIN --We begin the ARCHITECTUREE
 --****************************************--  
 --****************************************--
 
-We_talking_about_Addresses_here: Process(Address_for_mem,STATE_A,Write_enable,Min_sync,Max_sync)
+
+We_talking_about_Addresses_here: Process(Address_for_mem,STATE_S,Write_enable,Min_sync,Max_sync)
 
                                  BEGIN
                                  
@@ -134,7 +123,7 @@ We_talking_about_Addresses_here: Process(Address_for_mem,STATE_A,Write_enable,Mi
 									end process;
 
 --****************************************--
-We_talking_about_storage_here: Process(Address_for_mem,STATE_A,Write_enable,Min_sync,Max_sync)
+We_talking_about_storage_here: Process(Address_for_mem,STATE_S,Write_enable,Min_sync,Max_sync)
 
                                  BEGIN
                                  
@@ -171,7 +160,7 @@ We_talking_about_storage_here: Process(Address_for_mem,STATE_A,Write_enable,Min_
 									end process; 
 									
 --****************************************-- 
---****************************************--  
+--****************************************-- 
 --****************************************--  
 --****************************************-- 
 
@@ -193,7 +182,7 @@ Memory_for_display: memory
 --****************************************-- 
 --****************************************--
 --****************************************--
------ Syncronize the reset
+----- Synchronize the reset
 		synchReset_proc : process (CLOCK_50) begin
 		  if (rising_edge(CLOCK_50)) then
 		    key0_d1 <= KEY(0);
@@ -238,33 +227,18 @@ The_State_MachineF: FSM_Servo
     Port Map(  
 			clk          				=>  CLOCK_50,
 			reset              			=>  reset_n,
-		--	enable	           	   		=>				--this is to start the servo
-			Write_en                	=>  Write_enable,
-		--	Period	               		=>
-		--	AngleCount              	=>              
+			Write_en                	=>  Write_enable,           
             Max_Interrupt        		=>  Interruptmax,
             Min_Interrupt        		=>  Interruptmin,
 			state                  	    =>  STATE_S               
           );
 --****************************************--		  
--- The_State_MachineA: FSM_Angle
---
---     Port Map(
--- 			clk        			 		=>  CLOCK_50,
---             reset                		=>  reset_n,
---             --verfiedMin           		=>  minverified,
---             --verfiedMax    		 		=>  maxverified,
---             Write_en             		=>  Write_enable,
---             Start_Servo          		=>  servoenable,
---             --KEY		            		=>  KEY,
---             state		        	    =>  STATE_A
---           );
- --****************************************--
  Timing_Counter: generic_counter_Time
  		Port Map(
 		
 		clk               =>   CLOCK_50,
 		reset             =>   reset_n,
+		counter             =>   TimingCount,
 		output            =>   ActivePeriod
 		
 		);
@@ -273,9 +247,8 @@ Angle_Counter: generic_counter_Angle
 		Port Map(
 		clk                =>   CLOCK_50,
 		reset              =>   reset_n,
-		--Angle1		   =>   Min_sync,
-		--Angle2		   =>   Max_sync,
-		Timer              =>   ActivePeriod,
+		Timer              =>   ActivePeriod, --when the timer hits 1 mil
+		PeriodCount        =>   TimingCount,
 		Max_Interrupt      =>   Interruptmax,
 		state	           =>   STATE_S,
 		Min_Interrupt      =>   interruptmin,
@@ -284,93 +257,6 @@ Angle_Counter: generic_counter_Angle
 --*******************************************************************************************************************************************************************************--
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************-- 
- 
--- The_Seperation: double_dabble
---
---     Port Map(
---
---            binIN     => extended_data, --this is getting the information from the working memory
---            ones      => Double_Dab_Ones,
---            tens      => Double_Dab_Tens,
---            hundreds  => Double_Dab_Hundres
---            );
-
---****************************************--  
---****************************************--  
---****************************************-- 
- 
--- The_Dab_Display0: BCD
---
---     Port Map(
---
---       clk    => CLOCK_50,
---       reset  => reset_n,
---       Bin    => Double_Dab_Ones,
---       Hex    => Hex5
---       );
---****************************************--
-
--- The_Dab_Display1: BCD
---
---     Port Map(
---
---         clk   => CLOCK_50,
---         reset => reset_n,
---         Bin   => Double_Dab_Tens,
---         Hex   => Hex4
---       );
---
---****************************************--
-
--- The_Dab_Display2: BCD
---
---     Port Map(
---
---             clk   => CLOCK_50,
---             reset => reset_n,
---             Bin   => Double_Dab_Hundres,
---             Hex   => Hex3
---       );
---
---****************************************--
-
---this is for the display clarity, goes to BCD 
-     
--- The_Dab_Display3: BCD_Display
---
---     Port Map(
---
---             clk   => clk,
---             reset => Reset_enable,
---             Bin   => LEDS,
---             Hex   => Hex5
---       );
-
--- State_LEDS: Process(CLOCK_50,servoenable,reset_n)
--- begin
---
---     if (reset_n = '0') then
---
---
--- 	LEDR <= "0000000000";
---
---     elsif (CLOCK_50'event and CLOCK_50 = '1') then
---
---       if (servoenable = '1') then
---
--- 		  LEDR <= "000000" & STATE_S;
---
---       else
---
--- 		  	LEDR <= "0000" & STATE_A;
---
---       end if;
---
---     end if;
---
---   end process;
-
- 
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  
 --*******************************************************************************************************************************************************************************--  
