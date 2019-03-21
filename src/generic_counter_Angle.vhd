@@ -53,7 +53,7 @@ process(clk,reset,Angle_Count,Timer)
 			
 				  if (Angle_Count < max_angle_count) then
 			  
-					  Angle_Count <= Angle_Count + 5000;
+					  Angle_Count <= Angle_Count + 5500;
 
 						end if;
 					  
@@ -61,7 +61,7 @@ process(clk,reset,Angle_Count,Timer)
 					
 						if (Angle_Count > min_angle_count) then
 			  
-							Angle_Count <= Angle_Count - 5000;
+							Angle_Count <= Angle_Count - 5500;
 							
 							else
 
@@ -120,7 +120,8 @@ process(clk,reset,Angle_Count,Timer)
 		   if (reset = '0') then 
 		
 		   		Max_Interrupt <= '0';
-	  
+
+	  					Min_Interrupt <= '0';
 	  
 		   elsif (clk'event and clk = '1') then
       

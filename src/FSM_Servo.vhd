@@ -93,13 +93,13 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 ---------------------------------------          
               When Interrupt_right =>
         
-                if(Min_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
+                --if(Max_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the min value fits the criteria
             
                     Next_State <= Sweep_Left;
-  			  else
+  			  --else
 				  
-  				  Next_State <= Interrupt_right;
-                end if;
+  				  --Next_State <= Interrupt_right;
+                --end if;
 ------------------------------------------
           
               When Sweep_Left =>
@@ -116,14 +116,14 @@ The_Default_Process :process(clk,reset,Present_State,Next_State)
 
                     When Interrupt_left =>
 					                 
-                    if(Max_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the max value fits the criteria
+                    --if(Min_Interrupt = '0') THEN --this is the flag i will set to a 1 in the C program to let program know that the max value fits the criteria
 						
                         Next_State <= Sweep_Right;
                     
-	    			  else
+	    			 -- else
 				  
-	    				  Next_State <= Interrupt_left;
-                    end if;
+	    				  --Next_State <= Interrupt_left;
+                    --end if;
                     
 ------------------------------------------                     
                                 when others =>
@@ -159,7 +159,7 @@ Write_Enable: Process(Present_state,clk,reset)
 		 
 		 WHEN OTHERS =>
 						
-					Write_en <= '0';
+				Write_en <= '0';
 		 
 	   END CASE; 
 END PROCESS;	   
