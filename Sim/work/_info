@@ -1,0 +1,617 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Software/ModelSim/10.7b/examples
+T_opt
+!s110 1551909922
+VhbdhMEGPJ1K8mAB5Z8?WI0
+04 12 4 work top_level_tb arch 1
+=2-509a4c2798a6-5c804420-3ba-211c
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.7b;67
+R0
+Ebcd
+Z1 w1551981078
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dZ:/Documents/ESD1/EmbededSystemsDesign/sim
+Z8 8Z:/Documents/ESD1/lab4Part1/src/BCD.vhd
+Z9 FZ:/Documents/ESD1/lab4Part1/src/BCD.vhd
+l0
+L13
+V3_XMhHib2=]z?hz0Hl1bP0
+!s100 gS0SnQIX0KUEgcFDz5=;?0
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1552798682
+!i10b 1
+Z12 !s108 1552798682.000000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/BCD.vhd|
+Z14 !s107 Z:/Documents/ESD1/lab4Part1/src/BCD.vhd|
+!i113 1
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1 CvgOpt 0
+Aarc
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 bcd 0 22 3_XMhHib2=]z?hz0Hl1bP0
+l44
+L23
+VJdJ=XjXlR:JggJk8lXHz10
+!s100 `SY;XfNWRVO2onEe`N9N_1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Pcomponents_include
+R2
+R3
+R4
+R5
+R6
+w1552798676
+R7
+8Z:/Documents/ESD1/lab4Part1/src/components_include.vhd
+FZ:/Documents/ESD1/lab4Part1/src/components_include.vhd
+l0
+L13
+VKBebz6c9VTn5ML0N1`SNg1
+!s100 nWgmOIA;GFcSSRN@EfENQ2
+R10
+32
+!s110 1552798681
+!i10b 1
+!s108 1552798681.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/components_include.vhd|
+!s107 Z:/Documents/ESD1/lab4Part1/src/components_include.vhd|
+!i113 1
+R15
+R16
+Edouble_dabble
+Z17 w1551975303
+R2
+R3
+R4
+R5
+R6
+R7
+Z18 8Z:/Documents/ESD1/lab4Part1/src/double_dabble.vhd
+Z19 FZ:/Documents/ESD1/lab4Part1/src/double_dabble.vhd
+l0
+L13
+VC2J1:5W<]KiLzT`9TbfdI1
+!s100 1@5SAE<n9cZ3nDQoLjM090
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/double_dabble.vhd|
+Z21 !s107 Z:/Documents/ESD1/lab4Part1/src/double_dabble.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 13 double_dabble 0 22 C2J1:5W<]KiLzT`9TbfdI1
+l25
+L23
+V5O^<VWOoT^TK^YC]C;URD2
+!s100 TkO524=CnT48;;lLVT`[e0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
+Efsm_angle
+Z22 w1551981612
+R2
+R3
+R4
+R5
+R6
+R7
+Z23 8Z:/Documents/ESD1/lab4Part1/src/FSM_Angle.vhd
+Z24 FZ:/Documents/ESD1/lab4Part1/src/FSM_Angle.vhd
+l0
+L14
+Vg9WLFVIg:DEYUN07PBiDW3
+!s100 `Cn[HMccMia;I4hoLhzN]0
+R10
+32
+R11
+!i10b 1
+R12
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/FSM_Angle.vhd|
+Z26 !s107 Z:/Documents/ESD1/lab4Part1/src/FSM_Angle.vhd|
+!i113 1
+R15
+R16
+Abeh
+R2
+R3
+R4
+R5
+R6
+DEx4 work 9 fsm_angle 0 22 g9WLFVIg:DEYUN07PBiDW3
+l50
+L29
+VeP=1XXla8ZKQbnSeLL<5=2
+!s100 FWV:2?ed7[;ggHCEWC7bm2
+R10
+32
+R11
+!i10b 1
+R12
+R25
+R26
+!i113 1
+R15
+R16
+Efsm_servo
+R17
+R2
+R3
+R4
+R5
+R6
+R7
+Z27 8Z:/Documents/ESD1/lab4Part1/src/FSM_Servo.vhd
+Z28 FZ:/Documents/ESD1/lab4Part1/src/FSM_Servo.vhd
+l0
+L12
+Vo9m]``1;J8?EnbZB[J:g53
+!s100 X2[ThkGM?H1S?;gf=097m2
+R10
+32
+R11
+!i10b 1
+R12
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/FSM_Servo.vhd|
+Z30 !s107 Z:/Documents/ESD1/lab4Part1/src/FSM_Servo.vhd|
+!i113 1
+R15
+R16
+Abeh
+R2
+R3
+R4
+R5
+R6
+DEx4 work 9 fsm_servo 0 22 o9m]``1;J8?EnbZB[J:g53
+l42
+L25
+VXk_eDIMN?L:@GzRjGVg=81
+!s100 M[n>]con`S2dCYnf1C>OP1
+R10
+32
+R11
+!i10b 1
+R12
+R29
+R30
+!i113 1
+R15
+R16
+Egeneric_counter_angle
+Z31 w1551980930
+R2
+R3
+R4
+R5
+R6
+R7
+Z32 8Z:/Documents/ESD1/lab4Part1/src/generic_counter_Angle.vhd
+Z33 FZ:/Documents/ESD1/lab4Part1/src/generic_counter_Angle.vhd
+l0
+L10
+VM4?E^fdaYQLS9he7=SkXD0
+!s100 3kh3c=_z1DbP7PBdB?l[c2
+R10
+32
+Z34 !s110 1552798683
+!i10b 1
+R12
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/generic_counter_Angle.vhd|
+Z36 !s107 Z:/Documents/ESD1/lab4Part1/src/generic_counter_Angle.vhd|
+!i113 1
+R15
+R16
+Abeh
+R2
+R3
+R4
+R5
+R6
+DEx4 work 21 generic_counter_angle 0 22 M4?E^fdaYQLS9he7=SkXD0
+l37
+L23
+V1N540l?O`0kUVkYFQV;NQ3
+!s100 fM0zBM3YXd4lm:IUo398?2
+R10
+32
+R34
+!i10b 1
+R12
+R35
+R36
+!i113 1
+R15
+R16
+Egeneric_counter_time
+R17
+R2
+R3
+R4
+R5
+R6
+R7
+Z37 8Z:/Documents/ESD1/lab4Part1/src/generic_counter_Time.vhd
+Z38 FZ:/Documents/ESD1/lab4Part1/src/generic_counter_Time.vhd
+l0
+L10
+VhmzB6Z5RhZH[HVTfc@E__1
+!s100 4URhz`_>dlK8i[NziBzze2
+R10
+32
+R34
+!i10b 1
+Z39 !s108 1552798683.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/generic_counter_Time.vhd|
+Z41 !s107 Z:/Documents/ESD1/lab4Part1/src/generic_counter_Time.vhd|
+!i113 1
+R15
+R16
+Abeh
+R2
+R3
+R4
+R5
+R6
+DEx4 work 20 generic_counter_time 0 22 hmzB6Z5RhZH[HVTfc@E__1
+l26
+L22
+V2;Tc]IRh^c_i?VjiJGJP81
+!s100 i0VO@GU6mhlT@UCd>Zfjc1
+R10
+32
+R34
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R15
+R16
+Ememory
+Z42 w1551904127
+R3
+R4
+Z43 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R5
+Z44 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z45 dS:/CPET-561/Lab_4/sim
+Z46 8S:/CPET-561/Lab_4/src/memory.vhd
+Z47 FS:/CPET-561/Lab_4/src/memory.vhd
+l0
+L9
+VH_^K:zMVm5f_FWJlX]7Nl3
+!s100 FJ`BeKMA2KCL^d7cc0R;42
+Z48 OL;C;10.7b;67
+32
+Z49 !s110 1551909910
+!i10b 1
+Z50 !s108 1551909910.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|S:/CPET-561/Lab_4/src/memory.vhd|
+Z52 !s107 S:/CPET-561/Lab_4/src/memory.vhd|
+!i113 0
+R15
+R16
+Abeh
+R3
+R4
+R43
+R5
+R44
+DEx4 work 6 memory 0 22 H_^K:zMVm5f_FWJlX]7Nl3
+l32
+L24
+VMhegU`SW_9U5`LPaBedR?2
+!s100 W1AmmRj?>o`Vbkn;;J6_:1
+R48
+32
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 0
+R15
+R16
+Erising_edge_synchronizer
+R17
+R5
+R6
+R7
+Z53 8Z:/Documents/ESD1/lab4Part1/src/rising_edge_synchronizer.vhd
+Z54 FZ:/Documents/ESD1/lab4Part1/src/rising_edge_synchronizer.vhd
+l0
+L10
+Vo>Ic57DcN54f0K65ACYLP0
+!s100 ^=0l=2M8^Pl6eN^fIVNh_2
+R10
+32
+R34
+!i10b 1
+R39
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/rising_edge_synchronizer.vhd|
+Z56 !s107 Z:/Documents/ESD1/lab4Part1/src/rising_edge_synchronizer.vhd|
+!i113 1
+R15
+R16
+Abeh
+R5
+R6
+DEx4 work 24 rising_edge_synchronizer 0 22 o>Ic57DcN54f0K65ACYLP0
+l25
+L19
+VOJjRabC@YBB<ekAR29feT0
+!s100 N7SGMkOL;[mY<JYkM3f2[1
+R10
+32
+R34
+!i10b 1
+R39
+R55
+R56
+!i113 1
+R15
+R16
+Eservo_register
+Z57 w1552019441
+R2
+R3
+R4
+R5
+R6
+R7
+Z58 8Z:/Documents/ESD1/lab4Part1/src/Servo_Register.vhd
+Z59 FZ:/Documents/ESD1/lab4Part1/src/Servo_Register.vhd
+l0
+L9
+VNIj6f:;:oiNmdAiUCb]Im3
+!s100 OQo=DM`8TV_QM:[ShSgLO1
+R10
+32
+R34
+!i10b 1
+R39
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/Servo_Register.vhd|
+Z61 !s107 Z:/Documents/ESD1/lab4Part1/src/Servo_Register.vhd|
+!i113 1
+R15
+R16
+Artl
+R2
+R3
+R4
+R5
+R6
+DEx4 work 14 servo_register 0 22 NIj6f:;:oiNmdAiUCb]Im3
+l37
+L24
+VShicC`z4Ta>7f?Q>3g77K1
+!s100 ^4Vm`ozIaWfB;z:bo^iW?1
+R10
+32
+R34
+!i10b 1
+R39
+R60
+R61
+!i113 1
+R15
+R16
+Esynchronizer4bit
+R17
+R5
+R6
+R7
+Z62 8Z:/Documents/ESD1/lab4Part1/src/synchronizer4bit.vhd
+Z63 FZ:/Documents/ESD1/lab4Part1/src/synchronizer4bit.vhd
+l0
+L10
+V<Bb:i]Q<DnfK241>E[ZBm3
+!s100 ?1MaeAFcFH]@c]0cC[0^j3
+R10
+32
+R34
+!i10b 1
+R39
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/synchronizer4bit.vhd|
+Z65 !s107 Z:/Documents/ESD1/lab4Part1/src/synchronizer4bit.vhd|
+!i113 1
+R15
+R16
+Abeh
+R5
+R6
+DEx4 work 16 synchronizer4bit 0 22 <Bb:i]Q<DnfK241>E[ZBm3
+l24
+L19
+V?O^jEIa^7Cn@^5h:@EIe=2
+!s100 A3L2aQN9zZ<k;JWBg]NN>1
+R10
+32
+R34
+!i10b 1
+R39
+R64
+R65
+!i113 1
+R15
+R16
+Esynchronizer8bit
+R17
+R5
+R6
+R7
+Z66 8Z:/Documents/ESD1/lab4Part1/src/synchronizer8bit.vhd
+Z67 FZ:/Documents/ESD1/lab4Part1/src/synchronizer8bit.vhd
+l0
+L10
+VH4i2j:T;ce`<a1T=cSBA83
+!s100 F<NTLXMHjI[eV2o9iQk211
+R10
+32
+Z68 !s110 1552798684
+!i10b 1
+R39
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/synchronizer8bit.vhd|
+Z70 !s107 Z:/Documents/ESD1/lab4Part1/src/synchronizer8bit.vhd|
+!i113 1
+R15
+R16
+Abeh
+R5
+R6
+DEx4 work 16 synchronizer8bit 0 22 H4i2j:T;ce`<a1T=cSBA83
+l24
+L19
+V]R;fYLZH?<SII=z>THQ?o1
+!s100 B<a`<fWb_Y4^nYDYEignA3
+R10
+32
+R68
+!i10b 1
+R39
+R69
+R70
+!i113 1
+R15
+R16
+Etop
+w1551981608
+DPx4 work 18 components_include 0 22 KBebz6c9VTn5ML0N1`SNg1
+R2
+R3
+R4
+R5
+R6
+R7
+8Z:/Documents/ESD1/lab4Part1/src/Top.vhd
+FZ:/Documents/ESD1/lab4Part1/src/Top.vhd
+l0
+L14
+V7XWoJLj2zWEm49]h_:hz[0
+!s100 WRn2JNAH3^_nn`8QBc6@_0
+R10
+32
+!s110 1552798750
+!i10b 1
+!s108 1552798750.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/src/Top.vhd|
+!s107 Z:/Documents/ESD1/lab4Part1/src/Top.vhd|
+!i113 1
+R15
+R16
+Aservomotor
+DPx4 work 18 components_include 0 22 KZzClnRGYVRH^9Ej10jHO1
+R43
+R3
+R4
+R5
+R44
+DEx4 work 3 top 0 22 o=W@Wb<OLd4@hMXX^]eIA0
+l83
+L34
+VV8_ifWhocQdH3Z6CQgCjL2
+!s100 cEfKdch8^o9Q<E5OOT0eE3
+R48
+32
+!s110 1551909907
+!i10b 1
+!s108 1551909907.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|S:/CPET-561/Lab_4/src/Top.vhd|
+!s107 S:/CPET-561/Lab_4/src/Top.vhd|
+!i113 0
+R15
+R16
+R45
+FS:/CPET-561/Lab_4/src/Top.vhd
+w1551909254
+8S:/CPET-561/Lab_4/src/Top.vhd
+Etop_level_tb
+Z71 w1551975302
+R3
+Z72 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R2
+R5
+R6
+R7
+Z73 8Z:/Documents/ESD1/lab4Part1/sim/src/top_level_tb.vhd
+Z74 FZ:/Documents/ESD1/lab4Part1/sim/src/top_level_tb.vhd
+l0
+L6
+VOWFW]e@gKn?XXPiYCRB=N2
+!s100 P24^6B1;zC@noIJVF4EN]1
+R10
+32
+Z75 !s110 1552798749
+!i10b 1
+Z76 !s108 1552798749.000000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|Z:/Documents/ESD1/lab4Part1/sim/src/top_level_tb.vhd|
+Z78 !s107 Z:/Documents/ESD1/lab4Part1/sim/src/top_level_tb.vhd|
+!i113 1
+R15
+R16
+Aarch
+R3
+R72
+R2
+R5
+R6
+DEx4 work 12 top_level_tb 0 22 OWFW]e@gKn?XXPiYCRB=N2
+l57
+L9
+V9ZRK0=8kj[dU:^4M3`;Tf0
+!s100 iV_]@TCM5oUi>dZa=M9Zn0
+R10
+32
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R15
+R16

@@ -1,0 +1,1233 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+                              obj/default/Lab_5.o (__fixunsdfsi)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              obj/default/Lab_5.o (__divsi3)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                              obj/default/Lab_5.o (__mulsi3)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+                              obj/default/Lab_5.o (__adddf3)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o) (__gedf2)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+                              obj/default/Lab_5.o (__muldf3)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o) (__subdf3)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o) (__fixdfsi)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+                              obj/default/Lab_5.o (__floatsidf)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o) (__clzsi2)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o) (__clz_tab)
+../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+                              obj/default/Lab_5.o (alt_ic_isr_register)
+../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_iic.o) (alt_iic_isr_register)
+../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq_entry)
+../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o) (alt_irq)
+../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_iic.o) (alt_irq_active)
+../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+                              ../nios_software_bsp//obj/HAL/src/crt0.o (alt_load)
+../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+                              ../nios_software_bsp//obj/HAL/src/crt0.o (alt_main)
+../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_read_fd)
+../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_avalon_jtag_uart_init)
+../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_ioctl)
+../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_read)
+../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o) (altera_avalon_jtag_uart_write)
+../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (alt_alarm_start)
+../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (close)
+../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_list)
+../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o) (alt_dev_llist_insert)
+../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (_do_ctors)
+../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (_do_dtors)
+../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_close.o) (alt_errno)
+../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (alt_io_redirect)
+../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o) (open)
+../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_close.o) (alt_release_fd)
+../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o) (_alt_tick_rate)
+../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_open.o) (alt_find_dev)
+../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_open.o) (alt_find_file)
+../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_open.o) (alt_get_fd)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (atexit)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_main.o) (exit)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_close.o) (errno)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o) (memcmp)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+                              ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o) (memcpy)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                              ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o) (strlen)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o) (__register_exitproc)
+c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (__call_exitprocs)
+../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+                              c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+edge_capture        0x4               obj/default/Lab_5.o
+errno               0x4               c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000008000 0x0000000000000020
+onchip_memory2_0 0x0000000000008020 0x0000000000007fe0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../nios_software_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/Lab_5.o
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+LOAD ../nios_software_bsp/\libhal_bsp.a
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+END GROUP
+LOAD c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a
+                0x0000000000008000                __alt_mem_onchip_memory2_0 = 0x8000
+
+.entry          0x0000000000008000       0x20
+ *(.entry)
+ .entry         0x0000000000008000       0x20 ../nios_software_bsp//obj/HAL/src/crt0.o
+                0x0000000000008000                __reset
+
+.exceptions     0x0000000000008020      0x210
+                0x0000000000008020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000000008020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000000008020        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000008020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000000008020        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000008020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000000008020       0x54 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000000008074       0x10 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000000008084        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000000008088        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000000808c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000000808c        0x8 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000000008094       0x14 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000000080a8        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000000080a8        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000000080a8       0x54 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000000080fc       0xd4 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x00000000000080fc                alt_irq_handler
+ .exceptions    0x00000000000081d0       0x60 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x00000000000081d0                alt_instruction_exception_entry
+                0x0000000000008230                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000000008020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x0000000000008230     0x469c
+                [!provide]                        PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000008230       0x3c ../nios_software_bsp//obj/HAL/src/crt0.o
+                0x0000000000008230                _start
+ .text          0x000000000000826c      0x550 obj/default/Lab_5.o
+                0x000000000000826c                pushbutton_isr
+                0x000000000000848c                servo_registor_isr
+                0x00000000000085c4                main
+ .text          0x00000000000087bc       0x74 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+                0x00000000000087bc                __fixunsdfsi
+ .text          0x0000000000008830      0x1b4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000000008830                __divsi3
+                0x00000000000088b4                __modsi3
+                0x0000000000008928                __udivsi3
+                0x000000000000898c                __umodsi3
+ .text          0x00000000000089e4       0x28 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x00000000000089e4                __mulsi3
+ .text          0x0000000000008a0c      0x8ac c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+                0x0000000000008a0c                __adddf3
+ .text          0x00000000000092b8       0xdc c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+                0x00000000000092b8                __gedf2
+                0x00000000000092b8                __gtdf2
+ .text          0x0000000000009394      0x86c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+                0x0000000000009394                __muldf3
+ .text          0x0000000000009c00      0x8fc c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+                0x0000000000009c00                __subdf3
+ .text          0x000000000000a4fc       0x80 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+                0x000000000000a4fc                __fixdfsi
+ .text          0x000000000000a57c       0xdc c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+                0x000000000000a57c                __floatsidf
+ .text          0x000000000000a658       0x64 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+                0x000000000000a658                __clzsi2
+ .text          0x000000000000a6bc        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .text          0x000000000000a6bc      0x1b0 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+                0x000000000000a6bc                alt_ic_isr_register
+                0x000000000000a70c                alt_ic_irq_enable
+                0x000000000000a794                alt_ic_irq_disable
+                0x000000000000a820                alt_ic_irq_enabled
+ .text          0x000000000000a86c       0xf0 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x000000000000a86c                alt_iic_isr_register
+ .text          0x000000000000a95c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x000000000000a95c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x000000000000a95c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x000000000000a95c       0xec ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+                0x000000000000a9c4                alt_load
+ .text          0x000000000000aa48       0x7c ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000aa48                alt_main
+ .text          0x000000000000aac4       0xb8 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000000000000aaf8                alt_irq_init
+                0x000000000000ab30                alt_sys_init
+ .text          0x000000000000ab7c      0x164 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                0x000000000000ab7c                altera_avalon_jtag_uart_read_fd
+                0x000000000000abdc                altera_avalon_jtag_uart_write_fd
+                0x000000000000ac3c                altera_avalon_jtag_uart_close_fd
+                0x000000000000ac8c                altera_avalon_jtag_uart_ioctl_fd
+ .text          0x000000000000ace0      0x3d4 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                0x000000000000ace0                altera_avalon_jtag_uart_init
+                0x000000000000b04c                altera_avalon_jtag_uart_close
+ .text          0x000000000000b0b4       0xf0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                0x000000000000b0b4                altera_avalon_jtag_uart_ioctl
+ .text          0x000000000000b1a4      0x21c ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x000000000000b1a4                altera_avalon_jtag_uart_read
+ .text          0x000000000000b3c0      0x224 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x000000000000b3c0                altera_avalon_jtag_uart_write
+ .text          0x000000000000b5e4      0x12c ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                0x000000000000b5e4                alt_alarm_start
+ .text          0x000000000000b710      0x114 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+                0x000000000000b74c                close
+ .text          0x000000000000b824       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000b824                alt_dcache_flush_all
+ .text          0x000000000000b844       0x2c ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .text          0x000000000000b870       0xe0 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                0x000000000000b8ac                alt_dev_llist_insert
+ .text          0x000000000000b950       0x60 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                0x000000000000b950                _do_ctors
+ .text          0x000000000000b9b0       0x60 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                0x000000000000b9b0                _do_dtors
+ .text          0x000000000000ba10        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x000000000000ba10        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x000000000000ba10       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000000000000ba10                alt_icache_flush_all
+ .text          0x000000000000ba30       0x9c ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000ba30                alt_exception_cause_generated_bad_addr
+ .text          0x000000000000bacc      0x160 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                0x000000000000bbb0                alt_io_redirect
+ .text          0x000000000000bc2c      0x284 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+                0x000000000000bd54                open
+ .text          0x000000000000beb0       0x84 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+                0x000000000000beb0                alt_release_fd
+ .text          0x000000000000bf34      0x1a4 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000000bf34                alt_alarm_stop
+                0x000000000000bfd0                alt_tick
+ .text          0x000000000000c0d8       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x000000000000c0d8                altera_nios2_gen2_irq_init
+ .text          0x000000000000c0fc       0x90 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+                0x000000000000c0fc                alt_find_dev
+ .text          0x000000000000c18c      0x108 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+                0x000000000000c18c                alt_find_file
+ .text          0x000000000000c294       0xc4 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+                0x000000000000c294                alt_get_fd
+ .text          0x000000000000c358        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .text.atexit   0x000000000000c358       0x14 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                0x000000000000c358                atexit
+ .text          0x000000000000c36c        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .text.exit     0x000000000000c36c       0x38 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                0x000000000000c36c                exit
+ .text          0x000000000000c3a4        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .text          0x000000000000c3a4        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .text          0x000000000000c3a4        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x000000000000c3a4       0x7c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                0x000000000000c3a4                memcmp
+ .text          0x000000000000c420        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x000000000000c420      0x148 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+                0x000000000000c420                memcpy
+ .text          0x000000000000c568        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .text.strlen   0x000000000000c568       0x98 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                0x000000000000c568                strlen
+ .text          0x000000000000c600        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x000000000000c600      0x118 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                0x000000000000c600                __register_exitproc
+ .text          0x000000000000c718        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x000000000000c718      0x180 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                0x000000000000c718                __call_exitprocs
+ .text          0x000000000000c898       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+                0x000000000000c898                _exit
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000000000000c8cc                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                0x000000000000c8cc                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x000000000000c8cc                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x000000000000c8cc                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x000000000000c8cc                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x000000000000c8cc                . = ALIGN (0x4)
+
+.rodata         0x000000000000c8cc      0x138
+                0x000000000000c8cc                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x000000000000c8cc                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x000000000000c8cc      0x100 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+                0x000000000000c8cc                __clz_tab
+ .rodata        0x000000000000c9cc       0x11 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ *fill*         0x000000000000c9dd        0x3 
+ .rodata        0x000000000000c9e0       0x11 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ *fill*         0x000000000000c9f1        0x3 
+ .rodata        0x000000000000c9f4        0xa ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ *fill*         0x000000000000c9fe        0x2 
+ .rodata.str1.4
+                0x000000000000ca00        0x4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                                          0x2 (size before relaxing)
+ *(.rodata1)
+                0x000000000000ca04                . = ALIGN (0x4)
+                0x000000000000ca04                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x000000000000c8cc                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x000000000000ca04     0x1680 load address 0x000000000000e084
+                0x000000000000ca04                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000000000000ca04                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .data          0x000000000000ca04        0x0 obj/default/Lab_5.o
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .data          0x000000000000ca04        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x000000000000ca04        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x000000000000ca04     0x1060 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .data          0x000000000000da64        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000000000000da64      0x1a8 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000000000000da64                alt_dev_null
+                0x000000000000da8c                alt_fd_list
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .data          0x000000000000dc0c        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .data          0x000000000000dc0c        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .data          0x000000000000dc0c        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .data          0x000000000000dc0c        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x000000000000dc0c      0x424 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .data          0x000000000000e030        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .data          0x000000000000e030        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+                0x0000000000016030                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000000e030       0x26 obj/default/Lab_5.o
+                0x000000000000e030                KeyPtr
+                0x000000000000e034                SwitchPtr
+                0x000000000000e038                ServoPtr
+                0x000000000000e03c                HEX0
+                0x000000000000e040                HEX1
+                0x000000000000e044                HEX2
+                0x000000000000e048                HEX3
+                0x000000000000e04c                HEX4
+                0x000000000000e050                HEX5
+                0x000000000000e054                ServoReg0
+                0x000000000000e055                ServoReg1
+ *fill*         0x000000000000e056        0x2 
+ .sdata         0x000000000000e058        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000000e058                alt_priority_mask
+ .sdata         0x000000000000e05c       0x14 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+                0x000000000000e05c                alt_fs_list
+                0x000000000000e064                alt_dev_list
+                0x000000000000e06c                alt_max_fd
+ .sdata         0x000000000000e070        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+                0x000000000000e070                alt_errno
+ .sdata         0x000000000000e074        0x8 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000000e074                alt_alarm_list
+ .sdata._global_impure_ptr
+                0x000000000000e07c        0x4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x000000000000e07c                _global_impure_ptr
+ .sdata._impure_ptr
+                0x000000000000e080        0x4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                0x000000000000e080                _impure_ptr
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000000000000e084                . = ALIGN (0x4)
+                0x000000000000e084                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata, ABSOLUTE (.))
+                0x000000000000e084                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000000000000e084                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x000000000000f704      0x130
+                0x000000000000f704                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x000000000000f704        0xc obj/default/Lab_5.o
+                0x000000000000f704                j
+                0x000000000000f708                SwitchValue
+                0x000000000000f70c                KeyValue
+ .sbss          0x000000000000f710        0x4 obj/default/Lab_5.o
+                0x000000000000f710                edge_capture
+ .sbss          0x000000000000f714        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x000000000000f714                alt_irq_active
+ .sbss          0x000000000000f718        0xc ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000f718                alt_argc
+                0x000000000000f71c                alt_argv
+                0x000000000000f720                alt_envp
+ .sbss          0x000000000000f724        0x4 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000f724                alt_instruction_exception_handler
+ .sbss          0x000000000000f728        0x8 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+                0x000000000000f728                _alt_tick_rate
+                0x000000000000f72c                _alt_nticks
+ .sbss          0x000000000000f730        0x4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                0x000000000000f730                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000f734        0x0 obj/default/Lab_5.o
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .bss           0x000000000000f734        0x0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .bss           0x000000000000f734        0x0 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+ *(COMMON)
+ COMMON         0x000000000000f734      0x100 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x000000000000f734                alt_irq
+                0x000000000000f834                . = ALIGN (0x4)
+                0x000000000000f834                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x000000000000f834        0x0
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
+                0x000000000000f834                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x000000000000f834                _end = ABSOLUTE (.)
+                0x000000000000f834                end = ABSOLUTE (.)
+                0x000000000000f834                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x23
+ *(.comment)
+ .comment       0x0000000000000000       0x23 obj/default/Lab_5.o
+                                         0x24 (size before relaxing)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .comment       0x0000000000000023       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x6f0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x20 obj/default/Lab_5.o
+ .debug_aranges
+                0x0000000000000048       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_aranges
+                0x0000000000000068       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x0000000000000088       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_aranges
+                0x00000000000000c8       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_aranges
+                0x0000000000000108       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_aranges
+                0x0000000000000128       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_aranges
+                0x0000000000000148       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_aranges
+                0x0000000000000168       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_aranges
+                0x0000000000000188       0x18 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .debug_aranges
+                0x00000000000001a0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_aranges
+                0x00000000000001c0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_aranges
+                0x00000000000001e0       0x30 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x0000000000000210       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000230       0x18 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000248       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x0000000000000268       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x0000000000000288       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000002a8       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_aranges
+                0x00000000000002c8       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_aranges
+                0x00000000000002e8       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_aranges
+                0x0000000000000308       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x0000000000000328       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x0000000000000348       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_aranges
+                0x0000000000000368       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_aranges
+                0x0000000000000388       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000000000003a8       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_aranges
+                0x00000000000003c8       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_aranges
+                0x00000000000003e8       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_aranges
+                0x0000000000000408       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_aranges
+                0x0000000000000428       0x18 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x0000000000000440       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x0000000000000478       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000498       0x28 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_aranges
+                0x00000000000004c0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_aranges
+                0x00000000000004e0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_aranges
+                0x0000000000000500       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_aranges
+                0x0000000000000520       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_aranges
+                0x0000000000000540       0x20 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x0000000000000560       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_aranges
+                0x0000000000000580       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_aranges
+                0x00000000000005a0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_aranges
+                0x00000000000005c0       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_aranges
+                0x00000000000005e0       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_aranges
+                0x0000000000000600       0x18 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_aranges
+                0x0000000000000618       0x18 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_aranges
+                0x0000000000000630       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_aranges
+                0x0000000000000650       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_aranges
+                0x0000000000000670       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_aranges
+                0x0000000000000690       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_aranges
+                0x00000000000006b0       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_aranges
+                0x00000000000006d0       0x20 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x9079
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x6a ../nios_software_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x000000000000006a      0x23c obj/default/Lab_5.o
+ .debug_info    0x00000000000002a6       0xc7 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_info    0x000000000000036d      0x2c6 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000000000000633       0xb4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x00000000000006e7      0x4a2 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_info    0x0000000000000b89      0x202 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_info    0x0000000000000d8b      0x5f1 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_info    0x000000000000137c      0x4a2 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_info    0x000000000000181e      0x1ae c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_info    0x00000000000019cc      0x1bc c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_info    0x0000000000001b88      0x124 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_info    0x0000000000001cac       0xb2 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .debug_info    0x0000000000001d5e      0x350 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00000000000020ae      0x1ef ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x000000000000229d       0x73 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000002310      0x187 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000002497       0x88 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x000000000000251f      0x145 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000002664      0x131 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000002795      0x4c3 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000002c58      0x52e ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_info    0x0000000000003186      0x3a0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_info    0x0000000000003526      0x280 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_info    0x00000000000037a6      0x345 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x0000000000003aeb      0x340 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000003e2b      0x2cc ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_info    0x00000000000040f7      0x321 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_info    0x0000000000004418       0x92 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000044aa      0x49c ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_info    0x0000000000004946      0x1a9 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_info    0x0000000000004aef       0x83 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_info    0x0000000000004b72       0x83 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_info    0x0000000000004bf5       0xa6 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000004c9b       0x79 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000004d14       0x92 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000004da6      0x1e7 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x0000000000004f8d      0x4a5 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_info    0x0000000000005432      0x3bb ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_info    0x00000000000057ed      0x2b0 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_info    0x0000000000005a9d      0x299 ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_info    0x0000000000005d36       0x92 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000005dc8      0x2e9 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_info    0x00000000000060b1      0x2e6 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_info    0x0000000000006397      0x310 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_info    0x00000000000066a7       0xfe c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_info    0x00000000000067a5      0x8e4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_info    0x0000000000007089      0x8a1 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_info    0x000000000000792a       0x8a c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_info    0x00000000000079b4      0x11a c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_info    0x0000000000007ace      0x144 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_info    0x0000000000007c12       0xe2 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000007cf4      0x934 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000008628      0x965 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000008f8d       0xec ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_abbrev   0x0000000000000000     0x334f
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012       0xd6 obj/default/Lab_5.o
+ .debug_abbrev  0x00000000000000e8       0x60 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_abbrev  0x0000000000000148      0x10e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x0000000000000256       0x6f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x00000000000002c5      0x13a c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_abbrev  0x00000000000003ff      0x137 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_abbrev  0x0000000000000536      0x13f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_abbrev  0x0000000000000675      0x133 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_abbrev  0x00000000000007a8      0x135 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_abbrev  0x00000000000008dd      0x124 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_abbrev  0x0000000000000a01       0xbe c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_abbrev  0x0000000000000abf       0x5d c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .debug_abbrev  0x0000000000000b1c      0x163 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x0000000000000c7f      0x169 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x0000000000000de8       0x12 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000000dfa      0x122 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x0000000000000f1c       0x40 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x0000000000000f5c       0x9f ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000ffb       0xba ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000010b5      0x187 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000000000000123c      0x127 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_abbrev  0x0000000000001363      0x19e ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_abbrev  0x0000000000001501      0x111 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_abbrev  0x0000000000001612      0x1aa ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x00000000000017bc      0x1a8 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000001964      0x162 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_abbrev  0x0000000000001ac6      0x11f ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_abbrev  0x0000000000001be5       0x42 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000001c27       0xd9 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_abbrev  0x0000000000001d00      0x114 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_abbrev  0x0000000000001e14       0x79 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_abbrev  0x0000000000001e8d       0x79 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_abbrev  0x0000000000001f06       0x5a ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x0000000000001f60       0x12 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x0000000000001f72       0x42 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000001fb4       0xdc ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000002090      0x114 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_abbrev  0x00000000000021a4      0x148 ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_abbrev  0x00000000000022ec       0xde ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_abbrev  0x00000000000023ca      0x15a ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_abbrev  0x0000000000002524       0x42 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000002566       0xf0 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_abbrev  0x0000000000002656       0xf0 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_abbrev  0x0000000000002746      0x10d ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_abbrev  0x0000000000002853       0xaa c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x00000000000028fd      0x1e5 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_abbrev  0x0000000000002ae2      0x18f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000002c71       0x37 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x0000000000002ca8       0x7f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_abbrev  0x0000000000002d27       0xa3 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_abbrev  0x0000000000002dca       0x90 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_abbrev  0x0000000000002e5a      0x21e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000003078      0x22e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00000000000032a6       0xa9 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_line     0x0000000000000000     0x373b
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066       0x83 obj/default/Lab_5.o
+ .debug_line    0x00000000000000e9       0x6e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_line    0x0000000000000157      0x105 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x000000000000025c       0x80 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x00000000000002dc      0x37e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_line    0x000000000000065a       0xce c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_line    0x0000000000000728      0x1ea c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_line    0x0000000000000912      0x3ab c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_line    0x0000000000000cbd       0x9b c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_line    0x0000000000000d58       0xa2 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_line    0x0000000000000dfa       0xbd c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_line    0x0000000000000eb7       0x56 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .debug_line    0x0000000000000f0d       0xeb ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x0000000000000ff8       0xdb ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000010d3       0x6b ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000113e       0xaa ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000011e8       0x50 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000001238       0x8e ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000012c6       0xa4 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000136a      0x137 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000014a1      0x12f ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_line    0x00000000000015d0      0x18b ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_line    0x000000000000175b      0x131 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_line    0x000000000000188c      0x171 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x00000000000019fd      0x170 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000001b6d       0xf9 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_line    0x0000000000001c66      0x165 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_line    0x0000000000001dcb       0x51 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000001e1c       0xf8 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_line    0x0000000000001f14       0xcf ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_line    0x0000000000001fe3       0x59 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_line    0x000000000000203c       0x59 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_line    0x0000000000002095       0x51 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x00000000000020e6       0xb3 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000002199       0x4f ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000000000021e8       0xb9 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x00000000000022a1      0x135 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_line    0x00000000000023d6      0x12b ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_line    0x0000000000002501       0xb0 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_line    0x00000000000025b1       0xff ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_line    0x00000000000026b0       0x51 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000002701       0xb5 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_line    0x00000000000027b6       0xd1 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_line    0x0000000000002887       0xd7 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_line    0x000000000000295e       0xe7 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_line    0x0000000000002a45      0x1fc c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_line    0x0000000000002c41      0x160 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+ .debug_line    0x0000000000002da1       0x5f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+ .debug_line    0x0000000000002e00      0x176 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000002f76      0x18c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000003102      0x16f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000003271      0x21f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000003490      0x23a c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_line    0x00000000000036ca       0x71 ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_frame    0x0000000000000000      0xd08
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x94 obj/default/Lab_5.o
+ .debug_frame   0x0000000000000094       0x38 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x00000000000000cc       0x50 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000000000000011c       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x000000000000013c       0x40 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_frame   0x000000000000017c       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_frame   0x000000000000019c       0x58 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_frame   0x00000000000001f4       0x44 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_frame   0x0000000000000238       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_frame   0x0000000000000258       0x38 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_frame   0x0000000000000290       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_frame   0x00000000000002b0       0xa4 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000354       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x000000000000038c       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x00000000000003c4       0x5c ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000420       0x2c ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000000000000044c       0x88 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000000000004d4       0xb0 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+ .debug_frame   0x0000000000000584       0xa4 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_frame   0x0000000000000628       0x34 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+ .debug_frame   0x000000000000065c       0x38 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x0000000000000694       0x38 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000000000006cc       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+ .debug_frame   0x0000000000000700       0x60 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+ .debug_frame   0x0000000000000760       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000794       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+ .debug_frame   0x00000000000007c8       0x60 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+ .debug_frame   0x0000000000000828       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+ .debug_frame   0x0000000000000860       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+ .debug_frame   0x0000000000000898       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000008cc       0x5c ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x0000000000000928       0x64 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+ .debug_frame   0x000000000000098c       0x8c ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+ .debug_frame   0x0000000000000a18       0x3c ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+ .debug_frame   0x0000000000000a54       0x5c ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+ .debug_frame   0x0000000000000ab0       0x34 ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000ae4       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+ .debug_frame   0x0000000000000b1c       0x38 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+ .debug_frame   0x0000000000000b54       0x3c ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+ .debug_frame   0x0000000000000b90       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000bb0       0x28 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000bd8       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000000bf8       0x38 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000000c30       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000c50       0x38 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000c88       0x54 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000cdc       0x2c ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+
+.debug_str      0x0000000000000000     0x2111
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x189 obj/default/Lab_5.o
+                                        0x1d5 (size before relaxing)
+ .debug_str     0x0000000000000189      0x162 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+                                        0x1eb (size before relaxing)
+ .debug_str     0x00000000000002eb       0x7f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                        0x1d2 (size before relaxing)
+ .debug_str     0x000000000000036a       0x40 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                                        0x193 (size before relaxing)
+ .debug_str     0x00000000000003aa      0x11c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+                                        0x2a9 (size before relaxing)
+ .debug_str     0x00000000000004c6       0x5b c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+                                        0x233 (size before relaxing)
+ .debug_str     0x0000000000000521      0x1c4 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+                                        0x3c2 (size before relaxing)
+ .debug_str     0x00000000000006e5       0x39 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+                                        0x2a9 (size before relaxing)
+ .debug_str     0x000000000000071e       0x4e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+                                        0x22b (size before relaxing)
+ .debug_str     0x000000000000076c       0x6c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+                                        0x242 (size before relaxing)
+ .debug_str     0x00000000000007d8       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+                                        0x200 (size before relaxing)
+ .debug_str     0x00000000000007f8      0x1e3 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clz.o)
+ .debug_str     0x00000000000007f8      0x139 ../nios_software_bsp/\libhal_bsp.a(alt_iic.o)
+                                        0x23a (size before relaxing)
+ .debug_str     0x0000000000000931       0x4c ../nios_software_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                                        0x1e4 (size before relaxing)
+ .debug_str     0x000000000000097d       0x3a ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                                        0x193 (size before relaxing)
+ .debug_str     0x00000000000009b7       0x17 ../nios_software_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                                        0x136 (size before relaxing)
+ .debug_str     0x00000000000009ce       0xe9 ../nios_software_bsp/\libhal_bsp.a(alt_load.o)
+                                        0x20e (size before relaxing)
+ .debug_str     0x0000000000000ab7       0x70 ../nios_software_bsp/\libhal_bsp.a(alt_main.o)
+                                        0x199 (size before relaxing)
+ .debug_str     0x0000000000000b27      0x1a2 ../nios_software_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                        0x354 (size before relaxing)
+ .debug_str     0x0000000000000cc9       0xb9 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_fd.o)
+                                        0x3a0 (size before relaxing)
+ .debug_str     0x0000000000000d82       0xd1 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+                                        0x334 (size before relaxing)
+ .debug_str     0x0000000000000e53       0x4a ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_ioctl.o)
+                                        0x28f (size before relaxing)
+ .debug_str     0x0000000000000e9d       0x48 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                        0x2e4 (size before relaxing)
+ .debug_str     0x0000000000000ee5       0x4a ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                        0x2e5 (size before relaxing)
+ .debug_str     0x0000000000000f2f       0x59 ../nios_software_bsp/\libhal_bsp.a(alt_alarm_start.o)
+                                        0x27a (size before relaxing)
+ .debug_str     0x0000000000000f88       0x44 ../nios_software_bsp/\libhal_bsp.a(alt_close.o)
+                                        0x207 (size before relaxing)
+ .debug_str     0x0000000000000fcc       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x151 (size before relaxing)
+ .debug_str     0x0000000000001000      0x120 ../nios_software_bsp/\libhal_bsp.a(alt_dev.o)
+                                        0x301 (size before relaxing)
+ .debug_str     0x0000000000001120       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_dev_llist_insert.o)
+                                        0x1c8 (size before relaxing)
+ .debug_str     0x0000000000001154       0x48 ../nios_software_bsp/\libhal_bsp.a(alt_do_ctors.o)
+                                         0xcc (size before relaxing)
+ .debug_str     0x000000000000119c       0x4c ../nios_software_bsp/\libhal_bsp.a(alt_do_dtors.o)
+                                         0xcb (size before relaxing)
+ .debug_str     0x00000000000011e8       0x14 ../nios_software_bsp/\libhal_bsp.a(alt_errno.o)
+                                        0x141 (size before relaxing)
+ .debug_str     0x00000000000011fc       0x34 ../nios_software_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x151 (size before relaxing)
+ .debug_str     0x0000000000001230      0x48b ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x59c (size before relaxing)
+ .debug_str     0x00000000000016bb       0x56 ../nios_software_bsp/\libhal_bsp.a(alt_io_redirect.o)
+                                        0x312 (size before relaxing)
+ .debug_str     0x0000000000001711       0x2f ../nios_software_bsp/\libhal_bsp.a(alt_open.o)
+                                        0x247 (size before relaxing)
+ .debug_str     0x0000000000001740       0x28 ../nios_software_bsp/\libhal_bsp.a(alt_release_fd.o)
+                                        0x1cf (size before relaxing)
+ .debug_str     0x0000000000001768       0x4a ../nios_software_bsp/\libhal_bsp.a(alt_tick.o)
+                                        0x24e (size before relaxing)
+ .debug_str     0x00000000000017b2       0x3b ../nios_software_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x158 (size before relaxing)
+ .debug_str     0x00000000000017ed       0x24 ../nios_software_bsp/\libhal_bsp.a(alt_find_dev.o)
+                                        0x1e8 (size before relaxing)
+ .debug_str     0x0000000000001811       0x26 ../nios_software_bsp/\libhal_bsp.a(alt_find_file.o)
+                                        0x1f6 (size before relaxing)
+ .debug_str     0x0000000000001837       0x30 ../nios_software_bsp/\libhal_bsp.a(alt_get_fd.o)
+                                        0x218 (size before relaxing)
+ .debug_str     0x0000000000001867      0x17c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+                                        0x221 (size before relaxing)
+ .debug_str     0x00000000000019e3      0x3b5 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+                                        0x5be (size before relaxing)
+ .debug_str     0x0000000000001d98       0xd6 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-impure.o)
+                                        0x5b5 (size before relaxing)
+ .debug_str     0x0000000000001e6e       0x3f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+                                        0x1dd (size before relaxing)
+ .debug_str     0x0000000000001ead       0xda c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+                                        0x1e4 (size before relaxing)
+ .debug_str     0x0000000000001f87       0x6b c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+                                        0x20b (size before relaxing)
+ .debug_str     0x0000000000001ff2       0x51 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+                                        0x1f7 (size before relaxing)
+ .debug_str     0x0000000000002043       0x3f c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+                                        0x5f6 (size before relaxing)
+ .debug_str     0x0000000000002082       0x65 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+                                        0x5e2 (size before relaxing)
+ .debug_str     0x00000000000020e7       0x2a ../nios_software_bsp/\libhal_bsp.a(alt_exit.o)
+                                        0x14d (size before relaxing)
+
+.debug_loc      0x0000000000000000     0x4e98
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x28 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_fixunsdfsi.o)
+ .debug_loc     0x0000000000000028      0x4ce c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x00000000000004f6       0x93 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x0000000000000589     0x16f9 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_loc     0x0000000000001c82       0xf9 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_loc     0x0000000000001d7b     0x1085 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_loc     0x0000000000002e00     0x1627 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_loc     0x0000000000004427      0x121 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_loc     0x0000000000004548      0x175 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_loc     0x00000000000046bd       0x6b c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_loc     0x0000000000004728       0x2c c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_loc     0x0000000000004754       0x1e c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_loc     0x0000000000004772      0x126 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_loc     0x0000000000004898      0x266 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_loc     0x0000000000004afe       0x47 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000004b45      0x185 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_loc     0x0000000000004cca      0x1ce c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 ../nios_software_bsp//obj/HAL/src/crt0.o
+                0x0000000000010000                __alt_data_end = 0x10000
+                0x0000000000010000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start, end)
+                [!provide]                        PROVIDE (__alt_heap_limit, 0x10000)
+OUTPUT(nios_software.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x940
+ .debug_ranges  0x0000000000000000       0x20 ../nios_software_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x60 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_ranges  0x0000000000000080      0x240 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(adddf3.o)
+ .debug_ranges  0x00000000000002c0       0x88 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(gedf2.o)
+ .debug_ranges  0x0000000000000348      0x1d0 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(muldf3.o)
+ .debug_ranges  0x0000000000000518      0x268 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(subdf3.o)
+ .debug_ranges  0x0000000000000780       0x30 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(fixdfsi.o)
+ .debug_ranges  0x00000000000007b0       0x20 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(floatsidf.o)
+ .debug_ranges  0x00000000000007d0       0x18 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(_clzsi2.o)
+ .debug_ranges  0x00000000000007e8       0x28 ../nios_software_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000810       0x10 ../nios_software_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x0000000000000820       0x30 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_init.o)
+ .debug_ranges  0x0000000000000850       0x18 ../nios_software_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_ranges  0x0000000000000868       0x30 ../nios_software_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x0000000000000898       0x18 ../nios_software_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_ranges  0x00000000000008b0       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-atexit.o)
+ .debug_ranges  0x00000000000008c0       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-exit.o)
+ .debug_ranges  0x00000000000008d0       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcmp.o)
+ .debug_ranges  0x00000000000008e0       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-memcpy.o)
+ .debug_ranges  0x00000000000008f0       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000900       0x10 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__atexit.o)
+ .debug_ranges  0x0000000000000910       0x30 c:/intelfpga_lite/17.0/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-__call_atexit.o)
