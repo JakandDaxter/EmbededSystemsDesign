@@ -31,7 +31,7 @@ architecture rtl of Top is
 	component nios_system is
 		port (
 			clk_clk            : in  std_logic                    := 'X'; -- clk
-			led_export         : out std_logic_vector(7 downto 0);        -- export
+			leds_export         : out std_logic_vector(7 downto 0);        -- export
 			pushbuttons_export : in  std_logic                    := 'X'; -- export
 			reset_reset_n      : in  std_logic                    := 'X'  -- reset_n
 		);
@@ -54,7 +54,7 @@ begin
   	u0 : component nios_system
 		port map (
 			clk_clk            => CLOCK2_50,       --         clk.clk
-			led_export         => LEDR,         	--         led.export
+			leds_export         => LEDR,         	--         led.export
 			pushbuttons_export => KEY(1), 				-- pushbuttons.export
 			reset_reset_n      => reset_n      		--       reset.reset_n
 		);

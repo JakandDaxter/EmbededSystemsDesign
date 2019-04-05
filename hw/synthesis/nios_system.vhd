@@ -9,40 +9,13 @@ use IEEE.numeric_std.all;
 entity nios_system is
 	port (
 		clk_clk            : in  std_logic                    := '0'; --         clk.clk
-		led_export         : out std_logic_vector(7 downto 0);        --         led.export
+		leds_export        : out std_logic_vector(7 downto 0);        --        leds.export
 		pushbuttons_export : in  std_logic                    := '0'; -- pushbuttons.export
 		reset_reset_n      : in  std_logic                    := '0'  --       reset.reset_n
 	);
 end entity nios_system;
 
 architecture rtl of nios_system is
-	component nios_system_LED is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			out_port   : out std_logic_vector(7 downto 0)                      -- export
-		);
-	end component nios_system_LED;
-
-	component nios_system_Pushbuttons is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			in_port    : in  std_logic                     := 'X';             -- export
-			irq        : out std_logic                                         -- irq
-		);
-	end component nios_system_Pushbuttons;
-
 	component raminfr is
 		port (
 			clk       : in  std_logic                     := 'X';             -- clk
@@ -68,6 +41,19 @@ architecture rtl of nios_system is
 			av_irq         : out std_logic                                         -- irq
 		);
 	end component nios_system_jtag_uart_0;
+
+	component nios_system_leds is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			out_port   : out std_logic_vector(7 downto 0)                      -- export
+		);
+	end component nios_system_leds;
 
 	component nios_system_nios2_gen2_0 is
 		port (
@@ -116,6 +102,20 @@ architecture rtl of nios_system is
 		);
 	end component nios_system_onchip_memory2_0;
 
+	component nios_system_pushbuttons is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			in_port    : in  std_logic                     := 'X';             -- export
+			irq        : out std_logic                                         -- irq
+		);
+	end component nios_system_pushbuttons;
+
 	component nios_system_sysid_qsys_0 is
 		port (
 			clock    : in  std_logic                     := 'X'; -- clk
@@ -141,10 +141,10 @@ architecture rtl of nios_system is
 			nios2_gen2_0_instruction_master_waitrequest    : out std_logic;                                        -- waitrequest
 			nios2_gen2_0_instruction_master_read           : in  std_logic                     := 'X';             -- read
 			nios2_gen2_0_instruction_master_readdata       : out std_logic_vector(31 downto 0);                    -- readdata
-			inferred_ram_0_avalon_slave_0_address          : out std_logic_vector(11 downto 0);                    -- address
-			inferred_ram_0_avalon_slave_0_write            : out std_logic;                                        -- write
-			inferred_ram_0_avalon_slave_0_readdata         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			inferred_ram_0_avalon_slave_0_writedata        : out std_logic_vector(31 downto 0);                    -- writedata
+			inferred_ram_avalon_slave_0_address            : out std_logic_vector(11 downto 0);                    -- address
+			inferred_ram_avalon_slave_0_write              : out std_logic;                                        -- write
+			inferred_ram_avalon_slave_0_readdata           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			inferred_ram_avalon_slave_0_writedata          : out std_logic_vector(31 downto 0);                    -- writedata
 			jtag_uart_0_avalon_jtag_slave_address          : out std_logic_vector(0 downto 0);                     -- address
 			jtag_uart_0_avalon_jtag_slave_write            : out std_logic;                                        -- write
 			jtag_uart_0_avalon_jtag_slave_read             : out std_logic;                                        -- read
@@ -152,11 +152,11 @@ architecture rtl of nios_system is
 			jtag_uart_0_avalon_jtag_slave_writedata        : out std_logic_vector(31 downto 0);                    -- writedata
 			jtag_uart_0_avalon_jtag_slave_waitrequest      : in  std_logic                     := 'X';             -- waitrequest
 			jtag_uart_0_avalon_jtag_slave_chipselect       : out std_logic;                                        -- chipselect
-			LED_s1_address                                 : out std_logic_vector(1 downto 0);                     -- address
-			LED_s1_write                                   : out std_logic;                                        -- write
-			LED_s1_readdata                                : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			LED_s1_writedata                               : out std_logic_vector(31 downto 0);                    -- writedata
-			LED_s1_chipselect                              : out std_logic;                                        -- chipselect
+			leds_s1_address                                : out std_logic_vector(1 downto 0);                     -- address
+			leds_s1_write                                  : out std_logic;                                        -- write
+			leds_s1_readdata                               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			leds_s1_writedata                              : out std_logic_vector(31 downto 0);                    -- writedata
+			leds_s1_chipselect                             : out std_logic;                                        -- chipselect
 			nios2_gen2_0_debug_mem_slave_address           : out std_logic_vector(8 downto 0);                     -- address
 			nios2_gen2_0_debug_mem_slave_write             : out std_logic;                                        -- write
 			nios2_gen2_0_debug_mem_slave_read              : out std_logic;                                        -- read
@@ -172,11 +172,11 @@ architecture rtl of nios_system is
 			onchip_memory2_0_s1_byteenable                 : out std_logic_vector(3 downto 0);                     -- byteenable
 			onchip_memory2_0_s1_chipselect                 : out std_logic;                                        -- chipselect
 			onchip_memory2_0_s1_clken                      : out std_logic;                                        -- clken
-			Pushbuttons_s1_address                         : out std_logic_vector(1 downto 0);                     -- address
-			Pushbuttons_s1_write                           : out std_logic;                                        -- write
-			Pushbuttons_s1_readdata                        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			Pushbuttons_s1_writedata                       : out std_logic_vector(31 downto 0);                    -- writedata
-			Pushbuttons_s1_chipselect                      : out std_logic;                                        -- chipselect
+			pushbuttons_s1_address                         : out std_logic_vector(1 downto 0);                     -- address
+			pushbuttons_s1_write                           : out std_logic;                                        -- write
+			pushbuttons_s1_readdata                        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			pushbuttons_s1_writedata                       : out std_logic_vector(31 downto 0);                    -- writedata
+			pushbuttons_s1_chipselect                      : out std_logic;                                        -- chipselect
 			sysid_qsys_0_control_slave_address             : out std_logic_vector(0 downto 0);                     -- address
 			sysid_qsys_0_control_slave_readdata            : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
 		);
@@ -277,10 +277,10 @@ architecture rtl of nios_system is
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read            : std_logic;                     -- mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read:in
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write           : std_logic;                     -- mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write:in
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_writedata -> jtag_uart_0:av_writedata
-	signal mm_interconnect_0_inferred_ram_0_avalon_slave_0_readdata        : std_logic_vector(31 downto 0); -- inferred_ram_0:readdata -> mm_interconnect_0:inferred_ram_0_avalon_slave_0_readdata
-	signal mm_interconnect_0_inferred_ram_0_avalon_slave_0_address         : std_logic_vector(11 downto 0); -- mm_interconnect_0:inferred_ram_0_avalon_slave_0_address -> inferred_ram_0:address
-	signal mm_interconnect_0_inferred_ram_0_avalon_slave_0_write           : std_logic;                     -- mm_interconnect_0:inferred_ram_0_avalon_slave_0_write -> mm_interconnect_0_inferred_ram_0_avalon_slave_0_write:in
-	signal mm_interconnect_0_inferred_ram_0_avalon_slave_0_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:inferred_ram_0_avalon_slave_0_writedata -> inferred_ram_0:writedata
+	signal mm_interconnect_0_inferred_ram_avalon_slave_0_readdata          : std_logic_vector(31 downto 0); -- inferred_ram:readdata -> mm_interconnect_0:inferred_ram_avalon_slave_0_readdata
+	signal mm_interconnect_0_inferred_ram_avalon_slave_0_address           : std_logic_vector(11 downto 0); -- mm_interconnect_0:inferred_ram_avalon_slave_0_address -> inferred_ram:address
+	signal mm_interconnect_0_inferred_ram_avalon_slave_0_write             : std_logic;                     -- mm_interconnect_0:inferred_ram_avalon_slave_0_write -> mm_interconnect_0_inferred_ram_avalon_slave_0_write:in
+	signal mm_interconnect_0_inferred_ram_avalon_slave_0_writedata         : std_logic_vector(31 downto 0); -- mm_interconnect_0:inferred_ram_avalon_slave_0_writedata -> inferred_ram:writedata
 	signal mm_interconnect_0_sysid_qsys_0_control_slave_readdata           : std_logic_vector(31 downto 0); -- sysid_qsys_0:readdata -> mm_interconnect_0:sysid_qsys_0_control_slave_readdata
 	signal mm_interconnect_0_sysid_qsys_0_control_slave_address            : std_logic_vector(0 downto 0);  -- mm_interconnect_0:sysid_qsys_0_control_slave_address -> sysid_qsys_0:address
 	signal mm_interconnect_0_nios2_gen2_0_debug_mem_slave_readdata         : std_logic_vector(31 downto 0); -- nios2_gen2_0:debug_mem_slave_readdata -> mm_interconnect_0:nios2_gen2_0_debug_mem_slave_readdata
@@ -291,11 +291,6 @@ architecture rtl of nios_system is
 	signal mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable       : std_logic_vector(3 downto 0);  -- mm_interconnect_0:nios2_gen2_0_debug_mem_slave_byteenable -> nios2_gen2_0:debug_mem_slave_byteenable
 	signal mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write            : std_logic;                     -- mm_interconnect_0:nios2_gen2_0_debug_mem_slave_write -> nios2_gen2_0:debug_mem_slave_write
 	signal mm_interconnect_0_nios2_gen2_0_debug_mem_slave_writedata        : std_logic_vector(31 downto 0); -- mm_interconnect_0:nios2_gen2_0_debug_mem_slave_writedata -> nios2_gen2_0:debug_mem_slave_writedata
-	signal mm_interconnect_0_pushbuttons_s1_chipselect                     : std_logic;                     -- mm_interconnect_0:Pushbuttons_s1_chipselect -> Pushbuttons:chipselect
-	signal mm_interconnect_0_pushbuttons_s1_readdata                       : std_logic_vector(31 downto 0); -- Pushbuttons:readdata -> mm_interconnect_0:Pushbuttons_s1_readdata
-	signal mm_interconnect_0_pushbuttons_s1_address                        : std_logic_vector(1 downto 0);  -- mm_interconnect_0:Pushbuttons_s1_address -> Pushbuttons:address
-	signal mm_interconnect_0_pushbuttons_s1_write                          : std_logic;                     -- mm_interconnect_0:Pushbuttons_s1_write -> mm_interconnect_0_pushbuttons_s1_write:in
-	signal mm_interconnect_0_pushbuttons_s1_writedata                      : std_logic_vector(31 downto 0); -- mm_interconnect_0:Pushbuttons_s1_writedata -> Pushbuttons:writedata
 	signal mm_interconnect_0_onchip_memory2_0_s1_chipselect                : std_logic;                     -- mm_interconnect_0:onchip_memory2_0_s1_chipselect -> onchip_memory2_0:chipselect
 	signal mm_interconnect_0_onchip_memory2_0_s1_readdata                  : std_logic_vector(31 downto 0); -- onchip_memory2_0:readdata -> mm_interconnect_0:onchip_memory2_0_s1_readdata
 	signal mm_interconnect_0_onchip_memory2_0_s1_address                   : std_logic_vector(11 downto 0); -- mm_interconnect_0:onchip_memory2_0_s1_address -> onchip_memory2_0:address
@@ -303,13 +298,18 @@ architecture rtl of nios_system is
 	signal mm_interconnect_0_onchip_memory2_0_s1_write                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_0_s1_write -> onchip_memory2_0:write
 	signal mm_interconnect_0_onchip_memory2_0_s1_writedata                 : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_memory2_0_s1_writedata -> onchip_memory2_0:writedata
 	signal mm_interconnect_0_onchip_memory2_0_s1_clken                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_0_s1_clken -> onchip_memory2_0:clken
-	signal mm_interconnect_0_led_s1_chipselect                             : std_logic;                     -- mm_interconnect_0:LED_s1_chipselect -> LED:chipselect
-	signal mm_interconnect_0_led_s1_readdata                               : std_logic_vector(31 downto 0); -- LED:readdata -> mm_interconnect_0:LED_s1_readdata
-	signal mm_interconnect_0_led_s1_address                                : std_logic_vector(1 downto 0);  -- mm_interconnect_0:LED_s1_address -> LED:address
-	signal mm_interconnect_0_led_s1_write                                  : std_logic;                     -- mm_interconnect_0:LED_s1_write -> mm_interconnect_0_led_s1_write:in
-	signal mm_interconnect_0_led_s1_writedata                              : std_logic_vector(31 downto 0); -- mm_interconnect_0:LED_s1_writedata -> LED:writedata
-	signal irq_mapper_receiver0_irq                                        : std_logic;                     -- Pushbuttons:irq -> irq_mapper:receiver0_irq
-	signal irq_mapper_receiver1_irq                                        : std_logic;                     -- jtag_uart_0:av_irq -> irq_mapper:receiver1_irq
+	signal mm_interconnect_0_pushbuttons_s1_chipselect                     : std_logic;                     -- mm_interconnect_0:pushbuttons_s1_chipselect -> pushbuttons:chipselect
+	signal mm_interconnect_0_pushbuttons_s1_readdata                       : std_logic_vector(31 downto 0); -- pushbuttons:readdata -> mm_interconnect_0:pushbuttons_s1_readdata
+	signal mm_interconnect_0_pushbuttons_s1_address                        : std_logic_vector(1 downto 0);  -- mm_interconnect_0:pushbuttons_s1_address -> pushbuttons:address
+	signal mm_interconnect_0_pushbuttons_s1_write                          : std_logic;                     -- mm_interconnect_0:pushbuttons_s1_write -> mm_interconnect_0_pushbuttons_s1_write:in
+	signal mm_interconnect_0_pushbuttons_s1_writedata                      : std_logic_vector(31 downto 0); -- mm_interconnect_0:pushbuttons_s1_writedata -> pushbuttons:writedata
+	signal mm_interconnect_0_leds_s1_chipselect                            : std_logic;                     -- mm_interconnect_0:leds_s1_chipselect -> leds:chipselect
+	signal mm_interconnect_0_leds_s1_readdata                              : std_logic_vector(31 downto 0); -- leds:readdata -> mm_interconnect_0:leds_s1_readdata
+	signal mm_interconnect_0_leds_s1_address                               : std_logic_vector(1 downto 0);  -- mm_interconnect_0:leds_s1_address -> leds:address
+	signal mm_interconnect_0_leds_s1_write                                 : std_logic;                     -- mm_interconnect_0:leds_s1_write -> mm_interconnect_0_leds_s1_write:in
+	signal mm_interconnect_0_leds_s1_writedata                             : std_logic_vector(31 downto 0); -- mm_interconnect_0:leds_s1_writedata -> leds:writedata
+	signal irq_mapper_receiver0_irq                                        : std_logic;                     -- jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
+	signal irq_mapper_receiver1_irq                                        : std_logic;                     -- pushbuttons:irq -> irq_mapper:receiver1_irq
 	signal nios2_gen2_0_irq_irq                                            : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2_gen2_0:irq
 	signal rst_controller_reset_out_reset                                  : std_logic;                     -- rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
 	signal rst_controller_reset_out_reset_req                              : std_logic;                     -- rst_controller:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
@@ -317,46 +317,21 @@ architecture rtl of nios_system is
 	signal reset_reset_n_ports_inv                                         : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read:inv -> jtag_uart_0:av_read_n
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write:inv -> jtag_uart_0:av_write_n
-	signal mm_interconnect_0_inferred_ram_0_avalon_slave_0_write_ports_inv : std_logic;                     -- mm_interconnect_0_inferred_ram_0_avalon_slave_0_write:inv -> inferred_ram_0:write_n
-	signal mm_interconnect_0_pushbuttons_s1_write_ports_inv                : std_logic;                     -- mm_interconnect_0_pushbuttons_s1_write:inv -> Pushbuttons:write_n
-	signal mm_interconnect_0_led_s1_write_ports_inv                        : std_logic;                     -- mm_interconnect_0_led_s1_write:inv -> LED:write_n
-	signal rst_controller_reset_out_reset_ports_inv                        : std_logic;                     -- rst_controller_reset_out_reset:inv -> [LED:reset_n, Pushbuttons:reset_n, inferred_ram_0:reset_n, jtag_uart_0:rst_n, nios2_gen2_0:reset_n, sysid_qsys_0:reset_n]
+	signal mm_interconnect_0_inferred_ram_avalon_slave_0_write_ports_inv   : std_logic;                     -- mm_interconnect_0_inferred_ram_avalon_slave_0_write:inv -> inferred_ram:write_n
+	signal mm_interconnect_0_pushbuttons_s1_write_ports_inv                : std_logic;                     -- mm_interconnect_0_pushbuttons_s1_write:inv -> pushbuttons:write_n
+	signal mm_interconnect_0_leds_s1_write_ports_inv                       : std_logic;                     -- mm_interconnect_0_leds_s1_write:inv -> leds:write_n
+	signal rst_controller_reset_out_reset_ports_inv                        : std_logic;                     -- rst_controller_reset_out_reset:inv -> [inferred_ram:reset_n, jtag_uart_0:rst_n, leds:reset_n, nios2_gen2_0:reset_n, pushbuttons:reset_n, sysid_qsys_0:reset_n]
 
 begin
 
-	led : component nios_system_LED
+	inferred_ram : component raminfr
 		port map (
-			clk        => clk_clk,                                  --                 clk.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv, --               reset.reset_n
-			address    => mm_interconnect_0_led_s1_address,         --                  s1.address
-			write_n    => mm_interconnect_0_led_s1_write_ports_inv, --                    .write_n
-			writedata  => mm_interconnect_0_led_s1_writedata,       --                    .writedata
-			chipselect => mm_interconnect_0_led_s1_chipselect,      --                    .chipselect
-			readdata   => mm_interconnect_0_led_s1_readdata,        --                    .readdata
-			out_port   => led_export                                -- external_connection.export
-		);
-
-	pushbuttons : component nios_system_Pushbuttons
-		port map (
-			clk        => clk_clk,                                          --                 clk.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,         --               reset.reset_n
-			address    => mm_interconnect_0_pushbuttons_s1_address,         --                  s1.address
-			write_n    => mm_interconnect_0_pushbuttons_s1_write_ports_inv, --                    .write_n
-			writedata  => mm_interconnect_0_pushbuttons_s1_writedata,       --                    .writedata
-			chipselect => mm_interconnect_0_pushbuttons_s1_chipselect,      --                    .chipselect
-			readdata   => mm_interconnect_0_pushbuttons_s1_readdata,        --                    .readdata
-			in_port    => pushbuttons_export,                               -- external_connection.export
-			irq        => irq_mapper_receiver0_irq                          --                 irq.irq
-		);
-
-	inferred_ram_0 : component raminfr
-		port map (
-			clk       => clk_clk,                                                         --          clock.clk
-			reset_n   => rst_controller_reset_out_reset_ports_inv,                        --          reset.reset_n
-			write_n   => mm_interconnect_0_inferred_ram_0_avalon_slave_0_write_ports_inv, -- avalon_slave_0.write_n
-			address   => mm_interconnect_0_inferred_ram_0_avalon_slave_0_address,         --               .address
-			writedata => mm_interconnect_0_inferred_ram_0_avalon_slave_0_writedata,       --               .writedata
-			readdata  => mm_interconnect_0_inferred_ram_0_avalon_slave_0_readdata         --               .readdata
+			clk       => clk_clk,                                                       --          clock.clk
+			reset_n   => rst_controller_reset_out_reset_ports_inv,                      --          reset.reset_n
+			write_n   => mm_interconnect_0_inferred_ram_avalon_slave_0_write_ports_inv, -- avalon_slave_0.write_n
+			address   => mm_interconnect_0_inferred_ram_avalon_slave_0_address,         --               .address
+			writedata => mm_interconnect_0_inferred_ram_avalon_slave_0_writedata,       --               .writedata
+			readdata  => mm_interconnect_0_inferred_ram_avalon_slave_0_readdata         --               .readdata
 		);
 
 	jtag_uart_0 : component nios_system_jtag_uart_0
@@ -370,7 +345,19 @@ begin
 			av_write_n     => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv, --                  .write_n
 			av_writedata   => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata,       --                  .writedata
 			av_waitrequest => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest,     --                  .waitrequest
-			av_irq         => irq_mapper_receiver1_irq                                         --               irq.irq
+			av_irq         => irq_mapper_receiver0_irq                                         --               irq.irq
+		);
+
+	leds : component nios_system_leds
+		port map (
+			clk        => clk_clk,                                   --                 clk.clk
+			reset_n    => rst_controller_reset_out_reset_ports_inv,  --               reset.reset_n
+			address    => mm_interconnect_0_leds_s1_address,         --                  s1.address
+			write_n    => mm_interconnect_0_leds_s1_write_ports_inv, --                    .write_n
+			writedata  => mm_interconnect_0_leds_s1_writedata,       --                    .writedata
+			chipselect => mm_interconnect_0_leds_s1_chipselect,      --                    .chipselect
+			readdata   => mm_interconnect_0_leds_s1_readdata,        --                    .readdata
+			out_port   => leds_export                                -- external_connection.export
 		);
 
 	nios2_gen2_0 : component nios_system_nios2_gen2_0
@@ -418,6 +405,19 @@ begin
 			freeze     => '0'                                               -- (terminated)
 		);
 
+	pushbuttons : component nios_system_pushbuttons
+		port map (
+			clk        => clk_clk,                                          --                 clk.clk
+			reset_n    => rst_controller_reset_out_reset_ports_inv,         --               reset.reset_n
+			address    => mm_interconnect_0_pushbuttons_s1_address,         --                  s1.address
+			write_n    => mm_interconnect_0_pushbuttons_s1_write_ports_inv, --                    .write_n
+			writedata  => mm_interconnect_0_pushbuttons_s1_writedata,       --                    .writedata
+			chipselect => mm_interconnect_0_pushbuttons_s1_chipselect,      --                    .chipselect
+			readdata   => mm_interconnect_0_pushbuttons_s1_readdata,        --                    .readdata
+			in_port    => pushbuttons_export,                               -- external_connection.export
+			irq        => irq_mapper_receiver1_irq                          --                 irq.irq
+		);
+
 	sysid_qsys_0 : component nios_system_sysid_qsys_0
 		port map (
 			clock    => clk_clk,                                                 --           clk.clk
@@ -442,10 +442,10 @@ begin
 			nios2_gen2_0_instruction_master_waitrequest    => nios2_gen2_0_instruction_master_waitrequest,                 --                                         .waitrequest
 			nios2_gen2_0_instruction_master_read           => nios2_gen2_0_instruction_master_read,                        --                                         .read
 			nios2_gen2_0_instruction_master_readdata       => nios2_gen2_0_instruction_master_readdata,                    --                                         .readdata
-			inferred_ram_0_avalon_slave_0_address          => mm_interconnect_0_inferred_ram_0_avalon_slave_0_address,     --            inferred_ram_0_avalon_slave_0.address
-			inferred_ram_0_avalon_slave_0_write            => mm_interconnect_0_inferred_ram_0_avalon_slave_0_write,       --                                         .write
-			inferred_ram_0_avalon_slave_0_readdata         => mm_interconnect_0_inferred_ram_0_avalon_slave_0_readdata,    --                                         .readdata
-			inferred_ram_0_avalon_slave_0_writedata        => mm_interconnect_0_inferred_ram_0_avalon_slave_0_writedata,   --                                         .writedata
+			inferred_ram_avalon_slave_0_address            => mm_interconnect_0_inferred_ram_avalon_slave_0_address,       --              inferred_ram_avalon_slave_0.address
+			inferred_ram_avalon_slave_0_write              => mm_interconnect_0_inferred_ram_avalon_slave_0_write,         --                                         .write
+			inferred_ram_avalon_slave_0_readdata           => mm_interconnect_0_inferred_ram_avalon_slave_0_readdata,      --                                         .readdata
+			inferred_ram_avalon_slave_0_writedata          => mm_interconnect_0_inferred_ram_avalon_slave_0_writedata,     --                                         .writedata
 			jtag_uart_0_avalon_jtag_slave_address          => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address,     --            jtag_uart_0_avalon_jtag_slave.address
 			jtag_uart_0_avalon_jtag_slave_write            => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write,       --                                         .write
 			jtag_uart_0_avalon_jtag_slave_read             => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read,        --                                         .read
@@ -453,11 +453,11 @@ begin
 			jtag_uart_0_avalon_jtag_slave_writedata        => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata,   --                                         .writedata
 			jtag_uart_0_avalon_jtag_slave_waitrequest      => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest, --                                         .waitrequest
 			jtag_uart_0_avalon_jtag_slave_chipselect       => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect,  --                                         .chipselect
-			LED_s1_address                                 => mm_interconnect_0_led_s1_address,                            --                                   LED_s1.address
-			LED_s1_write                                   => mm_interconnect_0_led_s1_write,                              --                                         .write
-			LED_s1_readdata                                => mm_interconnect_0_led_s1_readdata,                           --                                         .readdata
-			LED_s1_writedata                               => mm_interconnect_0_led_s1_writedata,                          --                                         .writedata
-			LED_s1_chipselect                              => mm_interconnect_0_led_s1_chipselect,                         --                                         .chipselect
+			leds_s1_address                                => mm_interconnect_0_leds_s1_address,                           --                                  leds_s1.address
+			leds_s1_write                                  => mm_interconnect_0_leds_s1_write,                             --                                         .write
+			leds_s1_readdata                               => mm_interconnect_0_leds_s1_readdata,                          --                                         .readdata
+			leds_s1_writedata                              => mm_interconnect_0_leds_s1_writedata,                         --                                         .writedata
+			leds_s1_chipselect                             => mm_interconnect_0_leds_s1_chipselect,                        --                                         .chipselect
 			nios2_gen2_0_debug_mem_slave_address           => mm_interconnect_0_nios2_gen2_0_debug_mem_slave_address,      --             nios2_gen2_0_debug_mem_slave.address
 			nios2_gen2_0_debug_mem_slave_write             => mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write,        --                                         .write
 			nios2_gen2_0_debug_mem_slave_read              => mm_interconnect_0_nios2_gen2_0_debug_mem_slave_read,         --                                         .read
@@ -473,11 +473,11 @@ begin
 			onchip_memory2_0_s1_byteenable                 => mm_interconnect_0_onchip_memory2_0_s1_byteenable,            --                                         .byteenable
 			onchip_memory2_0_s1_chipselect                 => mm_interconnect_0_onchip_memory2_0_s1_chipselect,            --                                         .chipselect
 			onchip_memory2_0_s1_clken                      => mm_interconnect_0_onchip_memory2_0_s1_clken,                 --                                         .clken
-			Pushbuttons_s1_address                         => mm_interconnect_0_pushbuttons_s1_address,                    --                           Pushbuttons_s1.address
-			Pushbuttons_s1_write                           => mm_interconnect_0_pushbuttons_s1_write,                      --                                         .write
-			Pushbuttons_s1_readdata                        => mm_interconnect_0_pushbuttons_s1_readdata,                   --                                         .readdata
-			Pushbuttons_s1_writedata                       => mm_interconnect_0_pushbuttons_s1_writedata,                  --                                         .writedata
-			Pushbuttons_s1_chipselect                      => mm_interconnect_0_pushbuttons_s1_chipselect,                 --                                         .chipselect
+			pushbuttons_s1_address                         => mm_interconnect_0_pushbuttons_s1_address,                    --                           pushbuttons_s1.address
+			pushbuttons_s1_write                           => mm_interconnect_0_pushbuttons_s1_write,                      --                                         .write
+			pushbuttons_s1_readdata                        => mm_interconnect_0_pushbuttons_s1_readdata,                   --                                         .readdata
+			pushbuttons_s1_writedata                       => mm_interconnect_0_pushbuttons_s1_writedata,                  --                                         .writedata
+			pushbuttons_s1_chipselect                      => mm_interconnect_0_pushbuttons_s1_chipselect,                 --                                         .chipselect
 			sysid_qsys_0_control_slave_address             => mm_interconnect_0_sysid_qsys_0_control_slave_address,        --               sysid_qsys_0_control_slave.address
 			sysid_qsys_0_control_slave_readdata            => mm_interconnect_0_sysid_qsys_0_control_slave_readdata        --                                         .readdata
 		);
@@ -562,11 +562,11 @@ begin
 
 	mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write;
 
-	mm_interconnect_0_inferred_ram_0_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_inferred_ram_0_avalon_slave_0_write;
+	mm_interconnect_0_inferred_ram_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_inferred_ram_avalon_slave_0_write;
 
 	mm_interconnect_0_pushbuttons_s1_write_ports_inv <= not mm_interconnect_0_pushbuttons_s1_write;
 
-	mm_interconnect_0_led_s1_write_ports_inv <= not mm_interconnect_0_led_s1_write;
+	mm_interconnect_0_leds_s1_write_ports_inv <= not mm_interconnect_0_leds_s1_write;
 
 	rst_controller_reset_out_reset_ports_inv <= not rst_controller_reset_out_reset;
 

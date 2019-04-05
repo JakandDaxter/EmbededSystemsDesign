@@ -18,7 +18,7 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module nios_system_Pushbuttons (
+module nios_system_pushbuttons (
                                  // inputs:
                                   address,
                                   chipselect,
@@ -88,7 +88,7 @@ reg     [ 31: 0] readdata;
       if (reset_n == 0)
           edge_capture <= 0;
       else if (clk_en)
-          if (edge_capture_wr_strobe && writedata[0])
+          if (edge_capture_wr_strobe)
               edge_capture <= 0;
           else if (edge_detect)
               edge_capture <= -1;

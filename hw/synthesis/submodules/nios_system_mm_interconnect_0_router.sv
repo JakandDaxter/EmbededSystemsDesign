@@ -47,7 +47,7 @@ module nios_system_mm_interconnect_0_router_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 2 
+               DEFAULT_DESTID = 0 
    )
   (output [78 - 76 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
@@ -202,31 +202,31 @@ module nios_system_mm_interconnect_0_router
     // ( 0x0 .. 0x4000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 16'h0   ) begin
             src_channel = 7'b0000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x4000 .. 0x8000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 16'h4000   ) begin
-            src_channel = 7'b0100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_channel = 7'b0010000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x8800 .. 0x9000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 16'h8800   ) begin
             src_channel = 7'b0001000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x9000 .. 0x9010 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 16'h9000   ) begin
             src_channel = 7'b1000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x9010 .. 0x9020 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 16'h9010   ) begin
-            src_channel = 7'b0010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_channel = 7'b0100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x9020 .. 0x9028 )
@@ -238,7 +238,7 @@ module nios_system_mm_interconnect_0_router
     // ( 0x9028 .. 0x9030 )
     if ( {address[RG:PAD6],{PAD6{1'b0}}} == 16'h9028   ) begin
             src_channel = 7'b0000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
 end

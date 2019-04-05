@@ -1,5 +1,5 @@
 Assembler report for Top
-Mon Apr 01 00:25:30 2019
+Thu Apr 04 11:05:01 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -11,7 +11,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: Z:/Documents/ESD1/EmbededSystemsDesign/hw/project/output_files/Top.sof
+  6. Assembler Device Options: X:/CPET-561/Lab_6/hw/project/output_files/Top.sof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Apr 01 00:25:30 2019 ;
+; Assembler Status      ; Successful - Thu Apr 04 11:05:01 2019 ;
 ; Revision Name         ; Top                                   ;
 ; Top-level Entity Name ; Top                                   ;
 ; Family                ; Cyclone V                             ;
@@ -64,23 +64,23 @@ agreement for further details.
 +--------+------------------------+--------------+
 
 
-+------------------------------------------------------------------------+
-; Assembler Generated Files                                              ;
-+------------------------------------------------------------------------+
-; File Name                                                              ;
-+------------------------------------------------------------------------+
-; Z:/Documents/ESD1/EmbededSystemsDesign/hw/project/output_files/Top.sof ;
-+------------------------------------------------------------------------+
++---------------------------------------------------+
+; Assembler Generated Files                         ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; X:/CPET-561/Lab_6/hw/project/output_files/Top.sof ;
++---------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Assembler Device Options: Z:/Documents/ESD1/EmbededSystemsDesign/hw/project/output_files/Top.sof ;
-+----------------+---------------------------------------------------------------------------------+
-; Option         ; Setting                                                                         ;
-+----------------+---------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x01853E98                                                                      ;
-; Checksum       ; 0x01853E98                                                                      ;
-+----------------+---------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Assembler Device Options: X:/CPET-561/Lab_6/hw/project/output_files/Top.sof ;
++----------------+------------------------------------------------------------+
+; Option         ; Setting                                                    ;
++----------------+------------------------------------------------------------+
+; JTAG usercode  ; 0x01852D4C                                                 ;
+; Checksum       ; 0x01852D4C                                                 ;
++----------------+------------------------------------------------------------+
 
 
 +--------------------+
@@ -89,15 +89,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 01 00:25:18 2019
+    Info: Processing started: Thu Apr 04 11:04:41 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
-Warning (12914): The file, Z:/Documents/ESD1/Lab_5/HW/nios_system.sopcinfo, is not embedded into sof file as expected.  Some tools, such as System Console, may not function fully.
-Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4881 megabytes
-    Info: Processing ended: Mon Apr 01 00:25:30 2019
-    Info: Elapsed time: 00:00:12
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Thu Apr 04 11:05:02 2019
+    Info: Elapsed time: 00:00:21
     Info: Total CPU time (on all processors): 00:00:09
 
 

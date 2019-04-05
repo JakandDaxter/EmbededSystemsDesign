@@ -48,14 +48,14 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(output)
-		(text "led_export[7..0]" (rect 0 0 61 12)(font "Arial" (font_size 8)))
-		(text "led_export[7..0]" (rect 4 101 100 112)(font "Arial" (font_size 8)))
+		(text "leds_export[7..0]" (rect 0 0 66 12)(font "Arial" (font_size 8)))
+		(text "leds_export[7..0]" (rect 4 101 106 112)(font "Arial" (font_size 8)))
 		(line (pt 0 112)(pt 112 112)(line_width 3))
 	)
 	(drawing
 		(text "clk" (rect 97 43 212 99)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "clk" (rect 117 67 252 144)(font "Arial" (color 0 0 0)))
-		(text "led" (rect 96 83 210 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "leds" (rect 89 83 202 179)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 117 107 270 224)(font "Arial" (color 0 0 0)))
 		(text "pushbuttons" (rect 42 123 150 259)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 117 147 270 304)(font "Arial" (color 0 0 0)))

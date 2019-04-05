@@ -47,7 +47,7 @@ module nios_system_mm_interconnect_0_router_001_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 5 
+               DEFAULT_DESTID = 4 
    )
   (output [78 - 76 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
@@ -192,13 +192,13 @@ module nios_system_mm_interconnect_0_router_001
     // ( 0x4000 .. 0x8000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 16'h4000   ) begin
             src_channel = 7'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x8800 .. 0x9000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 16'h8800   ) begin
             src_channel = 7'b01;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end
