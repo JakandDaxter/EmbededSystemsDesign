@@ -1,0 +1,141 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.0
+Eraminfr_be
+Z0 w1554487007
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dX:/CPET-561/Lab_7/sim
+Z6 8X:/CPET-561/Lab_7/src/raminfr_be.vhd
+Z7 FX:/CPET-561/Lab_7/src/raminfr_be.vhd
+l0
+L4
+VX33H7J?[G<SoAEhZcM4zG3
+!s100 ^?UVIIz9N8Ez^Mh`^?c]_0
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1554489278
+!i10b 1
+Z10 !s108 1554489277.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|X:/CPET-561/Lab_7/src/raminfr_be.vhd|
+Z12 !s107 X:/CPET-561/Lab_7/src/raminfr_be.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 10 raminfr_be 0 22 X33H7J?[G<SoAEhZcM4zG3
+l29
+L15
+V9k_5<F=2dib9e7A@GggD22
+!s100 77]o2>PPI9IFDB<WA^6Hc1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eraminfr_be_tb
+Z15 w1554429867
+R1
+Z16 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z17 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z18 8X:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd
+Z19 FX:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd
+l0
+L10
+V[OFlUXz@a=PcQO[H;N:Ug2
+!s100 LSnKJY`P8n@7PdPKU14=L0
+R8
+32
+Z20 !s110 1554489276
+!i10b 1
+Z21 !s108 1554489275.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|X:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd|
+Z23 !s107 X:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd|
+!i113 1
+R13
+R14
+Aarch
+R1
+R16
+R17
+R3
+R4
+DEx4 work 13 raminfr_be_tb 0 22 [OFlUXz@a=PcQO[H;N:Ug2
+l37
+L13
+VhLPf^Ti;@M92L]12Yg_8>0
+!s100 8OD:CG[dgka[aKWO?2G6:3
+R8
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R13
+R14
+Etop
+Z24 w1554144364
+R1
+R2
+R3
+R4
+R5
+Z25 8X:/CPET-561/Lab_7/src/Top.vhd
+Z26 FX:/CPET-561/Lab_7/src/Top.vhd
+l0
+L6
+V7Yf7OWlb9HfZHh`LLOX[D3
+!s100 k;nSO<1mPgIzJKDXUa^QP2
+R8
+32
+Z27 !s110 1554489277
+!i10b 1
+Z28 !s108 1554489276.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|X:/CPET-561/Lab_7/src/Top.vhd|
+Z30 !s107 X:/CPET-561/Lab_7/src/Top.vhd|
+!i113 1
+R13
+R14
+Artl
+R1
+R2
+R3
+R4
+DEx4 work 3 top 0 22 7Yf7OWlb9HfZHh`LLOX[D3
+l40
+L21
+VU6i:iEOLhGz85:ozIK6HQ2
+!s100 <iQ8^b=dPYm>Y5no>C5Ld0
+R8
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R13
+R14

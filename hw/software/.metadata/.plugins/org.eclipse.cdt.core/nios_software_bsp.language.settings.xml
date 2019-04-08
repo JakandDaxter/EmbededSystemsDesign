@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1971514530" name="Nios II">
+	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.162991932" name="Nios II">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="altera.tool.Nios2GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
@@ -1382,7 +1382,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1397,7 +1397,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1412,7 +1412,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1427,7 +1427,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1442,7 +1442,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1457,7 +1457,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1472,7 +1472,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1487,7 +1487,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1502,7 +1502,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1517,7 +1517,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1532,7 +1532,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1547,7 +1547,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1562,7 +1562,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1577,7 +1577,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1592,7 +1592,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1607,7 +1607,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1622,7 +1622,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1637,7 +1637,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1652,7 +1652,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1667,7 +1667,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1682,7 +1682,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1697,7 +1697,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1712,7 +1712,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1727,7 +1727,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1742,7 +1742,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1757,7 +1757,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1772,7 +1772,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1787,7 +1787,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1802,7 +1802,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1817,7 +1817,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1832,7 +1832,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1847,7 +1847,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1862,7 +1862,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1877,7 +1877,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1892,7 +1892,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1907,7 +1907,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1922,7 +1922,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1937,7 +1937,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1952,7 +1952,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1967,7 +1967,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1982,7 +1982,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -1997,7 +1997,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2012,7 +2012,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2027,7 +2027,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2042,7 +2042,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2057,7 +2057,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2072,7 +2072,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2087,7 +2087,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2102,7 +2102,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2117,7 +2117,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2132,7 +2132,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2147,7 +2147,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2162,7 +2162,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2177,7 +2177,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2192,7 +2192,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2207,7 +2207,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2222,7 +2222,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2237,7 +2237,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2252,7 +2252,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2267,7 +2267,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2282,7 +2282,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2297,7 +2297,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2312,7 +2312,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2327,7 +2327,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2342,7 +2342,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2357,7 +2357,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2372,7 +2372,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2387,7 +2387,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2402,7 +2402,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2417,7 +2417,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2432,7 +2432,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2447,7 +2447,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2462,7 +2462,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2477,7 +2477,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2492,7 +2492,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2507,7 +2507,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2522,7 +2522,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2537,7 +2537,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2552,7 +2552,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -2567,7 +2567,7 @@
 						<entry kind="includePath" name="/${ProjName}/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
-						<entry kind="includePath" name="C:/CPET-561/Lab_6/hw/software/nios_software_bsp"/>
+						<entry kind="includePath" name="C:/CPET-561/Lab_7/hw/software/nios_software_bsp"/>
 						<entry kind="includePath" name="/${ProjName}/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>

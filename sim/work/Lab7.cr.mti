@@ -1,0 +1,32 @@
+S:/CPET-561/Lab_7/src/raminfr_be.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET-561/Lab_7/src/raminfr_be.vhd
+Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity raminfr_be
+-- Compiling architecture rtl of raminfr_be
+
+} {} {}} S:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd
+Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity raminfr_be_tb
+-- Compiling architecture arch of raminfr_be_tb
+
+} {} {}} S:/CPET-561/Lab_7/src/Top.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET-561/Lab_7/src/Top.vhd
+Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Top
+-- Compiling architecture rtl of Top
+
+} {} {}}

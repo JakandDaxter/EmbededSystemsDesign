@@ -1,0 +1,32 @@
+X:/CPET-561/Lab_7/src/raminfr_be.vhd {1 {vcom -work work -2002 -explicit -stats=none X:/CPET-561/Lab_7/src/raminfr_be.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity raminfr_be
+-- Compiling architecture rtl of raminfr_be
+
+} {} {}} X:/CPET-561/Lab_7/src/Top.vhd {1 {vcom -work work -2002 -explicit -stats=none X:/CPET-561/Lab_7/src/Top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Top
+-- Compiling architecture rtl of Top
+
+} {} {}} X:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none X:/CPET-561/Lab_7/sim/raminfr_be_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity raminfr_be_tb
+-- Compiling architecture arch of raminfr_be_tb
+
+} {} {}}

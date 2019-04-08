@@ -1,21 +1,149 @@
-12:41:53 **** Incremental Build of configuration Nios II for project nios_software ****
+00:14:03 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
-Info: Compiling lab6.c to obj/default/lab6.o
-nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lab6.o lab6.c
+Info: Compiling Lab7_Part4.c to obj/default/Lab7_Part4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab7_Part4.o Lab7_Part4.c
+Lab7_Part4.c: In function 'RAM32bit':
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+      printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+             ^
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c: In function 'Pushbutton_isr':
+Lab7_Part4.c:166:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+       usleep(1000000);
+       ^
+Lab7_Part4.c:170:24: warning: pointer targets in passing argument 1 of 'printf' differ in signedness [-Wpointer-sign]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                        ^
+In file included from c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from Lab7_Part4.c:2:
+c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:215:5: note: expected 'const char * restrict' but argument is of type 'uint8 * {aka unsigned char *}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                                ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
 Info: Linking nios_software.elf
-nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/  -msmallc  -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/lab6.o -lm -msys-lib=m
-nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 6 --sidp 0x9020 --timestamp 1554147767 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "X:/CPET-561/Lab_6/hw" --sopcinfo X:/CPET-561/Lab_6/hw/software/nios_software_bsp/../../nios_system.sopcinfo
-Info: (nios_software.elf) 5548 Bytes program size (code + initialized data).
-Info:                     10104 Bytes free for stack + heap.
+nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/  -msmallc  -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab7_Part4.o -lm -msys-lib=m
+nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 6 --sidp 0xd020 --timestamp 1554488042 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign/hw" --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/hw/software/nios_software_bsp/../../nios_system.sopcinfo
+Info: (nios_software.elf) 10 KBytes program size (code + initialized data).
+Info:                     4976 Bytes free for stack + heap.
 Info: Creating nios_software.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
 [nios_software build complete]
-12:44:58 **** Incremental Build of configuration Nios II for project nios_software ****
+00:18:41 **** Incremental Build of configuration Nios II for project nios_software ****
 make all 
 Info: Building ../nios_software_bsp/
 C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
 [BSP build complete]
+[nios_software build complete]
+00:30:52 **** Incremental Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+Info: Compiling Lab7_Part4.c to obj/default/Lab7_Part4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab7_Part4.o Lab7_Part4.c
+Lab7_Part4.c: In function 'RAM32bit':
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+      printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+             ^
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c: In function 'Pushbutton_isr':
+Lab7_Part4.c:166:24: warning: pointer targets in passing argument 1 of 'printf' differ in signedness [-Wpointer-sign]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                        ^
+In file included from c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from Lab7_Part4.c:2:
+c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:215:5: note: expected 'const char * restrict' but argument is of type 'uint8 * {aka unsigned char *}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+Lab7_Part4.c:166:32: warning: too many arguments for format [-Wformat-extra-args]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                                ^
+Lab7_Part4.c:166:32: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking nios_software.elf
+nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/  -msmallc  -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab7_Part4.o -lm -msys-lib=m
+nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 6 --sidp 0xd020 --timestamp 1554488042 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign/hw" --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/hw/software/nios_software_bsp/../../nios_system.sopcinfo
+Info: (nios_software.elf) 10 KBytes program size (code + initialized data).
+Info:                     5360 Bytes free for stack + heap.
+Info: Creating nios_software.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
+[nios_software build complete]
+00:32:47 **** Incremental Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+Info: Compiling Lab7_Part4.c to obj/default/Lab7_Part4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab7_Part4.o Lab7_Part4.c
+Lab7_Part4.c: In function 'RAM32bit':
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+      printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+             ^
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c: In function 'Pushbutton_isr':
+Lab7_Part4.c:170:24: warning: pointer targets in passing argument 1 of 'printf' differ in signedness [-Wpointer-sign]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                        ^
+In file included from c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from Lab7_Part4.c:2:
+c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:215:5: note: expected 'const char * restrict' but argument is of type 'uint8 * {aka unsigned char *}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                                ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking nios_software.elf
+nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/  -msmallc  -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab7_Part4.o -lm -msys-lib=m
+nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 6 --sidp 0xd020 --timestamp 1554488042 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign/hw" --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/hw/software/nios_software_bsp/../../nios_system.sopcinfo
+Info: (nios_software.elf) 10 KBytes program size (code + initialized data).
+Info:                     5388 Bytes free for stack + heap.
+Info: Creating nios_software.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
+[nios_software build complete]
+00:33:41 **** Incremental Build of configuration Nios II for project nios_software ****
+make all 
+Info: Building ../nios_software_bsp/
+C:/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios_software_bsp/
+[BSP build complete]
+Info: Compiling Lab7_Part4.c to obj/default/Lab7_Part4.o
+nios2-elf-gcc -xc -MP -MMD -c -I../nios_software_bsp//HAL/inc -I../nios_software_bsp/ -I../nios_software_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/Lab7_Part4.o Lab7_Part4.c
+Lab7_Part4.c: In function 'RAM32bit':
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+      printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+             ^
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c:134:13: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32 {aka long unsigned int}' [-Wformat=]
+Lab7_Part4.c: In function 'Pushbutton_isr':
+Lab7_Part4.c:170:24: warning: pointer targets in passing argument 1 of 'printf' differ in signedness [-Wpointer-sign]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                        ^
+In file included from c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from Lab7_Part4.c:2:
+c:\intelfpga_lite\17.0\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:215:5: note: expected 'const char * restrict' but argument is of type 'uint8 * {aka unsigned char *}'
+ int _EXFUN(printf, (const char *__restrict, ...)
+     ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
+                 printf((uint8*)"RAM TEST DONE", 13);
+                                ^
+Lab7_Part4.c:170:32: warning: too many arguments for format [-Wformat-extra-args]
+Info: Linking nios_software.elf
+nios2-elf-g++  -T'../nios_software_bsp//linker.x' -msys-crt0='../nios_software_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../nios_software_bsp/  -msmallc  -Wl,-Map=nios_software.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_software.elf obj/default/Lab7_Part4.o -lm -msys-lib=m
+nios2-elf-insert nios_software.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 6 --sidp 0xd020 --timestamp 1554488042 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "Z:/Documents/ESD1/EmbededSystemsDesign/hw" --sopcinfo Z:/Documents/ESD1/EmbededSystemsDesign/hw/software/nios_software_bsp/../../nios_system.sopcinfo
+Info: (nios_software.elf) 10 KBytes program size (code + initialized data).
+Info:                     5388 Bytes free for stack + heap.
+Info: Creating nios_software.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source nios_software.elf >nios_software.objdump
 [nios_software build complete]

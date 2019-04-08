@@ -1,0 +1,186 @@
+#include "io.h"
+#include <stdio.h>
+#include "system.h"
+#include "alt_types.h"
+#include "sys/alt_irq.h"
+#include "altera_nios2_gen2_irq.h"      // for standard embedded types
+#include <math.h>
+
+
+/***************DESCRIPTION****************/
+/* Program that Displays zero on led0 & checks to see if key1 (active low) is pushed */
+
+	
+/*volatile keyword is a qualifier that is applied to a variable when it is declared. 
+It tells the compiler that the value of the variable may change at any time--without 
+any action being taken by the code the compiler finds nearby. */
+
+/* Declare volatile pointers to I/O registers (volatile means that IO load and store
+instructions (e.g., ldwio, stwio) will be used to access these pointer locations) */
+// Switches = (int *) 0x10000000; // switches address
+
+// create standard embedded type definitions
+typedef   signed char   sint8;              // signed 8 bit values
+typedef unsigned char   uint8;              // unsigned 8 bit values
+typedef   signed short  sint16;             // signed 16 bit values
+typedef unsigned short  uint16;             // unsigned 16 bit values
+typedef   signed long   sint32;             // signed 32 bit values
+typedef unsigned long   uint32;             // unsigned 32 bit values
+typedef         float   real32;             // 32 bit real values
+
+volatile int *Key1Ptr = (int *)PUSHBUTTONS_BASE; // Key1 address
+volatile int *LEDPtr = (int *)LEDS_BASE; // LED base address
+
+uint8 *RAM8bitPtr = (uint8 *)RAMINFR_BE_0_BASE; // RAM base address
+uint16 *RAM16bitPtr = (uint16 *)RAMINFR_BE_0_BASE; // RAM base address
+uint32 *RAM32bitPtr = (uint32 *)RAMINFR_BE_0_BASE; // RAM base address
+
+uint32 *JtagUartPtr = (uint32*)JTAG_UART_0_BASE;
+
+int key_value;
+
+/*
+ Write a function that performs a byte accessible RAM test. The function should accept
+three arguments: start address, the number of bytes to test and the test data to write to the RAM.
+The function should consist of two loops. 
+*/
+//1 byte = 8 bits
+int RAM8bit(uint8 *startaddress, unsigned int numBytestoTest,uint8 testData)
+{
+	  int i;
+/*The first loop will write the data to the requested RAM
+locations.*/
+  for (i = 0; i < numBytestoTest; i++)
+  {
+    *(startaddress + i) = testData;//write test data to RAM //load RAM register with testData
+  } 
+
+/* 
+The second loop will read the data back to verify it was successfully written. 
+*/
+	for ( i = 0; i < numBytestoTest;)//read the data back to verify it was successfully written.
+	{
+		//// If the contents do not equal the expected data, then all the red LEDs should be turned on
+		if ( testData != *(startaddress + i)) //this is a failure
+	  			{
+					//jtag_display((uint8*)"ERROR: Address: 0x????_???? Read:  0x????_???? Expected: 0x????_????", 68);
+					//jtag_display((uint8*)"ERROR: Address: %d Read: %d Expected: %d",startaddress,testData, *(startaddress + i), 68);
+					//jtag_display((uint8*)"ERROR "," Address: "startaddress,"Read: " testData,"Expected: " startaddress + i, 68);
+	  				
+					printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+					*LEDPtr = 0xFF; //turn on LEDS
+	  			}
+		else
+				{
+					*LEDPtr = 0; //turn off LEDS
+				}
+		i++;
+	}
+	
+ return 1;
+}
+
+// perform a RAM test based on 16-bit memory access
+//2 bytes = 16 bits 
+int RAM16bit(uint16 *startaddress, unsigned int numBytestoTest,uint16 testData)
+{
+	int i;
+	 for ( i = 0; i < numBytestoTest; i++)
+  {
+    *(startaddress + i) = testData;//write test data to RAM //load RAM register with testData
+  } 
+  
+  for ( i = 0; i < numBytestoTest;)//read the data back to verify it was successfully written.
+	{
+		if ( testData != *(startaddress + i)) //this is a failure
+	  			{
+					//jtag_display((uint8*)"ERROR: Address: 0x????_???? Read:  0x????_???? Expected: 0x????_????", 68);
+					//jtag_display((uint8*)"ERROR: Address: %d Read: %d Expected: %d",startaddress,testData, *(startaddress + i), 68);
+					printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+					*LEDPtr = 0xFF; //turn on LEDS
+	  			}
+		else
+				{
+					*LEDPtr = 0; //turn off LEDS
+				}
+		i++;
+	}
+ return 1;
+}
+
+// perform a memory test based on 32-bit accesses.
+//4 bytes = 32 bits
+int RAM32bit(uint32 *startaddress, unsigned int numBytestoTest,uint32 testData)
+{
+	  int i;
+	for (i = 0; i < numBytestoTest; i++)
+	{
+		*(startaddress + i) = testData;//write test data to RAM //load RAM register with testData
+	} 
+	  
+	for ( i = 0; i < numBytestoTest;)
+	{
+		if ( testData != *(startaddress + i)) //this is a failure
+	  			{
+					//Address: 0x????_???? Read:  0x????_???? Expected: 0x????_????"
+					//jtag_display((uint8*)"ERROR: Address: 0x????_???? Read:  0x????_???? Expected: 0x????_????", 68);
+					//jtag_display((uint8*)"ERROR: Address: %d Read: %d Expected: %d",startaddress,testData, *(startaddress + i), 68);				
+					printf("\n\nERROR: Address: %u Read: %u Expected: %u",i,*(startaddress + i),testData );
+					*LEDPtr = 0xFF; //turn on LEDS
+	  			}
+		else
+				{
+					*LEDPtr = 0; //turn off LEDS
+				}
+		i++;
+
+
+
+	}
+	  
+return 1;
+}
+
+//This function displays to the JTAG_UART like a printf
+/* void jtag_display (uint8* prompt, uint32 count)
+{
+  uint32 i;
+
+  for (i = 0; i < count; i++)
+  {
+    *JtagUartPtr = prompt[i];
+  }  for */
+//}  */
+
+void testdone (void)//to stop the program when key one is pressed
+{
+	while(1);
+}
+
+int main(void)
+{
+*LEDPtr = 0;//initial value to LEDs
+
+  while (1)
+  {
+	  //numBytestoTest is 4096 because there are 4096 registers
+	RAM8bit(RAM8bitPtr, 4096, 0x00);
+
+	RAM16bit(RAM16bitPtr, 4096, 0x1234);
+
+	RAM32bit(RAM32bitPtr, 4096, 0xABCDEF90);
+	
+
+	//if the KEY1 was pressed then display a unique pattern on the green LEDs to 
+	//indicate the test has stopped and display a message RAM TEST DONE to the JTAG UART. 
+	key_value = *(Key1Ptr);
+	 if (key_value ==(key_value & 0x2)) //if KEY1 was pressed
+	 {                                 
+                *LEDPtr = 0x55;//unique pattern
+                printf((uint8*)"RAM TEST DONE", 13);
+				testdone();
+     }
+  }
+
+    return main();
+}

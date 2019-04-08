@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=X\:\\CPET-561\\Lab_6\\hw\\software\\nios_software
-newSoftwareExampleWizardPage.sopcinfoFile=X\:\\CPET-561\\Lab_6\\hw\\nios_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=X\:\\CPET-561\\Lab_6\\hw\\software\\nios_software_bsp
+newSoftwareExampleWizardPage.defaultLocation=S\:\\CPET-561\\Lab_7\\hw\\software\\nios_software
+newSoftwareExampleWizardPage.sopcinfoFile=S\:\\CPET-561\\Lab_7\\hw\\nios_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=S\:\\CPET-561\\Lab_7\\hw\\software\\nios_software_bsp

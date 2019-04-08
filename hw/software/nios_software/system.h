@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'nios_system'
  * SOPC Builder design path: ../../nios_system.sopcinfo
  *
- * Generated: Tue Apr 02 00:25:07 BRT 2019
+ * Generated: Fri Apr 05 16:02:09 EDT 2019
  */
 
 /*
@@ -62,7 +62,7 @@
 
 #define ALT_CPU_ARCHITECTURE "altera_nios2_gen2"
 #define ALT_CPU_BIG_ENDIAN 0
-#define ALT_CPU_BREAK_ADDR 0x00008820
+#define ALT_CPU_BREAK_ADDR 0x0000c820
 #define ALT_CPU_CPU_ARCH_NIOS2_R1
 #define ALT_CPU_CPU_FREQ 50000000u
 #define ALT_CPU_CPU_ID_SIZE 1
@@ -99,7 +99,7 @@
  */
 
 #define NIOS2_BIG_ENDIAN 0
-#define NIOS2_BREAK_ADDR 0x00008820
+#define NIOS2_BREAK_ADDR 0x0000c820
 #define NIOS2_CPU_ARCH_NIOS2_R1
 #define NIOS2_CPU_FREQ 50000000u
 #define NIOS2_CPU_ID_SIZE 1
@@ -139,6 +139,7 @@
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_NIOS2_GEN2
 #define __INFERRED_RAM
+#define __RAMINFR_BE
 
 
 /*
@@ -157,19 +158,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x9028
+#define ALT_STDERR_BASE 0xd028
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x9028
+#define ALT_STDIN_BASE 0xd028
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x9028
+#define ALT_STDOUT_BASE 0xd028
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -208,7 +209,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x9028
+#define JTAG_UART_0_BASE 0xd028
 #define JTAG_UART_0_IRQ 2
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -226,7 +227,7 @@
  */
 
 #define ALT_MODULE_CLASS_leds altera_avalon_pio
-#define LEDS_BASE 0x9000
+#define LEDS_BASE 0xd000
 #define LEDS_BIT_CLEARING_EDGE_REGISTER 0
 #define LEDS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LEDS_CAPTURE 0
@@ -282,7 +283,7 @@
  */
 
 #define ALT_MODULE_CLASS_pushbuttons altera_avalon_pio
-#define PUSHBUTTONS_BASE 0x9010
+#define PUSHBUTTONS_BASE 0xd010
 #define PUSHBUTTONS_BIT_CLEARING_EDGE_REGISTER 0
 #define PUSHBUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PUSHBUTTONS_CAPTURE 1
@@ -304,18 +305,32 @@
 
 
 /*
+ * raminfr_be_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_raminfr_be_0 raminfr_be
+#define RAMINFR_BE_0_BASE 0x8000
+#define RAMINFR_BE_0_IRQ -1
+#define RAMINFR_BE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define RAMINFR_BE_0_NAME "/dev/raminfr_be_0"
+#define RAMINFR_BE_0_SPAN 16384
+#define RAMINFR_BE_0_TYPE "raminfr_be"
+
+
+/*
  * sysid_qsys_0 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x9020
+#define SYSID_QSYS_0_BASE 0xd020
 #define SYSID_QSYS_0_ID 6
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1554147767
+#define SYSID_QSYS_0_TIMESTAMP 1554488042
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

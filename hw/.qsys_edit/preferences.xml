@@ -5,9 +5,11 @@
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
+   <baseaddress preferredWidth="165" />
+   <endaddress preferredWidth="181" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
+ <library expandedCategories="Project,Library" />
  <window width="1194" height="1047" x="-7" y="0" />
- <generation synthesis="VHDL" path="S:/CPET-561/Lab_6/hw" />
+ <generation synthesis="VHDL" path="X:/CPET-561/Lab_7/hw" />
 </preferences>
