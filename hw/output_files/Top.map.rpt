@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Top
-Mon Apr 08 16:49:35 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Tue Apr 09 00:40:15 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -40,27 +40,27 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 08 16:49:35 2019           ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
-; Revision Name                   ; Top                                             ;
-; Top-level Entity Name           ; Top                                             ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 99                                              ;
-; Total pins                      ; 53                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Apr 09 00:40:15 2019       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Top                                         ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 99                                          ;
+; Total pins                      ; 53                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,26 +155,26 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; ../src/Top.vhd                   ; yes             ; User VHDL File  ; S:/CPET-561/TimeQuest_demo/src/Top.vhd          ;         ;
-; ../src/Synchronizer.vhd          ; yes             ; User VHDL File  ; S:/CPET-561/TimeQuest_demo/src/Synchronizer.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; ../src/Top.vhd                   ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd          ;         ;
+; ../src/Synchronizer.vhd          ; yes             ; User VHDL File  ; Z:/Documents/ESD1/EmbededSystemsDesign/src/Synchronizer.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -264,34 +264,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
-    Info: Processing started: Mon Apr 08 16:49:24 2019
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Apr 09 00:40:02 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/timequest_demo/src/top.vhd
-    Info (12022): Found design unit 1: Top-TimeQuest_demo File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 38
-    Info (12023): Found entity 1: Top File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 13
-Info (12021): Found 2 design units, including 1 entities, in source file /cpet-561/timequest_demo/src/synchronizer.vhd
-    Info (12022): Found design unit 1: Synchronizer-beh File: S:/CPET-561/TimeQuest_demo/src/Synchronizer.vhd Line: 26
-    Info (12023): Found entity 1: Synchronizer File: S:/CPET-561/TimeQuest_demo/src/Synchronizer.vhd Line: 10
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/esd1/embededsystemsdesign/src/top.vhd
+    Info (12022): Found design unit 1: Top-TimeQuest_demo File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 38
+    Info (12023): Found entity 1: Top File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/esd1/embededsystemsdesign/src/synchronizer.vhd
+    Info (12022): Found design unit 1: Synchronizer-beh File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Synchronizer.vhd Line: 26
+    Info (12023): Found entity 1: Synchronizer File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Synchronizer.vhd Line: 10
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "Synchronizer" for hierarchy "Synchronizer:A_Synchonizer" File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 96
+Info (12128): Elaborating entity "Synchronizer" for hierarchy "Synchronizer:A_Synchonizer" File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 96
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 32
-    Warning (15610): No output dependent on input pin "KEY[2]" File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 32
-    Warning (15610): No output dependent on input pin "KEY[3]" File: S:/CPET-561/TimeQuest_demo/src/Top.vhd Line: 32
+    Warning (15610): No output dependent on input pin "KEY[1]" File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 32
+    Warning (15610): No output dependent on input pin "KEY[2]" File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 32
+    Warning (15610): No output dependent on input pin "KEY[3]" File: Z:/Documents/ESD1/EmbededSystemsDesign/src/Top.vhd Line: 32
 Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 99 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 786 megabytes
-    Info: Processing ended: Mon Apr 08 16:49:35 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue Apr 09 00:40:15 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:19
 
 

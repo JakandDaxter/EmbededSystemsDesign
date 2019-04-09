@@ -1,6 +1,6 @@
 Flow report for Top
-Mon Apr 08 16:50:25 2019
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+Tue Apr 09 00:41:17 2019
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -38,29 +38,29 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 08 16:50:17 2019           ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
-; Revision Name                   ; Top                                             ;
-; Top-level Entity Name           ; Top                                             ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CSEMA5F31C6                                    ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 28 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 99                                              ;
-; Total pins                      ; 53 / 457 ( 12 % )                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Tue Apr 09 00:41:10 2019       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; Top                                         ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 28 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 99                                          ;
+; Total pins                      ; 53 / 457 ( 12 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/08/2019 16:49:24 ;
+; Start date & time ; 04/09/2019 00:40:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
@@ -79,12 +79,14 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88623632836038.155475656406660         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 964706698141.155478480201220           ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; --         ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; --         ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; --         ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -94,11 +96,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 786 MB              ; 00:00:21                           ;
-; Fitter                    ; 00:00:29     ; 1.0                     ; 2538 MB             ; 00:00:56                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 764 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 1067 MB             ; 00:00:05                           ;
-; Total                     ; 00:00:53     ; --                      ; --                  ; 00:01:28                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4865 MB             ; 00:00:19                           ;
+; Fitter                    ; 00:00:43     ; 1.0                     ; 6214 MB             ; 00:00:56                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 4843 MB             ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 5121 MB             ; 00:00:05                           ;
+; Total                     ; 00:01:10     ; --                      ; --                  ; 00:01:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +109,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; ECTET-1360-11    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; ECTET-1360-11    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; ECTET-1360-11    ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; ECTET-1360-11    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; JAKANDDAXTE6183  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; JAKANDDAXTE6183  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; JAKANDDAXTE6183  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; JAKANDDAXTE6183  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
