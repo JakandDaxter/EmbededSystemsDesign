@@ -9,7 +9,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
-use work.components_include.all;
 
 entity Top is
 
@@ -17,16 +16,16 @@ entity Top is
 
       ---- Result Output ----
  
-      Result : out std_logic_vector(15 downto 0) --remeber to use key(0) for reset
+      Result : out std_logic_vector(15 downto 0); --remeber to use key(0) for reset
 
       ----- CLOCK -----
 	 
       CLOCK_50 : in std_logic;
       
       ----- Input -----
-      A : in std_logic_vector(15 downto 0) --remeber to use key(0) for reset
+      A : in std_logic_vector(15 downto 0); --remeber to use key(0) for reset
       
-      B : in std_logic_vector(15 downto 0) --remeber to use key(0) for reset
+      B : in std_logic_vector(15 downto 0); --remeber to use key(0) for reset
 
 
       ----- KEY -----
@@ -37,6 +36,24 @@ entity Top is
 end Top;  
 
 architecture TimeQuest_demo of Top  is 
+--------------------------------------
+--Component
+--------------------------------------
+Component Synchronizer is
+
+		  port (
+  
+    clk               : in std_logic;
+    
+    reset             : in std_logic;
+    
+    async_in          : in  std_logic_vector(15 downto 0);
+    
+    sync_out          : out  std_logic_vector(15 downto 0)
+    
+  );
+  
+  end component Synchronizer;
 --------------------------------------
 --Signals
 --------------------------------------

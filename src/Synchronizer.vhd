@@ -7,7 +7,7 @@
 library ieee;
 use ieee.std_logic_1164.all;      
 
-entity synchronizer16bit is 
+entity Synchronizer is 
 
   port (
   
@@ -21,9 +21,9 @@ entity synchronizer16bit is
     
   );
   
-end synchronizer4bit;
+end Synchronizer;
 
-architecture beh of synchronizer4bit is
+architecture beh of Synchronizer is
     
 -- signal declarations
 
