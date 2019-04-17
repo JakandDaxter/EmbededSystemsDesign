@@ -1,0 +1,138 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 432 336)
+	(text "nios_system" (rect 179 -1 230 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "avalon_bridge_acknowledge" (rect 0 0 110 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_acknowledge" (rect 4 61 154 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 176 72)(line_width 1))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "avalon_bridge_irq" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_irq" (rect 4 77 106 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 176 88)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "avalon_bridge_read_data[15..0]" (rect 0 0 125 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_read_data[15..0]" (rect 4 173 184 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 176 184)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 213 46 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 176 224)(line_width 1))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 293 82 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 176 304)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "avalon_bridge_address[10..0]" (rect 0 0 116 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_address[10..0]" (rect 4 93 172 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 176 104)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(output)
+		(text "avalon_bridge_bus_enable" (rect 0 0 106 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_bus_enable" (rect 4 109 148 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 176 120)(line_width 1))
+	)
+	(port
+		(pt 0 136)
+		(output)
+		(text "avalon_bridge_byte_enable[1..0]" (rect 0 0 128 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_byte_enable[1..0]" (rect 4 125 190 136)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 176 136)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "avalon_bridge_rw" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_rw" (rect 4 141 100 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 176 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "avalon_bridge_write_data[15..0]" (rect 0 0 125 12)(font "Arial" (font_size 8)))
+		(text "avalon_bridge_write_data[15..0]" (rect 4 157 190 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 176 168)(line_width 3))
+	)
+	(port
+		(pt 0 264)
+		(output)
+		(text "ledr_export[9..0]" (rect 0 0 64 12)(font "Arial" (font_size 8)))
+		(text "ledr_export[9..0]" (rect 4 253 106 264)(font "Arial" (font_size 8)))
+		(line (pt 0 264)(pt 176 264)(line_width 3))
+	)
+	(drawing
+		(text "avalon_bridge" (rect 96 43 270 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "acknowledge" (rect 181 67 428 144)(font "Arial" (color 0 0 0)))
+		(text "irq" (rect 181 83 380 176)(font "Arial" (color 0 0 0)))
+		(text "address" (rect 181 99 404 208)(font "Arial" (color 0 0 0)))
+		(text "bus_enable" (rect 181 115 422 240)(font "Arial" (color 0 0 0)))
+		(text "byte_enable" (rect 181 131 428 272)(font "Arial" (color 0 0 0)))
+		(text "rw" (rect 181 147 374 304)(font "Arial" (color 0 0 0)))
+		(text "write_data" (rect 181 163 422 336)(font "Arial" (color 0 0 0)))
+		(text "read_data" (rect 181 179 416 368)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 161 195 340 403)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 181 219 380 448)(font "Arial" (color 0 0 0)))
+		(text "ledr" (rect 155 235 334 483)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 181 259 398 528)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 147 275 324 563)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 181 299 404 608)(font "Arial" (color 0 0 0)))
+		(text " nios_system " (rect 374 320 826 650)(font "Arial" ))
+		(line (pt 176 32)(pt 256 32)(line_width 1))
+		(line (pt 256 32)(pt 256 320)(line_width 1))
+		(line (pt 176 320)(pt 256 320)(line_width 1))
+		(line (pt 176 32)(pt 176 320)(line_width 1))
+		(line (pt 177 52)(pt 177 188)(line_width 1))
+		(line (pt 178 52)(pt 178 188)(line_width 1))
+		(line (pt 177 204)(pt 177 228)(line_width 1))
+		(line (pt 178 204)(pt 178 228)(line_width 1))
+		(line (pt 177 244)(pt 177 268)(line_width 1))
+		(line (pt 178 244)(pt 178 268)(line_width 1))
+		(line (pt 177 284)(pt 177 308)(line_width 1))
+		(line (pt 178 284)(pt 178 308)(line_width 1))
+		(line (pt 0 0)(pt 432 0)(line_width 1))
+		(line (pt 432 0)(pt 432 336)(line_width 1))
+		(line (pt 0 336)(pt 432 336)(line_width 1))
+		(line (pt 0 0)(pt 0 336)(line_width 1))
+	)
+)
