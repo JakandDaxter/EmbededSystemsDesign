@@ -1,0 +1,782 @@
+library ieee;
+use ieee.std_logic_1164.all;
+--use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+
+
+entity Top is
+
+	port(
+		
+			clock  					:in  std_logic;
+			
+				----- KEY -----
+			KEY 					: in std_logic_vector(3 downto 0);
+	 
+			
+			data_in					:in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
+			
+			--filter_en 				:in  std_Logic; -- this enables the interal registers and coincides with a new audio sample			
+			
+			data_out				:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
+			
+		);	
+		
+			end Top;
+			
+architecture lowandHigh_pass_filter of Top is
+---------------------------------------------
+--Creation of 2D array
+----------------------------------------------
+--							        rows   , columns		This long of a data set
+type Low_High_Pass is array (0 to 16, 0 to 1) of std_logic_vector(15 downto 0);
+
+signal Filter_array : Low_High_Pass :=  
+          
+                        ( 
+                      -- Low            High
+                        (X"0051"   , X"003E"),
+                        (X"00BA"   , X"FF9A"),
+                        (X"01E1"   , X"FE9E"),
+                        (X"0408"   , X"0000"),
+                        (X"071A"   , X"0535"),
+                        (X"0AAC"   , X"05B2"),      --will be indexing this filter to get the numbers
+                        (X"0E11"   , X"F5AC"),
+                        (X"107F"   , X"DAB7"),
+                        (X"1161"   , X"4C91"),
+                        (X"107F"   , X"DAB7"),                                                                        
+                        (X"0E11"   , X"F5AC"),
+                        (X"0AAC"   , X"05B2"),
+                        (X"071A"   , X"0535"),                                                                        
+                        (X"0408"   , X"0000"),
+                        (X"01E1"   , X"FE9E"),
+                        (X"00BA"   , X"FF9A"),
+                        (X"0051"   , X"003E")
+                        
+                        );
+								
+--------------------------                        
+-- Component Declarations
+--------------------------
+
+Component Multiplier IS
+
+	PORT
+	
+	(
+		dataa			: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+		
+		datab			: IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+		
+		result		       : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+		
+	);
+
+END COMPONENT Multiplier;
+
+--------------------------                        
+-- Signal Declarations
+--------------------------
+
+signal S0L,S1L,S2L,S3L,S4L,S5L,S6L,S7L,S8L,S9L,S10L,S11L,S12L,S13L,S14L,S15L,S16L        : std_logic_vector (15 downto 0);  --the multiplier signal declarations low 
+ 
+signal S0H,S1H,S2H,S3H,S4H,S5H,S6H,S7H,S8H,S9H,S10H,S11H,S12H,S13H,S14H,S15H,S16H        : std_logic_vector (15 downto 0);  --the multiplier signal declarations high
+	 
+signal Z0,Z1,Z2,Z3,Z4,Z5,Z6,Z7,Z8,Z9,Z10,Z11,Z12,Z13,Z14,Z15,Z16                         : signed(15 downto 0);
+	 
+signal index                      		  								                          : integer 		range 0 to 16 := 0;
+
+signal Filter_index                      								                          : integer 		range 0 to 1 := 0; --0 for low pass, 1 for high pass	 
+    
+signal dummy1																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy2																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy3																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy4																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy5																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy6																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy7																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy8																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy9																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy10																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy11																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy12																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy13																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy14																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy15																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal dummy16																									  : STD_LOGIC_VECTOR (31 DOWNTO 0);
+
+
+signal Input_data 																							  : std_logic_vector(15 downto 0)   := (others => '0');
+
+signal output_data 																							  : std_logic_vector(31 downto 0)   := (others => '0'); 
+ 
+signal reset_n : std_logic;
+signal key0_d1 : std_logic;
+signal key0_d2 : std_logic;
+signal key0_d3 : std_logic;
+
+-----------------------------------------------------			  
+-----------------------------------------------------																			 :std_logic_vector  (31 downto 0);
+
+BEGIN
+ 
+Input_data <= data_in; 
+
+-------------------------------
+--Signal Initializations Low_Pass
+
+        S0L <= Filter_array(0,0);
+
+        S1L <= Filter_array(1,0);
+
+        S2L <= Filter_array(2,0);
+
+        S3L <= Filter_array(3,0);
+
+        S4L <= Filter_array(4,0);
+
+        S5L <= Filter_array(5,0);
+
+        S6L <= Filter_array(6,0);
+
+        S7L <= Filter_array(7,0);
+
+        S8L <= Filter_array(8,0);
+
+        S9L <= Filter_array(9,0);
+
+       S10L <= Filter_array(10,0);
+
+       S11L <= Filter_array(11,0);
+
+       S12L <= Filter_array(12,0);
+
+       S13L <= Filter_array(13,0);
+
+       S14L <= Filter_array(14,0);
+
+       S15L <= Filter_array(15,0);
+
+       S16L <= Filter_array(16,0);
+	   
+--------------------------------		 
+--------------------------------
+--Signal Initializations High_Pass
+-------------------------------
+         S0H <= Filter_array(0,1);
+
+         S1H <= Filter_array(1,1);
+
+         S2H <= Filter_array(2,1);
+
+         S3H <= Filter_array(3,1);
+
+         S4H <= Filter_array(4,1);
+
+         S5H <= Filter_array(5,1);
+
+         S6H <= Filter_array(6,1);
+
+         S7H <= Filter_array(7,1);
+
+         S8H <= Filter_array(8,1);
+
+         S9H <= Filter_array(9,1);
+
+        S10H <= Filter_array(10,1);
+
+        S11H <= Filter_array(11,1);
+
+        S12H <= Filter_array(12,1);
+
+        S13H <= Filter_array(13,1);
+
+        S14H <= Filter_array(14,1);
+
+        S15H <= Filter_array(15,1);
+
+        S16H <= Filter_array(16,1);
+-----------------------------------------------------			  
+-----------------------------------------------------		  
+  ----- Syncronize the reset
+  synchReset_proc : process (clock) begin
+    if (rising_edge(clock)) then
+      key0_d1 <= KEY(0);
+      key0_d2 <= key0_d1;
+      key0_d3 <= key0_d2;
+    end if;
+  end process synchReset_proc;
+  reset_n <= key0_d3;
+-----------------------------------------------------
+-----------------------------------------------------	
+
+--------------------------                        
+-- Filter Process_0
+--------------------------
+	Zone : process( clock, reset_n )
+		
+		begin
+    
+		if( reset_n = '1' ) then
+			
+			Z0 <= (OTHERS => '0');
+        
+			elsif( rising_edge(clock) ) then
+        
+			Z0 <= Input_data;
+		  
+			end if ;
+
+	end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_1
+--------------------------
+	Ztwo : process( clock, reset_n )
+	
+	begin
+    
+	 if( reset_n = '1' ) then
+	 
+					Z1 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+        
+						Z1 <= Z0;
+    
+	 end if ;
+
+		end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_2
+--------------------------
+Zthree : process( clock, reset_n )
+
+	begin
+    
+	 if( reset_n = '1' ) then
+	 
+					Z2 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+						Z2 <= Z1;
+        
+    end if ;
+	 
+	end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_3
+--------------------------
+	Zfour : process( clock, reset_n )
+	
+	begin
+    
+	 if( reset_n = '1' ) then
+	 
+	 			Z3 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+				Z3 <= Z2;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_4
+--------------------------
+Zfive : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z4 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z4 <= Z3;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_5
+--------------------------
+Zsix : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z5 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z5 <= Z4;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_6
+--------------------------
+Zseven : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+					Z6 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+						Z6 <= Z5;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_7
+--------------------------
+Zeight : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z7 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z7 <= Z6;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_8
+--------------------------
+Znine : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z8 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z8 <= Z7;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_9
+--------------------------
+Zten : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z9 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+				Z9 <= Z8;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_10
+--------------------------
+Zeleven : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z10 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+						Z10 <= Z9;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_11
+--------------------------
+Ztwelve : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z11 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z11 <= Z10;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_12
+--------------------------
+Zthirteen : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z12 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+		
+				Z12 <= Z11;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_13
+--------------------------
+Zfourteen : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z13 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+					Z13 <= Z12;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_14
+--------------------------
+Zfifteen : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z14 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+				Z14 <= Z13;
+        
+    end if ;
+	 
+end process ; -- identifier
+------------------------------
+--Addition
+
+------------------------------
+--------------------------                        
+-- Filter Process_15
+--------------------------
+Zsixteen : process( clock, reset_n )
+
+begin
+
+    if( reset_n = '1' ) then
+	 
+	 			Z15 <= (OTHERS => '0');
+        
+    elsif( rising_edge(clock) ) then
+	 
+				Z15 <= Z14;
+        
+    end if ;
+	 
+end process ; -- identifier
+ ------------------------------
+--Addition
+output_data <= 
+
+dummy16 OR dummy15 OR dummy14 OR dummy13 OR dummy12 OR dummy11 OR dummy10 OR dummy9 OR dummy8 OR dummy7 OR dummy6 OR dummy5 OR dummy4 OR dummy3 OR dummy2 OR dummy1 OR (S0L);
+
+data_out <= output_data(30 downto 15);
+------------------------------
+one:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S1L,
+		
+		result 	     => dummy1
+		
+	);
+------------------------------
+------------------------------
+two:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S2L,
+		
+		result 	     => dummy2
+		
+	);
+------------------------------ 
+------------------------------
+three:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S3L,
+		
+		result 	     => dummy3
+		
+	);
+------------------------------ 
+------------------------------
+four:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S4L,
+		
+		result 	     => dummy4
+		
+	);
+------------------------------ 
+------------------------------
+onefwe:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S5L,
+		
+		result 	     => dummy5
+		
+	);
+------------------------------ 
+------------------------------
+sffvwvwwfq:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S6L,
+		
+		result 	     => dummy6
+		
+	);
+------------------------------ 
+------------------------------
+werfqwefqwrfvrwf:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S7L,
+		
+		result 	     => dummy7
+		
+	);
+------------------------------ 
+------------------------------
+rvbyrbevwrf:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S8L,
+		
+		result 	     => dummy8
+		
+	);
+------------------------------ 
+------------------------------
+rgtbybevtwcqrtg:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S9L,
+		
+		result 	     => dummy9
+		
+	);
+------------------------------ 
+------------------------------
+w5e6ybtvwrcq:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S10L,
+		
+		result 	     => dummy10
+		
+	);
+------------------------------ 
+------------------------------
+qehjkmnubyvtrs:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S11L,
+		
+		result 	     => dummy11
+		
+	);
+------------------------------ 
+------------------------------
+hjntjrbhevwt:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S12L,
+		
+		result 	     => dummy12
+		
+	);
+------------------------------ 
+------------------------------
+nmnybevwrbth:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S13L,
+		
+		result 	     => dummy13
+		
+	);
+------------------------------ 
+------------------------------
+mnbhygtsarshjbeyst:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S14L,
+		
+		result 	     => dummy14
+		
+	);
+------------------------------ 
+------------------------------
+srtjyiujbhytfwh:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S15L,
+		
+		result 	     => dummy15
+		
+	);
+------------------------------ 
+------------------------------
+tyjjtuntiurnebwtt:component Filter
+
+		PORT MAP (
+	
+		dataa		     => data_in,
+		
+		datab 	     => S16L,
+		
+		result 	     => dummy16
+		
+	);
+------------------------------ 
+
+    
+    
+    
+    
+end lowandHigh_pass_filter;
