@@ -1,0 +1,25 @@
+
+
+S:/CPET-561/Lab_8/src/Multiplier.vhd
+
+Apr 15 08PM:46:20>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+Multiplier.v
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
+
+S:/CPET-561/Lab_8/src/Multiplier.vhd
+
+Apr 15 08PM:49:33>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+Multiplier.v
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
