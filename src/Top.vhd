@@ -12,7 +12,10 @@ entity Top is
 			clock  					    :in  std_logic;
 			
 				----- KEY -----
-			KEY 						: in std_logic;
+			KEY 						:in std_logic;
+			
+			
+			SW							:in std_logic; --connect this to selection so that i know which filter to apply
 	 
 			
 			data_in					    :in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
@@ -56,6 +59,11 @@ signal Filter_array : Low_High_Pass :=
                         
                         );
 ---------------------------------------------
+--This is to store the data coming in 
+----------------------------------------------
+--							 rows						This long of a data set
+type sampledData is array (0 to 16) of signed(31 downto 0);
+---------------------------------------------
 --Creation of 1D array to store from multiplier
 ----------------------------------------------
 --							 rows						This long of a data set
@@ -89,6 +97,28 @@ Component Multiplier IS
 	);
 
 END COMPONENT Multiplier;
+
+Component Filter IS
+
+	PORT
+	
+	(
+		clock  					    :in  std_logic;
+	
+		----- KEY -----
+		reset_n 					: in std_logic;
+
+   	 	selection 					: in std_logic;
+	
+		data_in					    :in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
+	
+		filter_en 				    :in  std_Logic; -- this enables the interal registers and coincides with a new audio sample			
+	
+		data_out					:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
+		
+	);
+
+END COMPONENT Filter;
 
 --------------------------                        
 -- Signal Declarations
@@ -146,28 +176,7 @@ BEGIN
 			);
 			
    end generate LowPass;	
------------------------------------------------------
---alrighty right here we want to take what we input into the array and add it all up together
------------------------------------------------------  
--- For_loop: Process(reset_n,clock)
---
--- BEGIN
---
---     if(reset_n = '0') THEN
---
---             output_data <= (others => '0');
---
---         elsif(clock'event AND clock = '1') THEN
---
---     for j in 0 to 16 loop
---
---         output_data <= output_data + Data_F(j)(30 downto 15) ;
---
---     end loop;
---
---     end if;
---
---  END PROCESS For_loop;
+
   ----------------------------------------------------
   --so instead im just going to copy and paste every single one
   data_out <=  Data_F(0)(30 downto 15)
