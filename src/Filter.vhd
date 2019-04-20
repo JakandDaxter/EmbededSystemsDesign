@@ -12,20 +12,20 @@ entity Filter is
 			clock  					    :in  std_logic;
 			
 				----- KEY -----
-			reset_n 					:in std_logic;
+			reset_n 					:in  std_logic;
 	 
-	 	   	address 					:in std_logic; --this will let me know low or high pass from the array
+	 	   	address 					:in  std_logic; --this will let me know low or high pass from the array
 			
-			writedata					:in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
+			writedata					:in  signed (15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
 			
 			write	 				    :in  std_Logic;
 					
 			
-			readdata					:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
+			readdata					:out signed (15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
 			
 		);	
 		
-			end Top;
+			end Filter;
 			
 architecture beh of Filter is
 ---------------------------------------------
@@ -57,6 +57,25 @@ signal Filter_array : Low_High_Pass :=
                         (X"0051"   , X"003E")
                         
                         );
+															
+--------------------------                        
+-- Component Declarations
+--------------------------
+
+Component Multiplier IS
+
+	PORT
+
+	(
+		dataa					  		  :IN  STD_LOGIC_VECTOR  (15 DOWNTO 0);
+
+		datab					  		  :IN  STD_LOGIC_VECTOR  (15 DOWNTO 0);
+
+		result		              		  :OUT STD_LOGIC_VECTOR  (31 DOWNTO 0)
+
+	);
+
+END COMPONENT Multiplier;
 ---------------------------------------------
 --Creation of 1D array to store from multiplier
 ----------------------------------------------
@@ -72,7 +91,18 @@ signal Data_F : sampledData ;
 type shiftedData is array (0 to 16) of signed(15 downto 0);
 
 signal shifts : shiftedData ;
-														
+---------------------------------------------
+--Register Storage for high and low pass and audio data
+----------------------------------------------
+--							 rows						This long of a data set
+type ram_type is array (0 to 17) of signed(15 downto 0);
+
+signal Registers : ram_type ;														
+
+
+-- Registers(0) this will be storing the data to let me know if its a low or high pass will be (0xFF) or (0x00)
+
+-- Registers(1) this will actuall store the audio data
 
 --------------------------                        
 -- Signal Declarations
@@ -90,7 +120,8 @@ signal key0_d2 				 : std_logic;
 signal key0_d3 				 : std_logic;
 
 -----------------------------------------------------			  
------------------------------------------------------																		
+-----------------------------------------------------
+																		
 BEGIN
  
 -----------------------------------------------------			  		  
@@ -112,6 +143,23 @@ BEGIN
 -----------------------------------------------------	  
 			reset_n <= key0_d3;
 -----------------------------------------------------
+--alright so right there we generates 16 port maps for every variable constant
+-----------------------------------------------------
+   LowPass:
+   
+   for i in 0 to 16 generate
+      
+	  REGX : Multiplier 
+	  
+	  port map(
+	  
+			dataa   			             		 		=> std_logic_vector( shifts(i) ),
+			
+			datab       					  		 		=> std_logic_vector( Filter_array(i,index) ),
+			
+			signed(result)			         				=> Data_F(i)
+            
+-----------------------------------------------------
 -- Depending on the filter enable the index will either be a 1 or a 0 for the low or high pass filter
 -----------------------------------------------------
 Low_OR_HIGH: process( reset_n , clock )
@@ -124,7 +172,7 @@ begin
 	
 			if( rising_edge(clock) ) then
 		
-				if(selection = '1') then
+				if(Register(0) = X"F") then
 			
 					index <= '1';
 			
@@ -143,7 +191,7 @@ end process ; -- identifier
 -----------------------------------------------------
 ----------------------------------------------------
   --so instead im just going to copy and paste every single one
-  data_out <=  Data_F(0)(30 downto 15)
+  readdata <=  Data_F(0)(30 downto 15)
                + Data_F(1)(30 downto 15)
                + Data_F(2)(30 downto 15)
                + Data_F(3)(30 downto 15)
@@ -173,9 +221,9 @@ BEGIN
 		 
 		 shifts <= ( others => ( others=> '0') );
 		 
-		 elsif(filter_en = '1') THEN
+		 elsif(Register(0) = X"F") THEN
 			
-				shifts(0) <= data_in;
+				shifts(0) <= writedata;
 				
 			for G in 1 to shifts'length-1 loop
 			

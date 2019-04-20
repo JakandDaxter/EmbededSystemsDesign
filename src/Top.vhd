@@ -24,7 +24,7 @@ entity Top is
 			
 			data_out					:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
 			
-		);	
+	    );	
 		
 			end Top;
 			
@@ -98,28 +98,6 @@ Component Multiplier IS
 
 END COMPONENT Multiplier;
 
-Component Filter IS
-
-	PORT
-	
-	(
-		clock  					    :in  std_logic;
-	
-		----- KEY -----
-		reset_n 					: in std_logic;
-
-   	 	selection 					: in std_logic;
-	
-		data_in					    :in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
-	
-		filter_en 				    :in  std_Logic; -- this enables the interal registers and coincides with a new audio sample			
-	
-		data_out					:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
-		
-	);
-
-END COMPONENT Filter;
-
 --------------------------                        
 -- Signal Declarations
 --------------------------
@@ -134,7 +112,7 @@ signal key0_d2 				 : std_logic;
 signal key0_d3 				 : std_logic;
 
 -----------------------------------------------------			  
------------------------------------------------------																			 :std_logic_vector  (31 downto 0);
+-----------------------------------------------------																	
 
 BEGIN
  
@@ -156,73 +134,9 @@ BEGIN
   end process synchReset_proc;
 -----------------------------------------------------	  
 			reset_n <= key0_d3;
------------------------------------------------------
---alright so right there we generates 16 port maps for every variable constant
------------------------------------------------------
-   LowPass:
-   
-   for i in 0 to 16 generate
-      
-	  REGX : Multiplier 
-	  
-	  port map(
-	  
-			dataa   			             		 		=> std_logic_vector( shifts(i) ),
-			
-			datab       					  		 		=> std_logic_vector( Filter_array(i,1) ),
-			
-			signed(result)			         				=> Data_F(i)
-
-			);
-			
-   end generate LowPass;	
 
   ----------------------------------------------------
   --so instead im just going to copy and paste every single one
-  data_out <=  Data_F(0)(30 downto 15)
-               + Data_F(1)(30 downto 15)
-               + Data_F(2)(30 downto 15)
-               + Data_F(3)(30 downto 15)
-               + Data_F(4)(30 downto 15)
-               + Data_F(5)(30 downto 15)
-               + Data_F(6)(30 downto 15)
-               + Data_F(7)(30 downto 15)
-               + Data_F(8)(30 downto 15)
-               + Data_F(9)(30 downto 15)
-               + Data_F(10)(30 downto 15)
-               + Data_F(11)(30 downto 15)
-               + Data_F(12)(30 downto 15)
-               + Data_F(13)(30 downto 15)
-               + Data_F(14)(30 downto 15)
-               + Data_F(15)(30 downto 15)
-               + Data_F(16)(30 downto 15);
- ----------------------------------------------------
---alright so right we going to shift the data
------------------------------------------------------
- dataShifts: PROCESS(clock,reset_n)
- 
-BEGIN
 
- IF (clock'event AND clock = '1') THEN
-	 
-	 IF (reset_n = '0') THEN
-		 
-		 shifts <= ( others => ( others=> '0') );
-		 
-		 elsif(filter_en = '1') THEN
-			
-				shifts(0) <= data_in;
-				
-			for G in 1 to shifts'length-1 loop
-			
-				shifts(G)	<=  shifts(G-1);
-
-			end loop;
-			
-		end if;
-		
-	end if;
-	
-END PROCESS dataShifts; 
     
 end lowandHigh_pass_filter;
