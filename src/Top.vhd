@@ -7,22 +7,26 @@ use ieee.std_logic_signed.all;
 
 entity Top is
 
-	port(
+	port(		----- Clock -----
 		
-			clock  					    :in  std_logic;
+			clock  					         :in  std_logic;
 			
 				----- KEY -----
-			KEY 						:in std_logic;
+			KEY 							 :in std_logic;
 			
+				----- switch -----
+			SW								 :in std_logic; --connect this to selection so that i know which filter to apply
+				----- Adio Data Coming in -----
 			
-			SW							:in std_logic; --connect this to selection so that i know which filter to apply
-	 
+			data_in					    	 :in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
 			
-			data_in					    :in  signed(15 downto 0); --audio sample,in the 16 bit fized point format (15 bits assumed deciaml)
+				----- filter enable -----
 			
-			filter_en 				    :in  std_Logic; -- this enables the interal registers and coincides with a new audio sample			
+			--filter_en 				    	 :in  std_Logic; -- this enables the interal registers and coincides with a new audio sample			
 			
-			data_out					:out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
+				----- Output the filtered data -----
+			
+			data_out						 :out signed(15 downto 0) --this is the filtered audio signal out, in 16 bit fixed
 			
 	    );	
 		
@@ -58,45 +62,23 @@ signal Filter_array : Low_High_Pass :=
                         (X"0051"   , X"003E")
                         
                         );
----------------------------------------------
---This is to store the data coming in 
-----------------------------------------------
---							 rows						This long of a data set
-type sampledData is array (0 to 16) of signed(31 downto 0);
----------------------------------------------
---Creation of 1D array to store from multiplier
-----------------------------------------------
---							 rows						This long of a data set
-type sampledData is array (0 to 16) of signed(31 downto 0);
-
-signal Data_F : sampledData ;
-
----------------------------------------------
---Creation of 1D array to store from shifting
-----------------------------------------------
---							 rows						This long of a data set
-type shiftedData is array (0 to 16) of signed(15 downto 0);
-
-signal shifts : shiftedData ;
 															
 --------------------------                        
 -- Component Declarations
 --------------------------
-
-Component Multiplier IS
-
-	PORT
+component nios_system is
 	
-	(
-		dataa					  		  : IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+		port (
 			
-		datab					  		  : IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
+			clk_clk         : in std_logic                    := 'X';             -- clk
+			
+			reset_reset_n   : in std_logic                    := 'X';             -- reset_n
+			
+			switches_export : in std_logic 						  := 'X'  -- export
 		
-		result		              		  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-		
-	);
-
-END COMPONENT Multiplier;
+		);
+	
+	end component nios_system;
 
 --------------------------                        
 -- Signal Declarations
@@ -135,8 +117,20 @@ BEGIN
 -----------------------------------------------------	  
 			reset_n <= key0_d3;
 
-  ----------------------------------------------------
-  --so instead im just going to copy and paste every single one
-
+----------------------------------------------------
+--------------------------                        
+-- Port Map nios system
+--------------------------
+u0 : component nios_system
+		
+		port map (
+		
+			clk_clk         => clock,         --      clk.clk
+			
+			reset_reset_n   => reset_n,   --    reset.reset_n
+			
+			switches_export => SW  -- switches.export
+		
+		);
     
 end lowandHigh_pass_filter;

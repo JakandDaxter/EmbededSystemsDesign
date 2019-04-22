@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "readdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "readdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "write",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "writedata[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
