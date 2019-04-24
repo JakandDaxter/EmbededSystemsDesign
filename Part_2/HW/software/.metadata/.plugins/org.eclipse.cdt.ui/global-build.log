@@ -1,0 +1,33 @@
+15:08:47 **** Incremental Build of configuration Nios II for project Arbitration_Nios1_APP ****
+make all 
+Info: Building ../Arbitration_Nios1_APP_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_Nios1_APP_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Arbitration_Nios1_APP_bsp//HAL/inc -I../Arbitration_Nios1_APP_bsp/ -I../Arbitration_Nios1_APP_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking Arbitration_Nios1_APP.elf
+nios2-elf-g++  -T'../Arbitration_Nios1_APP_bsp//linker.x' -msys-crt0='../Arbitration_Nios1_APP_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Arbitration_Nios1_APP_bsp/  -msmallc  -Wl,-Map=Arbitration_Nios1_APP.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Arbitration_Nios1_APP.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Arbitration_Nios1_APP.elf --thread_model hal --cpu_name nios2_gen2_1 --qsys true --simulation_enabled false --id 2770 --sidp 0x9800 --timestamp 1556072697 --stderr_dev jtag_uart_1 --stdin_dev jtag_uart_1 --stdout_dev jtag_uart_1 --sopc_system_name nios_system --quartus_project_dir "S:/CPET-561/Arbitration_Demo/Part_2/HW" --jdi ../..//output_files/Part_2.jdi --sopcinfo S:/CPET-561/Arbitration_Demo/Part_2/HW/software/Arbitration_Nios1_APP_bsp/../../nios_system.sopcinfo
+Info: (Arbitration_Nios1_APP.elf) 5292 Bytes program size (code + initialized data).
+Info:                             10 KBytes free for stack + heap.
+Info: Creating Arbitration_Nios1_APP.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Arbitration_Nios1_APP.elf >Arbitration_Nios1_APP.objdump
+[Arbitration_Nios1_APP build complete]
+15:09:48 **** Incremental Build of configuration Nios II for project Arbitration_Nios1_APP ****
+make all 
+Info: Building ../Arbitration_Nios1_APP_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_Nios1_APP_bsp/
+[BSP build complete]
+[Arbitration_Nios1_APP build complete]
+15:10:29 **** Incremental Build of configuration Nios II for project Arbitration_Nios0_APP ****
+make all 
+Info: Building ../Arbitration_Nios0_APP_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_Nios0_APP_bsp/
+[BSP build complete]
+[Arbitration_Nios0_APP build complete]
+15:18:43 **** Incremental Build of configuration Nios II for project Arbitration_Nios0_APP ****
+make all 
+Info: Building ../Arbitration_Nios0_APP_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_Nios0_APP_bsp/
+[BSP build complete]
+[Arbitration_Nios0_APP build complete]

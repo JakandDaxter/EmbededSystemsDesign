@@ -1,0 +1,9 @@
+15:18:43 **** Incremental Build of configuration Nios II for project Arbitration_Nios0_APP ****
+make all 
+Info: Building ../Arbitration_Nios0_APP_bsp/
+C:/intelFPGA/17.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Arbitration_Nios0_APP_bsp/
+[BSP build complete]
+[Arbitration_Nios0_APP build complete]
+
+15:19:02 Build Finished (took 19s.276ms)
+
