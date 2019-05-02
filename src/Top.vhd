@@ -84,7 +84,7 @@ Component Multiplier IS
 			
 		datab					  		  : IN STD_LOGIC_VECTOR  (15 DOWNTO 0);
 		
-		result		              		  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+		result		              		  		  : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 		
 	);
 
@@ -139,7 +139,7 @@ BEGIN
 	  
 			dataa   			             		 		=> std_logic_vector( shifts(i) ),
 			
-			datab       					  		 		=> std_logic_vector( Filter_array(i,1) ),
+			datab       					  		 		=> std_logic_vector( Filter_array(i,0) ),
 			
 			signed(result)			         				=> Data_F(i)
 

@@ -11,8 +11,8 @@ Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
 -- Compiling entity Filter_tb
 -- Compiling architecture arch of Filter_tb
 
-} {} {}} S:/CPET-561/Lab_8/src/Top.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET-561/Lab_8/src/Top.vhd
-Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+} {} {}} Z:/CPET-561/Lab_8/src/Top.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/CPET-561/Lab_8/src/Top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -22,5 +22,26 @@ Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
 -- Loading package STD_LOGIC_SIGNED
 -- Compiling entity Top
 -- Compiling architecture lowandHigh_pass_filter of Top
+
+} {} {}} S:/CPET-561/Lab_8/src/Multiplier.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none S:/CPET-561/Lab_8/src/Multiplier.vhd
+Model Technology ModelSim SE-64 vcom 10.7b Compiler 2018.06 Jun  8 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Multiplier
+-- Compiling architecture SYN of Multiplier
+
+} {} {}} Z:/CPET-561/Lab_8/sim/Filter_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none Z:/CPET-561/Lab_8/sim/Filter_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package std_logic_textio
+-- Compiling entity Filter_tb
+-- Compiling architecture arch of Filter_tb
 
 } {} {}}
