@@ -1,0 +1,314 @@
+IP Upgrade report for Top
+Fri Apr 26 03:48:56 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Fri Apr 26 03:48:56 2019           ;
+; Quartus Prime Version        ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                ; Top                                         ;
+; Top-level Entity Name        ; Top                                         ;
+; Family                       ; Cyclone V                                   ;
++------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                                        ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+-----------------------------------------------------------+
+; Entity Name ; Component Name ; Version ; Original Source File                  ; Generation File Path ; New Source File ; Message                                                   ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+-----------------------------------------------------------+
+; nios_system ; Qsys           ; 17.0    ; nios_system/synthesis/nios_system.qip ; nios_system.qsys     ;                 ; Error upgrading Platform Designer file "nios_system.qsys" ;
++-------------+----------------+---------+---------------------------------------+----------------------+-----------------+-----------------------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "nios_system.qsys" to "nios_system.BAK.qsys"
+Info (11902): Backing up file "nios_system/synthesis/nios_system.vhd" to "nios_system.BAK.vhd"
+Info (11837): Started upgrading IP component Qsys with file "nios_system.qsys"
+Info: 2019.04.26.03:47:50 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2019.04.26.03:47:50 Info: Finished upgrading the ip cores
+Info: 2019.04.26.03:48:06 Info: Saving generation log to X:/CPET-561/Lab_9/hw/nios_system
+Info: 2019.04.26.03:48:06 Info: Starting: Create simulation model
+Info: 2019.04.26.03:48:06 Info: qsys-generate X:\CPET-561\Lab_9\hw\nios_system.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=X:\CPET-561\Lab_9\hw\nios_system\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.26.03:48:06 Info: Loading hw
+Info: 2019.04.26.03:48:07 Info: Reading input file
+Info: 2019.04.26.03:48:07 Info: Adding Filter_0 [Filter 1.0]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module Filter_0
+Info: 2019.04.26.03:48:07 Info: Adding audio_0 [altera_up_avalon_audio 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module audio_0
+Info: 2019.04.26.03:48:07 Info: Adding audio_and_video_config_0 [altera_up_avalon_audio_and_video_config 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module audio_and_video_config_0
+Info: 2019.04.26.03:48:07 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module jtag_uart_0
+Info: 2019.04.26.03:48:07 Info: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module new_sdram_controller_0
+Info: 2019.04.26.03:48:07 Info: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module nios2_gen2_0
+Info: 2019.04.26.03:48:07 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module onchip_memory2_1
+Info: 2019.04.26.03:48:07 Info: Adding pin [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module pin
+Info: 2019.04.26.03:48:07 Info: Adding switches [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module switches
+Info: 2019.04.26.03:48:07 Info: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module sys_sdram_pll_0
+Info: 2019.04.26.03:48:07 Info: Adding sysid [altera_avalon_sysid_qsys 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module sysid
+Info: 2019.04.26.03:48:07 Info: Adding timer_0 [altera_avalon_timer 17.1]
+Info: 2019.04.26.03:48:07 Info: Parameterizing module timer_0
+Info: 2019.04.26.03:48:07 Info: Building connections
+Info: 2019.04.26.03:48:07 Info: Parameterizing connections
+Info: 2019.04.26.03:48:07 Info: Validating
+Info: 2019.04.26.03:48:07 Info: Done reading input file
+Info: 2019.04.26.03:48:08 Info: nios_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2019.04.26.03:48:08 Info: nios_system.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2019.04.26.03:48:08 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.04.26.03:48:08 Info: nios_system.sys_sdram_pll_0: Refclk Freq: 50.0
+Info: 2019.04.26.03:48:08 Info: nios_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2019.04.26.03:48:08 Info: nios_system.sysid: Time stamp will be automatically updated when this component is generated.
+Warning: 2019.04.26.03:48:08 Warning: nios_system.audio_0: Interrupt sender audio_0.interrupt is not connected to an interrupt receiver
+Info: 2019.04.26.03:48:09 Info: nios_system: Generating nios_system "nios_system" for SIM_VHDL
+Error: 2019.04.26.03:48:17 Error: Filter_0: Filter does not support generation for VHDL Simulation. Generation is available for: Quartus Synthesis.
+Error: 2019.04.26.03:48:17 Error: Generation stopped, 14 or more modules remaining
+Info: 2019.04.26.03:48:17 Info: nios_system: Done "nios_system" with 16 modules, 1 files
+Error: 2019.04.26.03:48:18 Error: qsys-generate failed with exit code 1: 2 Errors, 1 Warning
+Info: 2019.04.26.03:48:18 Info: Finished: Create simulation model
+Info: 2019.04.26.03:48:18 Info: Starting: Create Modelsim Project.
+Info: 2019.04.26.03:48:18 Info: sim-script-gen --spd=X:\CPET-561\Lab_9\hw\nios_system\nios_system.spd --output-directory=X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:18 Info: Doing: ip-make-simscript --spd=X:\CPET-561\Lab_9\hw\nios_system\nios_system.spd --output-directory=X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info: Generating the following file(s) for MODELSIM simulator in X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info:     mentor
+Info: 2019.04.26.03:48:19 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib
+Info: 2019.04.26.03:48:19 Info: Generating the following file(s) for VCSMX simulator in X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info:     synopsys/vcsmx
+Info: 2019.04.26.03:48:19 Info:     synopsys/vcsmx
+Info: 2019.04.26.03:48:19 Info: Generating the following file(s) for NCSIM simulator in X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info:     cadence
+Info: 2019.04.26.03:48:19 Info:     cadence
+Info: 2019.04.26.03:48:19 Info:     cadence
+Info: 2019.04.26.03:48:19 Info: Generating the following file(s) for RIVIERA simulator in X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info:     aldec
+Info: 2019.04.26.03:48:19 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under X:/CPET-561/Lab_9/hw/nios_system/simulation
+Info: 2019.04.26.03:48:19 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2019.04.26.03:48:19 Info: Finished: Create Modelsim Project.
+Info: 2019.04.26.03:48:19 Info: Starting: Create block symbol file (.bsf)
+Info: 2019.04.26.03:48:19 Info: qsys-generate X:\CPET-561\Lab_9\hw\nios_system.qsys --block-symbol-file --output-directory=X:\CPET-561\Lab_9\hw\nios_system --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.26.03:48:19 Info: Loading hw
+Info: 2019.04.26.03:48:20 Info: Reading input file
+Info: 2019.04.26.03:48:20 Info: Adding Filter_0 [Filter 1.0]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module Filter_0
+Info: 2019.04.26.03:48:20 Info: Adding audio_0 [altera_up_avalon_audio 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module audio_0
+Info: 2019.04.26.03:48:20 Info: Adding audio_and_video_config_0 [altera_up_avalon_audio_and_video_config 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module audio_and_video_config_0
+Info: 2019.04.26.03:48:20 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module jtag_uart_0
+Info: 2019.04.26.03:48:20 Info: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module new_sdram_controller_0
+Info: 2019.04.26.03:48:20 Info: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module nios2_gen2_0
+Info: 2019.04.26.03:48:20 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module onchip_memory2_1
+Info: 2019.04.26.03:48:20 Info: Adding pin [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module pin
+Info: 2019.04.26.03:48:20 Info: Adding switches [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module switches
+Info: 2019.04.26.03:48:20 Info: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module sys_sdram_pll_0
+Info: 2019.04.26.03:48:20 Info: Adding sysid [altera_avalon_sysid_qsys 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module sysid
+Info: 2019.04.26.03:48:20 Info: Adding timer_0 [altera_avalon_timer 17.1]
+Info: 2019.04.26.03:48:20 Info: Parameterizing module timer_0
+Info: 2019.04.26.03:48:20 Info: Building connections
+Info: 2019.04.26.03:48:20 Info: Parameterizing connections
+Info: 2019.04.26.03:48:20 Info: Validating
+Info: 2019.04.26.03:48:21 Info: Done reading input file
+Info: 2019.04.26.03:48:21 Info: nios_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2019.04.26.03:48:21 Info: nios_system.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2019.04.26.03:48:21 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.04.26.03:48:21 Info: nios_system.sys_sdram_pll_0: Refclk Freq: 50.0
+Info: 2019.04.26.03:48:21 Info: nios_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2019.04.26.03:48:21 Info: nios_system.sysid: Time stamp will be automatically updated when this component is generated.
+Warning: 2019.04.26.03:48:21 Warning: nios_system.audio_0: Interrupt sender audio_0.interrupt is not connected to an interrupt receiver
+Info: 2019.04.26.03:48:22 Info: qsys-generate succeeded.
+Info: 2019.04.26.03:48:22 Info: Finished: Create block symbol file (.bsf)
+Info: 2019.04.26.03:48:22 Info:
+Info: 2019.04.26.03:48:22 Info: Starting: Create HDL design files for synthesis
+Info: 2019.04.26.03:48:22 Info: qsys-generate X:\CPET-561\Lab_9\hw\nios_system.qsys --synthesis=VHDL --output-directory=X:\CPET-561\Lab_9\hw\nios_system\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: 2019.04.26.03:48:22 Info: Loading hw
+Info: 2019.04.26.03:48:22 Info: Reading input file
+Info: 2019.04.26.03:48:22 Info: Adding Filter_0 [Filter 1.0]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module Filter_0
+Info: 2019.04.26.03:48:22 Info: Adding audio_0 [altera_up_avalon_audio 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module audio_0
+Info: 2019.04.26.03:48:22 Info: Adding audio_and_video_config_0 [altera_up_avalon_audio_and_video_config 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module audio_and_video_config_0
+Info: 2019.04.26.03:48:22 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module jtag_uart_0
+Info: 2019.04.26.03:48:22 Info: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module new_sdram_controller_0
+Info: 2019.04.26.03:48:22 Info: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module nios2_gen2_0
+Info: 2019.04.26.03:48:22 Info: Adding onchip_memory2_1 [altera_avalon_onchip_memory2 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module onchip_memory2_1
+Info: 2019.04.26.03:48:22 Info: Adding pin [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module pin
+Info: 2019.04.26.03:48:22 Info: Adding switches [altera_avalon_pio 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module switches
+Info: 2019.04.26.03:48:22 Info: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module sys_sdram_pll_0
+Info: 2019.04.26.03:48:22 Info: Adding sysid [altera_avalon_sysid_qsys 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module sysid
+Info: 2019.04.26.03:48:22 Info: Adding timer_0 [altera_avalon_timer 17.1]
+Info: 2019.04.26.03:48:22 Info: Parameterizing module timer_0
+Info: 2019.04.26.03:48:22 Info: Building connections
+Info: 2019.04.26.03:48:22 Info: Parameterizing connections
+Info: 2019.04.26.03:48:22 Info: Validating
+Info: 2019.04.26.03:48:23 Info: Done reading input file
+Info: 2019.04.26.03:48:24 Info: nios_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: 2019.04.26.03:48:24 Info: nios_system.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: 2019.04.26.03:48:24 Info: nios_system.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.04.26.03:48:24 Info: nios_system.sys_sdram_pll_0: Refclk Freq: 50.0
+Info: 2019.04.26.03:48:24 Info: nios_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: 2019.04.26.03:48:24 Info: nios_system.sysid: Time stamp will be automatically updated when this component is generated.
+Warning: 2019.04.26.03:48:24 Warning: nios_system.audio_0: Interrupt sender audio_0.interrupt is not connected to an interrupt receiver
+Info: 2019.04.26.03:48:25 Info: nios_system: Generating nios_system "nios_system" for QUARTUS_SYNTH
+Info: 2019.04.26.03:48:30 Info: Filter_0: "nios_system" instantiated Filter "Filter_0"
+Info: 2019.04.26.03:48:30 Info: audio_0: Starting Generation of Audio Controller
+Info: 2019.04.26.03:48:30 Info: audio_0: "nios_system" instantiated altera_up_avalon_audio "audio_0"
+Info: 2019.04.26.03:48:30 Info: audio_and_video_config_0: Starting Generation of Audio and Video Config
+Info: 2019.04.26.03:48:30 Info: audio_and_video_config_0: "nios_system" instantiated altera_up_avalon_audio_and_video_config "audio_and_video_config_0"
+Info: 2019.04.26.03:48:31 Info: jtag_uart_0: Starting RTL generation for module 'nios_system_jtag_uart_0'
+Info: 2019.04.26.03:48:31 Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_system_jtag_uart_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0006_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0006_jtag_uart_0_gen/
+Info: 2019.04.26.03:48:32 Info: jtag_uart_0: Done RTL generation for module 'nios_system_jtag_uart_0'
+Info: 2019.04.26.03:48:32 Info: jtag_uart_0: "nios_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: 2019.04.26.03:48:32 Info: new_sdram_controller_0: Starting RTL generation for module 'nios_system_new_sdram_controller_0'
+Info: 2019.04.26.03:48:32 Info: new_sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=nios_system_new_sdram_controller_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0007_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0007_new_sdram_controller_0_gen/
+Info: 2019.04.26.03:48:33 Info: new_sdram_controller_0: Done RTL generation for module 'nios_system_new_sdram_controller_0'
+Info: 2019.04.26.03:48:33 Info: new_sdram_controller_0: "nios_system" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: 2019.04.26.03:48:33 Info: nios2_gen2_0: "nios_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: 2019.04.26.03:48:33 Info: onchip_memory2_1: Starting RTL generation for module 'nios_system_onchip_memory2_1'
+Info: 2019.04.26.03:48:33 Info: onchip_memory2_1:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios_system_onchip_memory2_1 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0008_onchip_memory2_1_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0008_onchip_memory2_1_gen/
+Info: 2019.04.26.03:48:34 Info: onchip_memory2_1: Done RTL generation for module 'nios_system_onchip_memory2_1'
+Info: 2019.04.26.03:48:34 Info: onchip_memory2_1: "nios_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_1"
+Info: 2019.04.26.03:48:34 Info: pin: Starting RTL generation for module 'nios_system_pin'
+Info: 2019.04.26.03:48:34 Info: pin:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_pin --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0009_pin_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0009_pin_gen/
+Info: 2019.04.26.03:48:35 Info: pin: Done RTL generation for module 'nios_system_pin'
+Info: 2019.04.26.03:48:35 Info: pin: "nios_system" instantiated altera_avalon_pio "pin"
+Info: 2019.04.26.03:48:35 Info: switches: Starting RTL generation for module 'nios_system_switches'
+Info: 2019.04.26.03:48:35 Info: switches:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_system_switches --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0010_switches_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0010_switches_gen/
+Info: 2019.04.26.03:48:35 Info: switches: Done RTL generation for module 'nios_system_switches'
+Info: 2019.04.26.03:48:35 Info: switches: "nios_system" instantiated altera_avalon_pio "switches"
+Info: 2019.04.26.03:48:36 Info: sys_sdram_pll_0: "nios_system" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info: 2019.04.26.03:48:36 Info: sysid: "nios_system" instantiated altera_avalon_sysid_qsys "sysid"
+Info: 2019.04.26.03:48:36 Info: timer_0: Starting RTL generation for module 'nios_system_timer_0'
+Info: 2019.04.26.03:48:36 Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nios_system_timer_0 --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0012_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0012_timer_0_gen/
+Info: 2019.04.26.03:48:36 Info: timer_0: Done RTL generation for module 'nios_system_timer_0'
+Info: 2019.04.26.03:48:36 Info: timer_0: "nios_system" instantiated altera_avalon_timer "timer_0"
+Info: 2019.04.26.03:48:39 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:39 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:39 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:39 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:39 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:40 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:40 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:40 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:40 Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:40 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:41 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: 2019.04.26.03:48:43 Info: mm_interconnect_0: "nios_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: 2019.04.26.03:48:43 Info: irq_mapper: "nios_system" instantiated altera_irq_mapper "irq_mapper"
+Info: 2019.04.26.03:48:43 Info: rst_controller: "nios_system" instantiated altera_reset_controller "rst_controller"
+Info: 2019.04.26.03:48:43 Info: cpu: Starting RTL generation for module 'nios_system_nios2_gen2_0_cpu'
+Info: 2019.04.26.03:48:43 Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_system_nios2_gen2_0_cpu --dir=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0015_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/JAKAND~1/AppData/Local/Temp/alt8012_1605720660944436260.dir/0015_cpu_gen/
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:44 (*) Starting Nios II generation
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:44 (*)   Checking for plaintext license.
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.1/quartus/bin64
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   LM_LICENSE_FILE environment variable is empty
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   Plaintext license not found.
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   No license required to generate encrypted Nios II
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   Elaborating CPU configuration settings
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:45 (*)   Creating all objects for CPU
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:46 (*)   Generating RTL from CPU objects
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:46 (*)   Creating plain-text RTL
+Info: 2019.04.26.03:48:47 Info: cpu: # 2019.04.26 03:48:47 (*) Done Nios II generation
+Info: 2019.04.26.03:48:47 Info: cpu: Done RTL generation for module 'nios_system_nios2_gen2_0_cpu'
+Info: 2019.04.26.03:48:47 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: 2019.04.26.03:48:48 Info: sys_pll: "sys_sdram_pll_0" instantiated altera_pll "sys_pll"
+Info: 2019.04.26.03:48:48 Info: reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: 2019.04.26.03:48:48 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: 2019.04.26.03:48:48 Info: audio_0_avalon_audio_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "audio_0_avalon_audio_slave_translator"
+Info: 2019.04.26.03:48:48 Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: 2019.04.26.03:48:48 Info: audio_0_avalon_audio_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "audio_0_avalon_audio_slave_agent"
+Info: 2019.04.26.03:48:48 Info: audio_0_avalon_audio_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "audio_0_avalon_audio_slave_agent_rsp_fifo"
+Info: 2019.04.26.03:48:48 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: 2019.04.26.03:48:49 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: 2019.04.26.03:48:49 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: 2019.04.26.03:48:49 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: 2019.04.26.03:48:49 Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: 2019.04.26.03:48:49 Info: Filter_0_avalon_slave_0_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "Filter_0_avalon_slave_0_burst_adapter"
+Info: 2019.04.26.03:48:50 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: 2019.04.26.03:48:50 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: 2019.04.26.03:48:50 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: 2019.04.26.03:48:50 Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
+Info: 2019.04.26.03:48:51 Info: Reusing file X:/CPET-561/Lab_9/hw/nios_system/synthesis/submodules
+Info: 2019.04.26.03:48:51 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: 2019.04.26.03:48:51 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: 2019.04.26.03:48:51 Info: Reusing file X:/CPET-561/Lab_9/hw/nios_system/synthesis/submodules
+Info: 2019.04.26.03:48:51 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: 2019.04.26.03:48:51 Info: Reusing file X:/CPET-561/Lab_9/hw/nios_system/synthesis/submodules
+Info: 2019.04.26.03:48:51 Info: Filter_0_avalon_slave_0_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "Filter_0_avalon_slave_0_rsp_width_adapter"
+Info: 2019.04.26.03:48:51 Info: Reusing file X:/CPET-561/Lab_9/hw/nios_system/synthesis/submodules
+Info: 2019.04.26.03:48:51 Info: Reusing file X:/CPET-561/Lab_9/hw/nios_system/synthesis/submodules
+Info: 2019.04.26.03:48:52 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: 2019.04.26.03:48:52 Info: avalon_st_adapter_003: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
+Info: 2019.04.26.03:48:52 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: 2019.04.26.03:48:52 Info: error_adapter_0: "avalon_st_adapter_003" instantiated error_adapter "error_adapter_0"
+Info: 2019.04.26.03:48:52 Info: nios_system: Done "nios_system" with 42 modules, 84 files
+Info: 2019.04.26.03:48:54 Info: qsys-generate succeeded.
+Info: 2019.04.26.03:48:54 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "nios_system.BAK.qsys" to "nios_system.qsys"
+Error (14923): Error upgrading Platform Designer file "nios_system.qsys"
+Error (11890): Unable to automatically upgrade Platform Designer component. Please manually upgrade "nios_system.qsys" in Platform Designer
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 6 errors, 3 warnings
+    Error: Peak virtual memory: 4877 megabytes
+    Error: Processing ended: Fri Apr 26 03:48:57 2019
+    Error: Elapsed time: 00:02:13
+    Error: Total CPU time (on all processors): 00:02:36
+
+

@@ -1,5 +1,5 @@
 Flow report for Top
-Mon Apr 22 16:32:09 2019
+Mon Apr 29 15:33:38 2019
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 22 16:31:54 2019           ;
+; Flow Status                     ; Successful - Mon Apr 29 15:33:20 2019           ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
 ; Revision Name                   ; Top                                             ;
 ; Top-level Entity Name           ; Top                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 958 / 32,070 ( 3 % )                            ;
-; Total registers                 ; 1263                                            ;
-; Total pins                      ; 35 / 457 ( 8 % )                                ;
+; Logic utilization (in ALMs)     ; 1,557 / 32,070 ( 5 % )                          ;
+; Total registers                 ; 2180                                            ;
+; Total pins                      ; 89 / 457 ( 19 % )                               ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 273,408 / 4,065,280 ( 7 % )                     ;
+; Total block memory bits         ; 543,872 / 4,065,280 ( 13 % )                    ;
 ; Total DSP Blocks                ; 17 / 87 ( 20 % )                                ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
 ; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total PLLs                      ; 1 / 6 ( 17 % )                                  ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
 +---------------------------------+-------------------------------------------------+
 
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/22/2019 16:29:47 ;
+; Start date & time ; 04/29/2019 15:30:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Top                 ;
 +-------------------+---------------------+
@@ -79,13 +79,13 @@ agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88623632849038.155596498707648                                ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88623632837282.155656621808660                                ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --         ;
-; MISC_FILE                           ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; nios_system/synthesis/../../nios_system.qsys                  ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ../src/Multiplier_inst.vhd                                    ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ../src/Multiplier.cmp                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; nios_system/synthesis/../nios_system.cmp                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; nios_system/synthesis/../../nios_system.qsys                  ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; --          ; --         ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; --          ; --         ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; --          ; --         ;
@@ -94,7 +94,7 @@ agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --         ;
 ; SLD_FILE                            ; nios_system/synthesis/nios_system.regmap                      ; --            ; --          ; --         ;
 ; SLD_FILE                            ; nios_system/synthesis/nios_system.debuginfo                   ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1555964873 ; --            ; nios_system ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1556566162 ; --            ; nios_system ; --         ;
 ; SOPCINFO_FILE                       ; nios_system/synthesis/../../nios_system.sopcinfo              ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --         ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+------------+
@@ -105,11 +105,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:42     ; 1.0                     ; 917 MB              ; 00:00:47                           ;
-; Fitter                    ; 00:00:59     ; 1.1                     ; 2750 MB             ; 00:02:04                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 799 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:13     ; 1.4                     ; 1144 MB             ; 00:00:15                           ;
-; Total                     ; 00:02:02     ; --                      ; --                  ; 00:03:13                           ;
+; Analysis & Synthesis      ; 00:01:10     ; 1.0                     ; 982 MB              ; 00:00:59                           ;
+; Fitter                    ; 00:01:10     ; 1.1                     ; 3083 MB             ; 00:02:31                           ;
+; Assembler                 ; 00:00:10     ; 1.0                     ; 823 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:16     ; 1.6                     ; 1315 MB             ; 00:00:20                           ;
+; Total                     ; 00:02:46     ; --                      ; --                  ; 00:03:58                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,10 +118,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; ECTET-1360-14    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; ECTET-1360-14    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; ECTET-1360-14    ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; ECTET-1360-14    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; ECTET-1360-06    ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; ECTET-1360-06    ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; ECTET-1360-06    ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; ECTET-1360-06    ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
