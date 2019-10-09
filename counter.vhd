@@ -29,7 +29,7 @@ The_5_Cycle_Count: Process ( reset_n, clk)
 
 BEGIN
 
-	if (reset_n = '0') THEN
+	if (reset_n = '1') THEN
 	
 			count <= "000";
 

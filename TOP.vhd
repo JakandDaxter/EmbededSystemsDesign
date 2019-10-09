@@ -78,7 +78,7 @@ Cycleing5: counter
 DifferentialProcess_P: process(clk,reset,5cyclesflag)
 BEGIN
 
-    if(reset = '0') then
+    if(reset = '1') then
         
         out_p <= '0';
         
@@ -101,7 +101,7 @@ END PROCESS;
 DifferentialProcess_n: process(clk,reset,5cyclesflag)
 BEGIN
 
-    if(reset = '0') then
+    if(reset = '1') then
         
         out_n <= '1';
         
