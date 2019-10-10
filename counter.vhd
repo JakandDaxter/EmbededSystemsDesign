@@ -17,7 +17,7 @@ ENTITY counter  IS
 
 END counter;
 
-ARCHITECTURE  beh OF Conversion IS
+ARCHITECTURE  beh OF counter IS
 
 
 signal count                                : std_logic_vector(2 downto 0) :="000"; 
@@ -25,37 +25,38 @@ signal count                                : std_logic_vector(2 downto 0) :="00
 
 BEGIN ---
 
-The_5_Cycle_Count: Process ( reset_n, clk)
+The_5_Cycle_Count: Process ( reset, clk)
 
 BEGIN
 
-	if (reset_n = '1') THEN
+	if (reset = '1') THEN
 	
 			count <= "000";
 
-		elsif ((clk'EVENT) AND (clk= '1')) THEN
+		elsif ( (clk'EVENT) AND (clk= '1') ) THEN
         
                 if(enable = '1')then --if the push button was pushed
 		
-			        if (count > "101") THEN
+						if (count > "101") THEN
             
 					    count <= "000";
                         
-                        flag <= '0'; --when it reached 5 dont be active
+                   flag <= '0'; --when it reached 5 dont be active
 
 			            else --if it is not greater than 5
             
 				            count <= count + '1';
                     
-                            flag <= '1'; --active while it counts to 5
+                        flag <= '1'; --active while it counts to 5
+									 
+						END IF;
                         
-                else
+						else
                         
                     flag <= '0';
                         
 			        END IF;
                     
-                END IF;
 	END IF;
 
  END PROCESS;

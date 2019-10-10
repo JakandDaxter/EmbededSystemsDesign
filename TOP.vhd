@@ -21,21 +21,17 @@ end TOP;
 architecture beh of TOP is
     
     --how to know i have 5 cycles
-    signal   5cyclesflag                    :std_logic;
-    constant 5cycles                        : std_logic_vector(15 downto 0) := X"3FFF";
+    signal   cyclesflag                     : std_logic;
+    constant cycles                         : std_logic_vector(15 downto 0) := X"3FFF";
     --used for sychonization
-    signal key0_d1 					  		:std_logic;
-    signal key0_d2 							:std_logic;
-    signal key0_d3 							:std_logic;
+    signal key0_d1 					  				:std_logic;
+    signal key0_d2 									:std_logic;
+    signal key0_d3 									:std_logic;
     --signals for use of code
-    signal reset                            :std_logic; --remeber active high
-    signal push_btn                         :std_logic; --push_button(1)
+    signal reset                             :std_logic; --remeber active high
+    signal push_btn                          :std_logic; --push_button(1)
     
 BEGIN --
-
---Lets go ahead and put the assumed idle values
-out_p <= '0';
-out_n <= '1';
 
 -----------------------------------------------
 
@@ -68,14 +64,14 @@ Cycleing5: counter
       clk               => clk,
       reset             => reset,
       enable            => push_btn,
-      flag              => 5cyclesflag
-    )
+      flag              => cyclesflag
+    );
 -------------------------------
 
 --Differential Output, one output per process... 
 
 --out_p
-DifferentialProcess_P: process(clk,reset,5cyclesflag)
+DifferentialProcess_P: process(clk,reset,cyclesflag)
 BEGIN
 
     if(reset = '1') then
@@ -84,9 +80,9 @@ BEGIN
         
     elsif(clk'event and clk = '1') then
         
-        if(5cyclesflag = '1') then
+        if(cyclesflag = '1') then
             
-            out_p <= NOT(out_p);
+            out_p <= '1';
             
             else
             
@@ -98,7 +94,7 @@ BEGIN
 END PROCESS;
 ------------
 --out_n
-DifferentialProcess_n: process(clk,reset,5cyclesflag)
+DifferentialProcess_n: process(clk,reset,cyclesflag)
 BEGIN
 
     if(reset = '1') then
@@ -107,9 +103,9 @@ BEGIN
         
     elsif(clk'event and clk = '1') then
         
-        if(5cyclesflag = '1') then
+        if(cyclesflag = '1') then
             
-            out_n <= NOT(out_n);
+            out_n <= '0';
             
         else
         
